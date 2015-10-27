@@ -39,7 +39,7 @@ section h2{
   background-color: #44707F;
 }
 
-#cover h1{
+#cover h2{
   font-size: 2.75rem;
   font-family: sans-serif;
   text-align: center;
@@ -47,7 +47,8 @@ section h2{
   margin-top: 20%;
 }
 
-#cover h2{
+#cover h3{
+  color:white;
   width: 66%;
   font-size: 2rem;
   margin: auto auto;
@@ -71,7 +72,7 @@ section h2{
   color: white;
 }
 
-#table-of-contents li{
+#table-of-contents > ol > li > ol > li{ /*needs to be done better*/
   padding: .2rem;
 }
 
@@ -159,7 +160,6 @@ section.conclusion h3{
 .font-1_5x{
   font-size: 120%;
 }
-
 
 .font-2x{
   font-size: 200%;

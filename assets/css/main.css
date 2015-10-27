@@ -1,18 +1,187 @@
+/*
+introduction blue-normal: #35768A
+gap-overview red-normal: #A93B41
+gap-overview red-light: #BF6D70
+bachalor-degrees yellow-normal: #C7A43A
+bachalor-degrees yellow-light: #DAC476
+sub-baccalaureate green-dark: #9EA771
+sub-baccalaureate green-light: #B6BD94
+conclusion grey-normal: #6E6E70
+*/
+
 html{
   font-size: 1vw;
+  background-color: #DEDEDE;
 }
 
-h1{
-  font-size: 2.75rem;
-}
-
-h2{
-  font-size: 2.125rem;
+p{
+  font-family: serif;
+  color:#6E6E70;
 }
 
 section.slide{
   width: 50vw;
   height: 37.5vw;
-  background-color: rgba(193, 189, 146, 0.5);
+  background-color: white;
+  margin: 1rem auto;
+  overflow: hidden;
+  border: 1px solid rgb(173, 173, 173);
+}
+
+section h2{
+  margin-top: 0;
+  font-size: 1rem;
+  padding: .6rem;
+  color: white;
+}
+
+#cover{
+  background-color: #44707F;
+}
+
+#cover h1{
+  font-size: 2.75rem;
+  font-family: sans-serif;
+  text-align: center;
+  color:white;
+  margin-top: 20%;
+}
+
+#cover h2{
+  width: 66%;
+  font-size: 2rem;
   margin: auto auto;
+  text-align: center;
+}
+
+#cover p{
+  border-top: .2rem solid white;
+  font-family: sans-serif;
+  width: 33%;
+  padding-top: 1.5rem;
+  margin: 1.5rem auto;
+  text-align: justify;
+  color: white;
+}
+
+#table-of-contents ol{
+  list-style: none;
+  margin:0;
+  padding: 0;
+  color: white;
+}
+
+#table-of-contents li{
+  padding: .2rem;
+}
+
+#table-of-contents ol.introduction li, section.introduction h2{
+  background-color: #35768A;
+}
+
+section.introduction h3{
+  color: #35768A;
+}
+
+#table-of-contents ol.degree-gap li, section.degree-gap h2{
+  background-color: #A93B41;
+}
+
+section.degree-gap h3{
+  color: #A93B41;
+}
+
+#table-of-contents ol.bachelors-degrees li, section.bachelors-degrees h2{
+  background-color: #C7A43A;
+}
+
+section.bachelors-degrees h3{
+  color: #C7A43A;
+}
+
+#table-of-contents ol.sub-baccalaureate li, section.sub-baccalaureate h2{
+  background-color: #9EA771;
+}
+
+section.sub-baccalaureate h3{
+  color: #9EA771;
+}
+
+#table-of-contents ol.conclusion li, section.conclusion h2{
+  background-color: #6E6E70;
+}
+
+section.conclusion h3{
+  color: #6E6E70;
+}
+
+.highlight{
+  color: #6E6E70;
+  font-family: sans-serif;
+}
+
+.contact p{
+  font-size: 68%;
+  font-family: sans-serif;
+  line-height: normal;
+  margin: 0;
+  font-weight: bold;
+}
+
+/*
+-- Utilitiy classes --
+*/
+.hidden{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.slide.short{
+  height: auto;
+}
+
+.view-more{
+  width: 33%;
+  padding-top: 1rem;
+  font-size: .75rem;
+  text-align: center;
+  color: white;
+  margin: auto auto;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  /*This needs a downard arrow*/
+}
+
+.font-1_5x{
+  font-size: 120%;
+}
+
+
+.font-2x{
+  font-size: 200%;
+}
+
+.font-4x{
+  font-size: 400%;
+}
+
+.center{
+  text-align: center;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.shadow{
+  box-shadow: 0px 2px 10px grey;
+}
+
+.tight-center{
+  margin: auto;
+  width: 60%;
 }

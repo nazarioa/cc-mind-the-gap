@@ -34,6 +34,7 @@ p{
 }
 
 section.slide{
+  position: relative;
   width: 50vw;
   height: 37.5vw;
   background-color: white;
@@ -110,6 +111,12 @@ section.degree-gap h3{
   color: rgb(167,62,63);
 }
 
+.degree-gap em{
+  color: rgb(167,62,63);
+  font-style: normal;
+  font-variant: normal;
+}
+
 #table-of-contents ol.bachelors-degrees li, section.bachelors-degrees h2{
   background-color: rgb(199,165,28);
 }
@@ -141,10 +148,60 @@ section.conclusion h3{
 
 .contact p{
   font-size: 68%;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: normal;
   margin: 0;
   font-weight: bold;
+}
+
+#degree-deficit-counter{
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(199,165,28);
+  display: inline-block;
+  width: 33%;
+  padding: 1.3%;
+}
+
+#degree-deficit-counter h4{
+  color: white;
+  font-size: 115%;
+  margin:0 0 2% 0;
+  padding: 0;
+}
+
+#degree-deficit-counter .counter{
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid grey;
+}
+
+#degree-deficit-counter .counter span{
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  flex-grow: 1;
+  font-weight: bolder;
+  color: rgb(110,110,112);
+  font-size: 140%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+#degree-deficit-counter .description{
+  background-color: white;
+  margin-top: 2%;
+  font-size: 70%;
+  padding: 2%;
+  color: rgb(199,165,28);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#degree-deficit-counter em {
+  color: rgb(167,62,63);
 }
 
 /*

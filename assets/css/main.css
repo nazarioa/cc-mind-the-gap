@@ -1,29 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);
+
 /*
-introduction blue-normal: #35768A
-gap-overview red-normal: #A93B41
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+*/
+
+h1,h2,h3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*
+introduction blue-normal: rgb(55,117,140)
+gap-overview red-normal: rgb(167,62,63)
 gap-overview red-light: #BF6D70
-bachalor-degrees yellow-normal: #C7A43A
+bachalor-degrees yellow-normal: rgb(199,165,28)
 bachalor-degrees yellow-light: #DAC476
-sub-baccalaureate green-dark: #9EA771
+sub-baccalaureate green-dark: rgb(159,167,107)
 sub-baccalaureate green-light: #B6BD94
-conclusion grey-normal: #6E6E70
+conclusion grey-normal: rgb(110,110,112)
 */
 
 html{
   font-size: 1vw;
   background-color: #DEDEDE;
+  font-family: 'EB Garamond', serif;
 }
 
 p{
-  font-family: serif;
-  color:#6E6E70;
+  font-family: 'EB Garamond', serif;
+  color:rgb(110,110,112);
 }
 
 section.slide{
   width: 50vw;
   height: 37.5vw;
   background-color: white;
-  margin: 1rem auto;
+  margin: 3rem auto;
   overflow: hidden;
   border: 1px solid rgb(173, 173, 173);
 }
@@ -36,29 +50,33 @@ section h2{
 }
 
 #cover{
-  background-color: #44707F;
+  background-color: rgb(55,117,140);
+  background-image: url('../img/cover.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 2rem solid rgb(167,62,63);
 }
 
 #cover h2{
-  font-size: 2.75rem;
-  font-family: sans-serif;
+  font-size: 2.45rem;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   color:white;
-  margin-top: 20%;
+  margin-top: 16%;
 }
 
 #cover h3{
   color:white;
-  width: 66%;
-  font-size: 2rem;
+  width: 50%;
+  font-size: 1.4rem;
   margin: auto auto;
   text-align: center;
 }
 
 #cover p{
   border-top: .2rem solid white;
-  font-family: sans-serif;
-  width: 33%;
+  font-family: 'Montserrat', sans-serif;  width: 33%;
   padding-top: 1.5rem;
   margin: 1.5rem auto;
   text-align: justify;
@@ -77,48 +95,48 @@ section h2{
 }
 
 #table-of-contents ol.introduction li, section.introduction h2{
-  background-color: #35768A;
+  background-color: rgb(55,117,140);
 }
 
 section.introduction h3{
-  color: #35768A;
+  color: rgb(55,117,140);
 }
 
 #table-of-contents ol.degree-gap li, section.degree-gap h2{
-  background-color: #A93B41;
+  background-color: rgb(167,62,63);
 }
 
 section.degree-gap h3{
-  color: #A93B41;
+  color: rgb(167,62,63);
 }
 
 #table-of-contents ol.bachelors-degrees li, section.bachelors-degrees h2{
-  background-color: #C7A43A;
+  background-color: rgb(199,165,28);
 }
 
 section.bachelors-degrees h3{
-  color: #C7A43A;
+  color: rgb(199,165,28);
 }
 
 #table-of-contents ol.sub-baccalaureate li, section.sub-baccalaureate h2{
-  background-color: #9EA771;
+  background-color: rgb(159,167,107);
 }
 
 section.sub-baccalaureate h3{
-  color: #9EA771;
+  color: rgb(159,167,107);
 }
 
 #table-of-contents ol.conclusion li, section.conclusion h2{
-  background-color: #6E6E70;
+  background-color: rgb(110,110,112);
 }
 
 section.conclusion h3{
-  color: #6E6E70;
+  color: rgb(110,110,112);
 }
 
 .highlight{
-  color: #6E6E70;
-  font-family: sans-serif;
+  color: rgb(110,110,112);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact p{
@@ -153,7 +171,7 @@ section.conclusion h3{
   color: white;
   margin: auto auto;
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   /*This needs a downard arrow*/
 }
 
@@ -178,7 +196,7 @@ section.conclusion h3{
 }
 
 .shadow{
-  box-shadow: 0px 2px 10px grey;
+  /*box-shadow: 0px 2px 10px grey;*/
 }
 
 .tight-center{

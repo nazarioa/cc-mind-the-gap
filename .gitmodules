@@ -4,3 +4,6 @@
 [submodule "vendor/c3"]
 	path = vendor/c3
 	url = https://github.com/masayuki0812/c3.git
+[submodule "vendor/d3"]
+	path = vendor/d3
+	url = https://github.com/mbostock/d3.git

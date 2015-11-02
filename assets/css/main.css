@@ -50,6 +50,8 @@ section h2{
   color: white;
 }
 
+/* -- Cover -- */
+
 #cover{
   background-color: rgb(55,117,140);
   background-image: url('../img/cover.png');
@@ -83,6 +85,8 @@ section h2{
   text-align: justify;
   color: white;
 }
+
+/* -- TOC -- */
 
 #table-of-contents ol{
   list-style: none;
@@ -152,6 +156,14 @@ section.conclusion h3{
   line-height: normal;
   margin: 0;
   font-weight: bold;
+}
+
+/* -- SLIDE 3 -- */
+
+#slide-3-degrees-needed{
+  float: right;
+  width: 22.8rem;
+  height: 10rem;
 }
 
 #degree-deficit-counter{

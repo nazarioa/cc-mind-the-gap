@@ -57,6 +57,7 @@ section h2{
 }
 
 section hr {
+  border-color: rgb(110,110,112);
   border-width: .15em;
   border-style: solid;
   width: 10%;

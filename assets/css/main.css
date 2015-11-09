@@ -448,3 +448,10 @@ section.conclusion h3{
   background-position: 50% 40%;
   background-size: 55%;
 }
+
+.state-grad{
+  background-repeat: no-repeat;
+  background-image: url('../img/state_grad.png');
+  background-position: 50% 22%;
+  background-size: 14%;
+}

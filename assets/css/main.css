@@ -65,6 +65,34 @@ section hr {
   margin-bottom: 4%;
 }
 
+.view-more{
+  width: 100%;
+  padding-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(110,110,112);
+  margin: auto auto;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.view-more::after{
+  /* Empty content, but required for pseudo element to display */
+  content: "";
+  display: block;
+  margin: auto;
+
+  /* Size of star within sprite */
+  width: 30px !important;
+  height: 40px  !important;
+  margin-top: .8rem;
+
+  /* Sprite */
+  background: url('../img/down_arrow_sprite.png') -30px 0px no-repeat;
+}
+
 /* -- Cover -- */
 
 #cover{
@@ -344,6 +372,13 @@ section.introduction hr {
 }
 
 /* -- SLIDE 4 -- */
+.bachelors-degrees .view-more{
+  color: rgb(199,165,28);
+}
+.bachelors-degrees .view-more::after{
+  background: url('../img/down_arrow_sprite.png') -60px 0px no-repeat;
+}
+
 #slide-4-bachelors-degree h3{
   margin-top: 20%;
   font-size: 500%;
@@ -399,18 +434,6 @@ section.conclusion h3{
 
 .slide.short{
   height: auto;
-}
-
-.view-more{
-  width: 33%;
-  padding-top: 1rem;
-  font-size: .75rem;
-  text-align: center;
-  color: white;
-  margin: auto auto;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  /*This needs a downard arrow*/
 }
 
 .font-1_5x{

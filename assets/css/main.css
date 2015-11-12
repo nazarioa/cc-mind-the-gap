@@ -130,6 +130,10 @@ section hr {
   color: white;
 }
 
+#cover .view-more {
+  color: white;
+}
+
 /* -- TOC -- */
 #table-of-contents{
   font-family: 'Montserrat', sans-serif;

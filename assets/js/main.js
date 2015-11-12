@@ -25,6 +25,9 @@ window.onload = function(){
       onmouseover: function(d) {
 
         if(d.id === 'gap'){
+          // Hacky way of doing this.
+          // Reading D3 documentation maybe I should be
+          // using the D3 selecters instead of jQuery.
           var gap_array= d.value.toString().split("");
           var counter_squares = $('#degree-deficit-counter .counter').children('span');
 

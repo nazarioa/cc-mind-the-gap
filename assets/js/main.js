@@ -16,8 +16,8 @@ window.onload = function(){
         data2: '#9EA0A0'
       },
       names:{
-        data1: 'Degrees Needed',
-        data2: 'Degrees Attained',
+        data1: 'Needed',
+        data2: 'Attained',
         gap: 'Gap'
       },
       hide: ['gap'],

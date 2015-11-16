@@ -20,7 +20,6 @@ window.onload = function(){
         data2: 'Degrees Attained',
         gap: 'Gap'
       },
-      hide: true,
       hide: ['gap'],
       onmouseover: function(d) {
 
@@ -36,6 +35,9 @@ window.onload = function(){
           }
         }
       }
+    },
+    legend: {
+      hide: ['gap']
     },
     axis: {
       x: {

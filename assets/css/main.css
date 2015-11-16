@@ -98,6 +98,21 @@ section hr {
  font-family: 'Montserrat', sans-serif;
 }
 
+.c3-tooltip{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.c3-axis-y-label{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .3rem;
+}
+
+.c3-area {
+    opacity:.9;
+}
+
 /* -- Cover -- */
 
 #cover{

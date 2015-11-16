@@ -1,21 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);
 
 /*
-@font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
-}
-*/
-
-h1,h2,h3{
-  font-family: 'Montserrat', sans-serif;
-}
-
-em{
-  font-style: normal;
-}
-
-/*
+== COLORS ==
 introduction blue-normal: rgb(55,117,140)
 gap-overview red-normal: rgb(167,62,63)
 gap-overview red-light: #BF6D70
@@ -25,6 +11,20 @@ sub-baccalaureate green-dark: rgb(159,167,107)
 sub-baccalaureate green-light: #B6BD94
 conclusion grey-normal: rgb(110,110,112)
 */
+
+/*
+== FONTS ==
+font-family: 'Montserrat', sans-serif;
+font-family: 'EB Garamond', serif;
+*/
+
+h1,h2,h3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+em{
+  font-style: normal;
+}
 
 html{
   font-size: 1vw;

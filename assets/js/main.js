@@ -8,9 +8,6 @@ window.onload = function(){
     data: {
       columns: dataSlide3chart1,
       type: 'area',
-      groups: [
-        ['data1', 'data2']
-      ],
       colors:{
         data1: '#99393E',
         data2: '#9EA0A0'

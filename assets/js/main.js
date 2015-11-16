@@ -49,20 +49,18 @@ window.onload = function(){
       },
       y:{
         label:{
-          text: 'Number of Degrees',
+          text: 'Degrees',
           position: 'outer-middle'
         },
+        min: 5000000,
+        max: 12000000,
         tick:{
-          max: 10
+          format: d3.format('s'),
+          // format: d3.format('-,'),
+          count: 5
         }
       }
     }
-    /*,
-    grid:{
-      y: {
-        lines: [{value:0}]
-      }
-    }*/
   });
 
   var slide5chart1 = c3.generate({

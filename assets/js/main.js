@@ -36,6 +36,9 @@ window.onload = function(){
         }
       }
     },
+    point: {
+      show: false
+    },
     legend: {
       hide: ['gap']
     },

@@ -395,6 +395,11 @@ section.introduction hr {
   width: 30%;
 }
 
+#slide-3-degrees-needed-graph .c3-xgrid-focus {
+  stroke-width: 3px;
+  stroke: rgb(199,165,28);
+}
+
 /* -- SLIDE 4 -- */
 .bachelors-degrees .view-more{
   color: rgb(199,165,28);

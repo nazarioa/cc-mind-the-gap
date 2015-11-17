@@ -10,6 +10,7 @@ bachalor-degrees yellow-light: #DAC476
 sub-baccalaureate green-dark: rgb(159,167,107)
 sub-baccalaureate green-light: #B6BD94
 conclusion grey-normal: rgb(110,110,112)
+conclusion orange-normal: rgba(182,89,30)
 */
 
 /*
@@ -431,26 +432,116 @@ section.bachelors-degrees em{
 
 /* -- Conclusion --*/
 section.conclusion h3{
-  color: rgb(110,110,112);
+  color: rgb(182,89,30);
+  font-size: 280%;
+  width: 60%;
+  margin-left: 3%;
 }
 
-#council-members{
+#slide-conclusion-action a{
+  color: rgb(110,110,112);
+  box-shadow: 0px 2px 10px grey;
+}
+
+#slide-conclusion-action h3.california-competes{
+  color: red;
+  font-size: 100%;
+  font-family: serif;
+  margin-top: 5%;
+}
+
+#slide-conclusion-action h3.california-competes span{
+  display: block;
+}
+
+#slide-conclusion-action h3.california-competes span.brand{
+  font-size: 250%;
+}
+
+#slide-conclusion-action h3.california-competes span.tagline{
+  font-size: 150%;
+}
+
+/* = */
+
+#call-to-action{
+  background-color: #6E6E70;
+  display: inline-block;
+  width: 60%;
+  margin-left: 3%;
+}
+
+#call-to-action p{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#call-to-action a{
+  color: white;
+}
+
+#side-action {
+  position: relative;
+  float: right;
+  right: 3%;
+  margin: 0px;
+  width: 25%;
+  margin-left: 10%;
+  font-family: 'EB Garamond', serif;
+}
+
+#side-action .download-report {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+#side-action .download-report::before{
+  /* Empty content, but required for pseudo element to display */
+  content: "";
+  display: block;
+  margin: 10% auto 3% auto;
+
+  /* Size of star within sprite */
+  width: 30px !important;
+  height: 40px  !important;
+  /* Sprite */
+  background: url('../img/down_arrow_sprite.png') -0px 0px no-repeat;
+
+}
+
+#side-action img.report-cover{
+  width: 100%;
+  box-shadow: 0px 2px 10px grey;
+}
+
+#side-action .contact{
+  margin-top: 10%;
+  padding-bottom: 10%;
+}
+
+/* = */
+
+#slide-conclusion-the-council .council-members{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
-#council-members dl{
+#slide-conclusion-the-council .council-members dl{
   flex-basis: 30%;
 }
 
-#council-members dt{
+#slide-conclusion-the-council .council-members dt{
   font-family: 'Montserrat', sans-serif;
   color: rgb(110,110,112);
 }
 
-#council-members dd{
+#slide-conclusion-the-council .council-members dd{
   font-family: 'EB Garamond', serif;
   font-style: italic;
   color: rgb(110,110,112);
@@ -529,4 +620,12 @@ section.conclusion h3{
   background-image: url('../img/state_grad.png');
   background-position: 50% 22%;
   background-size: 14%;
+}
+
+.left{
+  float:left;
+}
+
+.right{
+  float: right;
 }

@@ -92,12 +92,5 @@ window.onload = function(){
         }
       }
     }
-    /*,
-    grid:{
-      y: {
-        lines: [{value:0}]
-      }
-    }*/
   });
-
 }

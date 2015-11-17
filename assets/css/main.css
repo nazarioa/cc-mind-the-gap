@@ -434,6 +434,29 @@ section.conclusion h3{
   color: rgb(110,110,112);
 }
 
+#council-members{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#council-members dl{
+  flex-basis: 30%;
+}
+
+#council-members dt{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(110,110,112);
+}
+
+#council-members dd{
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: rgb(110,110,112);
+  margin-left: 0px;
+}
+
 /*
 -- Utilitiy classes --
 */

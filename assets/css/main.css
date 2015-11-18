@@ -10,6 +10,7 @@ bachalor-degrees yellow-light: #DAC476
 sub-baccalaureate green-dark: rgb(159,167,107)
 sub-baccalaureate green-light: #B6BD94
 conclusion grey-normal: rgb(110,110,112)
+conclusion grey-light: #B7B7B8
 conclusion orange-normal: rgba(182,89,30)
 */
 
@@ -189,23 +190,43 @@ section hr {
   background-image: url('../img/minus.svg');
 }
 
-#slide-0-1 ol.introduction li, section.introduction h2{
+#slide-0-1 ol.introduction li{
+  /*background-color: rgb(55,117,140);*/
+}
+
+#slide-0-1 ol.introduction li:first-child, section.introduction h2{
   background-color: rgb(55,117,140);
 }
 
-#slide-0-1 ol.degree-gap li, section.degree-gap h2{
+#slide-0-1 ol.degree-gap li{
+  background-color: #BF6D70;
+}
+
+#slide-0-1 ol.degree-gap li:first-child, section.degree-gap h2{
   background-color: rgb(167,62,63);
 }
 
-#slide-0-1 ol.bachelors-degrees li, section.bachelors-degrees h2{
+#slide-0-1 ol.bachelors-degrees li{
+  background-color: #DAC476;
+}
+
+#slide-0-1 ol.bachelors-degrees li:first-child, section.bachelors-degrees h2{
   background-color: rgb(199,165,28);
 }
 
-#slide-0-1 ol.sub-baccalaureate li, section.sub-baccalaureate h2{
+#slide-0-1 ol.sub-baccalaureate li{
+  background-color: #B6BD94;
+}
+
+#slide-0-1 ol.sub-baccalaureate li:first-child, section.sub-baccalaureate h2{
   background-color: rgb(159,167,107);
 }
 
-#slide-0-1 ol.conclusion li, section.conclusion h2{
+#slide-0-1 ol.conclusion li{
+  background-color: #B7B7B8;
+}
+
+#slide-0-1 ol.conclusion li:first-child, section.conclusion h2{
   background-color: rgb(110,110,112);
 }
 

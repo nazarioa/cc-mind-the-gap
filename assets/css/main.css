@@ -122,8 +122,7 @@ section hr {
     opacity:.9;
 }
 
-/* -- Cover -- */
-
+/* COVER */
 #slide-0-0{
   background-color: rgb(55,117,140);
   background-image: url('../img/cover.png');
@@ -165,7 +164,7 @@ section hr {
   color: white;
 }
 
-/* -- TABLE OF CONTENTS -- */
+/* TABLE OF CONTENTS */
 #slide-0-1{
   font-family: 'Montserrat', sans-serif;
 }
@@ -210,17 +209,8 @@ section hr {
   background-color: rgb(110,110,112);
 }
 
-/* -- CLEAN UP -- */
 
-section.bachelors-degrees h3{
-  color: rgb(199,165,28);
-}
-
-section.sub-baccalaureate h3{
-  color: rgb(159,167,107);
-}
-
-/* -- SLIDE 1 - INTRODUCTION -- */
+/* INTRODUCTION */
 section.introduction h3{
   color: rgb(55,117,140);
   text-align: center;
@@ -245,8 +235,8 @@ section.introduction hr {
   border-color: rgb(55,117,140);
 }
 
+
 /* STORY OF DEGREE GAP (RED) */
-/* -- SLIDE 2 -- */
 section.degree-gap em{
   color: rgb(167,62,63);
 }
@@ -260,8 +250,8 @@ section.degree-gap em{
   margin-right: auto;
 }
 
+
 /* BACHELORS DEGREES (YELLOW)  */
-/* -- SLIDE 3 -- */
 section.bachelors-degrees em{
   color: rgb(199,165,28);
 }
@@ -289,7 +279,14 @@ section.bachelors-degrees .view-more::after{
   margin-top: 0;
 }
 
-/* -- Conclusion --*/
+
+/* SUB-BACCALAUREATE DEGREES (GREEN) */
+section.sub-baccalaureate h3{
+  color: rgb(159,167,107);
+}
+
+
+/* CONCLUSION (GREY) */
 section.conclusion h3{
   color: rgb(182,89,30);
   font-size: 280%;

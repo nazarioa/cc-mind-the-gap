@@ -141,17 +141,18 @@ section hr {
 }
 
 #cover h2{
-  font-size: 2.45rem;
+  font-size: 500%;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color:white;
+  color: white;
   margin-top: 16%;
+  margin-bottom: 1%;
 }
 
 #cover h3{
   color:white;
-  width: 50%;
-  font-size: 1.4rem;
+  width: 60%;
+  font-size: 250%;
   margin: auto auto;
   text-align: center;
 }
@@ -159,9 +160,9 @@ section hr {
 #cover p{
   border-top: .2rem solid white;
   font-family: 'Montserrat', sans-serif;
-  width: 33%;
-  padding-top: 1.5rem;
-  margin: 1.5rem auto;
+  width: 40%;
+  padding: 1.5rem 0 1.5rem 0;
+  margin: 1.5rem auto 0 auto;
   text-align: justify;
   color: white;
 }

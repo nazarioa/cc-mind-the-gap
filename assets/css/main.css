@@ -427,7 +427,7 @@ section.introduction hr {
   color: rgb(199,165,28);
 }
 .bachelors-degrees .view-more::after{
-  background: url('../img/down_arrow_sprite.png') -60px 0px no-repeat;
+  background: url('../img/down_arrow_sprite.png') -90px 0px no-repeat;
 }
 
 #slide-4-bachelors-degree h3{

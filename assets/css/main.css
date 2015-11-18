@@ -221,12 +221,6 @@ section.sub-baccalaureate h3{
 }
 
 /* -- SLIDE 1 - INTRODUCTION -- */
-
-section.introduction {
-  /* TODO: */
-  /*background-image: url();*/
-}
-
 section.introduction h3{
   color: rgb(55,117,140);
   text-align: center;

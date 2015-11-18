@@ -245,9 +245,8 @@ section.introduction hr {
   border-color: rgb(55,117,140);
 }
 
-/* -- SLIDE 2 -- */
-
-#slide-2-degree-gap-overview h3{
+/* -- SLIDE 2 - STORY OF DEGREE GAP (RED) -- */
+#slide-2-0 h3{
   color: rgb(167,62,63);
   text-align: center;
   font-size: 220%;
@@ -256,84 +255,6 @@ section.introduction hr {
   margin-right: auto;
 }
 
-#demographic-chart{
-  float: right;
-  font-family: 'Montserrat', sans-serif;
-  width: 65%;
-  margin: 2% 2% 2% 4%;
-}
-
-#demographic-chart td{
-  padding: 1%;
-  border: 5px solid white;
-}
-
-#demographic-chart td.heading{
-  color: white;
-  width: 40%;
-  padding: 0% 5% 5% 10%;
-}
-
-#demographic-chart td.heading h4{
-  font-size: 130%;
-}
-
-#demographic-chart td.heading p{
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  text-transform: uppercase;
-  font-size: 60%;
-}
-
-#demographic-chart tr.year td.y2012{
-  background-color: rgb(221,222,220);
-  color: rgb(110,110,112);
-  font-size: 110%;
-  text-align: center;
-}
-
-#demographic-chart tr.year td.y2015{
-  background-color: rgb(242, 242, 242);
-  color: rgb(110,110,112);
-  font-size: 110%;
-  text-align: center;
-}
-
-#demographic-chart tr.demographics{
-  background-color: rgb(0, 116,108);
-}
-
-#demographic-chart tr.demographics td.y2012{
-  background-color: rgb(223, 238, 236);
-}
-
-#demographic-chart tr.demographics td.y2015{
-  background-color: rgb(242, 248, 248);
-}
-
-#demographic-chart tr.economy{
-  background-color: rgb(158, 167, 113);
-}
-
-#demographic-chart tr.economy td.y2012{
-  background-color: rgb(235, 236, 225);
-}
-
-#demographic-chart tr.economy td.y2015{
-  background-color: rgb(250, 251, 248);
-}
-
-#demographic-chart tr.politics{
-  background-color: rgb(169, 59, 65);
-}
-
-#demographic-chart tr.politics td.y2012{
-  background-color: rgb(240, 220, 221);
-}
-
-#demographic-chart tr.politics td.y2015{
-  background-color: rgb(251, 245, 245);
-}
 
 /* -- SLIDE 3 -- */
 .degree-gap em{
@@ -593,6 +514,98 @@ section.conclusion h3{
   color: rgb(110,110,112);
   margin-left: 0px;
 }
+
+/* == DEPRECTATED == */
+
+
+#slide-2-degree-gap-overview h3{
+  color: rgb(167,62,63);
+  text-align: center;
+  font-size: 220%;
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#demographic-chart{
+  float: right;
+  font-family: 'Montserrat', sans-serif;
+  width: 65%;
+  margin: 2% 2% 2% 4%;
+}
+
+#demographic-chart td{
+  padding: 1%;
+  border: 5px solid white;
+}
+
+#demographic-chart td.heading{
+  color: white;
+  width: 40%;
+  padding: 0% 5% 5% 10%;
+}
+
+#demographic-chart td.heading h4{
+  font-size: 130%;
+}
+
+#demographic-chart td.heading p{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 60%;
+}
+
+#demographic-chart tr.year td.y2012{
+  background-color: rgb(221,222,220);
+  color: rgb(110,110,112);
+  font-size: 110%;
+  text-align: center;
+}
+
+#demographic-chart tr.year td.y2015{
+  background-color: rgb(242, 242, 242);
+  color: rgb(110,110,112);
+  font-size: 110%;
+  text-align: center;
+}
+
+#demographic-chart tr.demographics{
+  background-color: rgb(0, 116,108);
+}
+
+#demographic-chart tr.demographics td.y2012{
+  background-color: rgb(223, 238, 236);
+}
+
+#demographic-chart tr.demographics td.y2015{
+  background-color: rgb(242, 248, 248);
+}
+
+#demographic-chart tr.economy{
+  background-color: rgb(158, 167, 113);
+}
+
+#demographic-chart tr.economy td.y2012{
+  background-color: rgb(235, 236, 225);
+}
+
+#demographic-chart tr.economy td.y2015{
+  background-color: rgb(250, 251, 248);
+}
+
+#demographic-chart tr.politics{
+  background-color: rgb(169, 59, 65);
+}
+
+#demographic-chart tr.politics td.y2012{
+  background-color: rgb(240, 220, 221);
+}
+
+#demographic-chart tr.politics td.y2015{
+  background-color: rgb(251, 245, 245);
+}
+
 
 /*
 -- Utilitiy classes --

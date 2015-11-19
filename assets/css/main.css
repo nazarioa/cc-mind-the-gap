@@ -333,6 +333,14 @@ section.bachelors-degrees .view-more::after{
   margin-bottom: 0;
 }
 
+#container-graph-3-1-0{
+  background-color: rgba(100,255,100,.1); /* TODO: */
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  bottom: 10%;
+  width: 50%;
+}
 
 /* SUB-BACCALAUREATE DEGREES (GREEN) */
 section.sub-baccalaureate h3{

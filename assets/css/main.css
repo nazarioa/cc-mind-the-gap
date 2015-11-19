@@ -69,6 +69,10 @@ section h2.active{
   background-image: url('../img/minus.svg');
 }
 
+section h3{
+  margin-bottom: 1%;
+}
+
 section hr {
   border-color: rgb(110,110,112);
   border-width: .15em;
@@ -268,11 +272,11 @@ section.degree-gap em{
 
 section.degree-gap h3{
   color: rgb(167,62,63);
-  text-align: center;
-  font-size: 220%;
+  margin-left: 4%;
+  font-size: 300%;
   width: 66%;
-  margin-left: auto;
-  margin-right: auto;
+}
+
 }
 
 
@@ -641,6 +645,7 @@ section.conclusion h3{
   color: rgb(110,110,112);
   font-family: 'Montserrat', sans-serif;
   font-size: 180%;
+  margin-top: 0px;
 }
 
 .contact p{

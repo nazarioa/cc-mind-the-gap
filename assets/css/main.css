@@ -296,6 +296,13 @@ section.degree-gap h3{
   width: 66%;
 }
 
+/* 2-0 */
+#container-graph-2-0-0{
+  background-color: red; /* TODO */
+  position: relative;
+  width: 55%;
+  margin-left: 5%;
+  float:right;
 }
 
 

@@ -339,6 +339,18 @@ section.sub-baccalaureate h3{
   color: rgb(159,167,107);
 }
 
+section.sub-baccalaureate .view-more{
+  color: rgb(159,167,107);
+}
+
+section.sub-baccalaureate .view-more::after{
+  background: url('../img/down_arrow_sprite.png') -120px 0px no-repeat;
+}
+
+#slide-4-0 h3{
+  font-size: 500%;
+}
+
 
 /* CONCLUSION (GREY) */
 section.conclusion h3{

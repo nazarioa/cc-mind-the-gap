@@ -110,6 +110,25 @@ section hr {
   background: url('../img/down_arrow_sprite.png') -30px 0px no-repeat;
 }
 
+.state-grad, .state-grad.red {
+  background-repeat: no-repeat;
+  background-image: url('../img/state_grad_red.png');
+  background-position: 50% 22%;
+  background-size: 14%;
+}
+
+.state-grad.green{
+  background-image: url('../img/state_grad_green.png');
+}
+
+.state-grad.yellow{
+  background-image: url('../img/state_grad_yellow.png');
+}
+
+.state-grad.blue{
+  background-image: url('../img/state_grad_blue.png');
+}
+
 /* == GENERAL CHART SPECIFIC STYLING == */
 .c3-chart{
  font-family: 'Montserrat', sans-serif;
@@ -703,13 +722,6 @@ section.conclusion h3{
   background-image: url('../img/california.png');
   background-position: 50% 40%;
   background-size: 55%;
-}
-
-.state-grad{
-  background-repeat: no-repeat;
-  background-image: url('../img/state_grad.png');
-  background-position: 50% 22%;
-  background-size: 14%;
 }
 
 .left{

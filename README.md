@@ -1,5 +1,5 @@
-California Competes<br/>Mind The Gap -- Report Infographic
-==========================================================
+California Competes Mind The Gap -- Report Infographic
+======================================================
 
 This is the code for California competes infographic.
 

@@ -14,10 +14,13 @@ window.onload = function(){
         'Cumulative Degrees': '#A93B41'
       },
       type: 'area',
-    }
+    },
+    point: {
+      show: false
+    },
   });
 
-/* DEPRECATED */
+  /* DEPRECATED */
   // Slide 3 ---
   var slide3chart1 = c3.generate({
     bindto: '#slide-3-degrees-needed-graph',

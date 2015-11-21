@@ -20,7 +20,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'EB Garamond', serif;
 */
 
-h1,h2,h3{
+h1, h2, h3, h4, h5{
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -297,11 +297,27 @@ section.degree-gap h3{
 
 /* 2-0 */
 #container-graph-2-0-0{
-  background-color: red; /* TODO */
+  margin-right: 3%;
   position: relative;
-  width: 55%;
+  width: 60%;
   margin-left: 5%;
   float:right;
+}
+
+#container-graph-2-0-0 h4, #container-graph-2-0-0 h5{
+  text-align: right;
+  color: #35768A;
+  margin: 0;
+  padding: 0;
+}
+
+#container-graph-2-0-0 h4 {
+  font-size: 200%;
+}
+
+#graph-2-0-0{
+  padding-top: 20%;
+  padding-right: 3%;
 }
 
 

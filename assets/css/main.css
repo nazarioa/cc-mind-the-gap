@@ -11,7 +11,7 @@ sub-baccalaureate green-dark: rgb(159,167,107)
 sub-baccalaureate green-light: #B6BD94
 conclusion grey-normal: rgb(110,110,112)
 conclusion grey-light: #B7B7B8
-conclusion orange-normal: rgba(182,89,30)
+conclusion orange-normal: rgb(182,89,30)
 */
 
 /*
@@ -44,6 +44,14 @@ p{
   padding: 1% 4% 1% 4%;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 section.slide{
   position: relative;
   width: 70vw;
@@ -71,6 +79,7 @@ section h2.active{
 
 section h3{
   margin-bottom: 1%;
+  margin-left: 4%;
   font-size: 280%;
 }
 
@@ -81,6 +90,14 @@ section hr {
   width: 10%;
   margin-top: 4%;
   margin-bottom: 4%;
+}
+
+section > label.field-of-study{
+  padding-top: 1%;
+  padding-left: 4%;
+  color:rgb(110,110,112);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 120%;
 }
 
 .view-more{
@@ -310,7 +327,6 @@ section.degree-gap em{
 
 section.degree-gap h3{
   color: rgb(167,62,63);
-  margin-left: 4%;
   width: 66%;
 }
 
@@ -342,9 +358,9 @@ section.bachelors-degrees .view-more::after{
   font-size: 500%;
 }
 
+/* = */
 #slide-3-1 h3{
   font-size: 230%;
-  margin-left: 4%;
   margin-bottom: 0;
 }
 
@@ -358,6 +374,41 @@ section.bachelors-degrees .view-more::after{
 #graph-3-1-0{
   width: 100%;
   height: 100%;
+}
+
+/* = */
+#slide-3-2 h3{
+  margin-top: 0px;
+}
+
+/* = */
+#slide-3-3 h3{
+}
+
+#slide-3-3 .left-panel{
+  width: 40%;
+  position: absolute;
+  left:0px;
+  top: 5%;
+  bottom: 0px;
+  background-color: rgba(255,255,0,.2);
+}
+
+#slide-3-3 .left-panel.hide{
+  left: -40%;
+}
+
+#slide-3-3 .right-panel{
+  width: 60%;
+  position: absolute;
+  right:0px;
+  top: 5%;
+  bottom: 0px;
+  background-color: pink;
+}
+
+#slide-3-3 .right-panel.hide{
+  right: -60%;
 }
 
 /* SUB-BACCALAUREATE DEGREES (GREEN) */
@@ -381,36 +432,115 @@ section.sub-baccalaureate .view-more::after{
 /* CONCLUSION (GREY) */
 section.conclusion h3{
   color: rgb(182,89,30);
-  width: 60%;
+}
+
+section.introduction em{
+  color: rgb(182,89,30);
+}
+
+section.conclusion .view-more{
+  color: rgb(182,89,30);
+}
+
+section.conclusion .view-more::after{
+  background: url('../img/down_arrow_sprite.png') -150px 0px no-repeat;
+}
+
+#slide-5-0 h3{
+  margin: 4% auto 0 auto;
+  text-align: center;
+  font-size: 400%;
+}
+
+/* = */
+#container-recomendations{
+  width: 73%;
+  float: right;
+}
+
+#container-recomendations dt{
+  color: white;
+  font-size: 100%;
+  padding: 2% 6% 2% 2%;
+  margin: 1px 2% 0px 2%;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(182,89,30);
+  background-image: url('../img/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center right 2%;
+  background-size: 3%;
+}
+
+#container-recomendations dt.inactive{
+  font-size: 80%;
+  background-color: #B7B7B8;
+  padding: 1% 6% 1% 1%;
+}
+
+#container-recomendations dt span.step{
+  font-size: 200%;
+  float: left;
+  height: inherit;
+  padding-right: 5%;
+  background-image: url('../img/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center right 2%;
+  background-size: 2%;
+}
+
+#container-recomendations dt span.subheading{
+  font-size: 75%;
+  display: block;
+}
+
+#container-recomendations dd{
+  margin: 0;
+  padding: 3%;
+}
+
+#container-recomendations dd p, #container-recomendations dd ul, #container-recomendations dd li{
+  font-size: 90%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 0 0;
+  padding: 0 0 1% 0;
+}
+
+#container-recomendations dd li{
   margin-left: 3%;
 }
 
-#slide-conclusion-action a{
+#container-recomendations dd p.highlight{
+  color: rgb(182,89,30);
+}
+
+
+/* = */
+#slide-5-2 a{
   color: rgb(110,110,112);
 }
 
-#slide-conclusion-action h3.california-competes{
+#slide-5-2 h3.california-competes{
   color: red;
   font-size: 100%;
   font-family: serif;
   margin-top: 5%;
+  margin-left: 3%;
 }
 
-#slide-conclusion-action h3.california-competes span{
+#slide-5-2 h3.california-competes span{
   display: block;
 }
 
-#slide-conclusion-action h3.california-competes span.brand{
+#slide-5-2 h3.california-competes span.brand{
   font-size: 250%;
 }
 
-#slide-conclusion-action h3.california-competes span.tagline{
+#slide-5-2 h3.california-competes span.tagline{
   font-size: 150%;
 }
 
-/* = */
-
-#call-to-action{
+#container-call-to-action{
   box-shadow: 0px 2px 10px grey;
   background-color: #6E6E70;
   display: inline-block;
@@ -418,49 +548,16 @@ section.conclusion h3{
   margin-left: 3%;
 }
 
-#call-to-action p{
+#container-call-to-action p{
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
 
-#slide-conclusion-action h3.california-competes{
-  color: red;
-  font-size: 100%;
-  font-family: serif;
-  margin-top: 5%;
-}
-
-#slide-conclusion-action h3.california-competes span{
-  display: block;
-}
-
-#slide-conclusion-action h3.california-competes span.brand{
-  font-size: 250%;
-}
-
-#slide-conclusion-action h3.california-competes span.tagline{
-  font-size: 150%;
-}
-
-/* = */
-
-#call-to-action{
-  background-color: #6E6E70;
-  display: inline-block;
-  width: 60%;
-  margin-left: 3%;
-}
-
-#call-to-action p{
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#call-to-action a{
+#container-call-to-action a{
   color: white;
 }
 
-#side-action {
+#conatiner-side-action {
   position: relative;
   float: right;
   right: 3%;
@@ -470,14 +567,14 @@ section.conclusion h3{
   font-family: 'EB Garamond', serif;
 }
 
-#side-action .download-report {
+#conatiner-side-action .download-report {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   text-align: center;
   display: block;
 }
 
-#side-action .download-report::before{
+#conatiner-side-action .download-report::before{
   /* Empty content, but required for pseudo element to display */
   content: "";
   display: block;
@@ -488,22 +585,43 @@ section.conclusion h3{
   height: 40px  !important;
   /* Sprite */
   background: url('../img/down_arrow_sprite.png') -0px 0px no-repeat;
-
 }
 
-#side-action img.report-cover{
+#conatiner-side-action img.report-cover{
   width: 100%;
   box-shadow: 0px 2px 10px grey;
 }
 
-#side-action .contact{
+#conatiner-side-action .contact{
   margin-top: 10%;
   padding-bottom: 10%;
 }
 
 /* = */
+#slide-5-3 h3 {
+  margin-left: 3%;
+}
 
-#slide-conclusion-the-council .council-members{
+#slide-5-3 .opportunity-institute-logo{
+  text-align: center;
+  padding-top: 3%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#slide-5-3 .opportunity-institute-logo img{
+  width: 20%;
+  margin-top: 2%;
+}
+
+#slide-5-3 .opportunity-institute-logo a{
+  color: rgb(182,89,30);
+}
+
+#slide-5-3 .opportunity-institute-logo a:hover{
+  color: #CA7243;
+}
+
+#slide-5-3 .council-members{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -512,186 +630,20 @@ section.conclusion h3{
   margin-right: 3%;
 }
 
-#slide-conclusion-the-council .council-members dl{
+#slide-5-3 .council-members dl{
   flex-basis: 30%;
 }
 
-#slide-conclusion-the-council .council-members dt{
+#slide-5-3 .council-members dt{
   font-family: 'Montserrat', sans-serif;
   color: rgb(110,110,112);
 }
 
-#slide-conclusion-the-council .council-members dd{
+#slide-5-3 .council-members dd{
   font-family: 'EB Garamond', serif;
   font-style: italic;
   color: rgb(110,110,112);
   margin-left: 0px;
-}
-
-/* == DEPRECTATED == */
-#slide-2-degree-gap-overview h3{
-  color: rgb(167,62,63);
-  text-align: center;
-  font-size: 220%;
-  width: 66%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#demographic-chart{
-  float: right;
-  font-family: 'Montserrat', sans-serif;
-  width: 65%;
-  margin: 2% 2% 2% 4%;
-}
-
-#demographic-chart td{
-  padding: 1%;
-  border: 5px solid white;
-}
-
-#demographic-chart td.heading{
-  color: white;
-  width: 40%;
-  padding: 0% 5% 5% 10%;
-}
-
-#demographic-chart td.heading h4{
-  font-size: 130%;
-}
-
-#demographic-chart td.heading p{
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  text-transform: uppercase;
-  font-size: 60%;
-}
-
-#demographic-chart tr.year td.y2012{
-  background-color: rgb(221,222,220);
-  color: rgb(110,110,112);
-  font-size: 110%;
-  text-align: center;
-}
-
-#demographic-chart tr.year td.y2015{
-  background-color: rgb(242, 242, 242);
-  color: rgb(110,110,112);
-  font-size: 110%;
-  text-align: center;
-}
-
-#demographic-chart tr.demographics{
-  background-color: rgb(0, 116,108);
-}
-
-#demographic-chart tr.demographics td.y2012{
-  background-color: rgb(223, 238, 236);
-}
-
-#demographic-chart tr.demographics td.y2015{
-  background-color: rgb(242, 248, 248);
-}
-
-#demographic-chart tr.economy{
-  background-color: rgb(158, 167, 113);
-}
-
-#demographic-chart tr.economy td.y2012{
-  background-color: rgb(235, 236, 225);
-}
-
-#demographic-chart tr.economy td.y2015{
-  background-color: rgb(250, 251, 248);
-}
-
-#demographic-chart tr.politics{
-  background-color: rgb(169, 59, 65);
-}
-
-#demographic-chart tr.politics td.y2012{
-  background-color: rgb(240, 220, 221);
-}
-
-#demographic-chart tr.politics td.y2015{
-  background-color: rgb(251, 245, 245);
-}
-
-/* -- SLIDE 3 -- */
-
-
-#slide-3-story-of-degree-gap h3{
-  color: rgb(167,62,63);
-  font-size: 220%;
-}
-
-#slide-3-degrees-needed-graph{
-  float: right;
-  width: 66%;
-  /*width: 22.8rem;*/
-  height: 50%;
-  margin-right: 1.3%;
-}
-
-#degree-deficit-counter{
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgb(199,165,28);
-  display: inline-block;
-  width: 33%;
-  padding: 1.3%;
-  float:right;
-  margin-right: 3%;
-}
-
-#degree-deficit-counter h4{
-  color: white;
-  font-size: 115%;
-  margin:0 0 2% 0;
-  padding: 0;
-}
-
-#degree-deficit-counter .counter{
-  background-color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: 1px solid grey;
-}
-
-#degree-deficit-counter .counter span{
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  flex-grow: 1;
-  font-weight: bolder;
-  color: rgb(110,110,112);
-  font-size: 140%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-}
-
-#degree-deficit-counter .description{
-  background-color: white;
-  margin-top: 2%;
-  font-size: 70%;
-  padding: 2%;
-  color: rgb(199,165,28);
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-
-#degree-deficit-counter em {
-  color: rgb(167,62,63);
-}
-
-#slide-3-story-of-degree-gap .highlight{
-  width: 30%;
-}
-
-#slide-3-degrees-needed-graph .c3-xgrid-focus {
-  stroke-width: 3px;
-  stroke: rgb(199,165,28);
 }
 
 
@@ -727,15 +679,27 @@ section.conclusion h3{
   height: auto;
 }
 
-.font-1_5x{
+.font-80x{
+  font-size: 100%;
+}
+
+.font-100x{
+  font-size: 100%;
+}
+
+.font-120x{
+  font-size: 120%;
+}
+
+.font-150x{
   font-size: 150%;
 }
 
-.font-2x{
+.font-200x{
   font-size: 200%;
 }
 
-.font-4x{
+.font-400x{
   font-size: 400%;
 }
 
@@ -773,8 +737,9 @@ section.conclusion h3{
 
 .loading{
   display: inline-block;
-  width: 64px;
-  height: 64px;
-  background-image: url('../img/loading.gif');
-  background-repeat: no-repeat;
+  min-width: 64px;
+  min-height: 64px;
+  width: 100%;
+  height: 100%;
+  background: url('../img/loading.gif') center center no-repeat;
 }

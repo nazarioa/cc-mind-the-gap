@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);
+@font-face {
+    font-family: Nilland;
+    src: url('../fonts/nilland/Nilland.ttf');
+}
 
 /*
 == COLORS ==
@@ -521,9 +525,8 @@ section.conclusion .view-more::after{
 }
 
 #slide-5-2 h3.california-competes{
-  color: red;
   font-size: 100%;
-  font-family: serif;
+  font-family: Nilland, sans-serif;
   margin-top: 5%;
   margin-left: 3%;
 }

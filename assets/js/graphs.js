@@ -25,6 +25,9 @@ window.onload = function(){
     point: {
       show: false
     },
+    size: {
+      width: slideSize(.5)
+    }
   });
 
   // slide
@@ -49,6 +52,9 @@ window.onload = function(){
     },
     legend: {
       hide: true
+    },
+    size: {
+      width: slideSize(.4)
     }
   });
 

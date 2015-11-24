@@ -2,6 +2,13 @@
 
 window.onload = function(){
 
+
+  var slideSize = function(percent){
+    var slideWidth = $('#slide-0-0').width();
+    console.log();
+    return Math.floor(slideWidth * percent);
+  };
+
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',

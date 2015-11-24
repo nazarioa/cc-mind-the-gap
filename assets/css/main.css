@@ -479,7 +479,12 @@ section.conclusion .view-more::after{
 #container-recomendations dt.inactive{
   font-size: 80%;
   background-color: #B7B7B8;
+  background-image: url('../img/minus.svg');
   padding: 1% 6% 1% 1%;
+}
+
+#container-recomendations dt.inactive:hover{
+  background-color: rgb(110,110,112);
 }
 
 #container-recomendations dt span.step{

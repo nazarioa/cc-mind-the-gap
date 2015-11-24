@@ -546,15 +546,16 @@ section.conclusion .view-more::after{
   display: inline-block;
   width: 60%;
   margin-left: 3%;
+  font-size: 100%;
 }
 
-#container-call-to-action p{
+#container-call-to-action h4{
+  font-size: 140%;
+}
+
+#container-call-to-action a, #container-call-to-action p, #container-call-to-action h4{
   color: white;
   font-family: 'Montserrat', sans-serif;
-}
-
-#container-call-to-action a{
-  color: white;
 }
 
 #conatiner-side-action {

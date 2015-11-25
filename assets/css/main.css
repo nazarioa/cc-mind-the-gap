@@ -328,7 +328,7 @@ section.degree-gap em{
   color: rgb(167,62,63);
 }
 
-section.degree-gap h3{
+section.degree-gap > h3, section.degree-gap .left-panel h3{
   color: rgb(167,62,63);
   width: 66%;
 }
@@ -351,7 +351,7 @@ section.degree-gap h3{
 }
 
 /* BACHELORS DEGREES (YELLOW)  */
-section.bachelors-degrees h3{
+section.bachelors-degrees > h3, section.bachelors-degrees .left-panel h3{
   color: rgb(199,165,28);
 }
 
@@ -433,7 +433,7 @@ section.bachelors-degrees .view-more > span{
 }
 
 /* SUB-BACCALAUREATE DEGREES (GREEN) */
-section.sub-baccalaureate h3{
+section.sub-baccalaureate > h3, section.sub-baccalaureate .left-panel h3{
   color: rgb(159,167,107);
 }
 
@@ -451,7 +451,7 @@ section.sub-baccalaureate .view-more > span {
 
 
 /* CONCLUSION (GREY) */
-section.conclusion h3{
+section.conclusion > h3,  section.conclusion .left-panel h3{
   color: rgb(182,89,30);
 }
 

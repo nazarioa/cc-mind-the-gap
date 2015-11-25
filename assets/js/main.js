@@ -11,10 +11,6 @@ $(document).ready(function(){
       $(this).removeClass('inactive');
       $(this).next('dd').removeClass('hidden');
     }
-    else {
-      $(this).addClass('inactive');
-      $(this).next('dd').addClass('hidden');
-    }
   });
 
 });

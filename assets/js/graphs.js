@@ -129,7 +129,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      width: slideSize(.4)
+      height: slideSize(.45)
     }
   });
 

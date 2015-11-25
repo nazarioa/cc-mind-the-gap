@@ -1,18 +1,78 @@
 "use strict";
 
 var slide_3_1_0_data = [
-  ['Business & Marketing', 0.17],
-  ['Social Sciences (various)', 0.12],
-  ['Psychology', 0.08],
-  ['Visual & Performing Arts', 0.07],
-  ['Biology', 0.07],
-  ['Health Professions', 0.07],
-  ['Engineering', 0.06],
-  ['Communication', 0.04],
-  ['English', 0.04],
-  ['Liberal Arts', 0.03],
-  ['Computer and Information Sciences', 0.02],
-  ['Other', .23]
+  {
+    "Major": "Business & Marketing",
+    "Percent": 0.17,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Social Sciences (various)",
+    "Percent":  0.12,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Psychology",
+    "Percent":  0.08,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Visual & Performing Arts",
+    "Percent":  0.07,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Biology",
+    "Percent":  0.07,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Health Professions",
+    "Percent":  0.07,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Engineering",
+    "Percent":  0.06,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Communication",
+    "Percent":  0.04,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "English",
+    "Percent":  0.04,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Liberal Arts",
+    "Percent":  0.03,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Computer & Information Sciences",
+    "Percent":  0.02,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  },
+  {
+    "Major": "Other",
+    "Percent":  .23,
+    "ColorInactive" : "#e3e3e3",
+    "ColorActive" : "#e3e3e3"
+  }
 ];
 
 var slide_3_3_0_data = [
@@ -126,16 +186,28 @@ window.onload = function(){
           var format = (id === 'Cumulative Degrees' || id === 'Degrees Added Per Year' || id === 'Projected Degrees') ? d3.format(',') : false;
           return format(value);
         }
-        // value: d3.format(',') // apply this format to both y and y2
       }
     }
   });
 
   // slide
+  var slide_3_1_0_data_keys = slide_3_1_0_data.map(function(x) {
+    return x;
+  });
+
+  var slide_3_1_0_data_result = slide_3_1_0_data.map(function(x) {
+      return [ x.Major, x.Percent];
+  });
+
+  var slide_3_1_0_data_colors = slide_3_1_0_data.map(function(x) {
+      return { "Active": x.ColorActive, "Inactive": x.ColorInactive };
+  });
+
   var slide_3_1_0 = c3.generate({
     bindto: '#graph-3-1-0',
     data: {
-      columns: slide_3_1_0_data,
+      columns: slide_3_1_0_data_result,
+      keys: slide_3_1_0_data_keys,
       type: 'pie',
     },
     legend: {

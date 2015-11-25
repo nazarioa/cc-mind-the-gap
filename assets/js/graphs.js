@@ -1,5 +1,83 @@
 "use strict";
 
+var slide_3_1_0_data = [
+  ['Business & Marketing', 0.17],
+  ['Social Sciences (various)', 0.12],
+  ['Psychology', 0.08],
+  ['Visual & Performing Arts', 0.07],
+  ['Biology', 0.07],
+  ['Health Professions', 0.07],
+  ['Engineering', 0.06],
+  ['Communication', 0.04],
+  ['English', 0.04],
+  ['Liberal Arts', 0.03],
+  ['Computer and Information Sciences', 0.02],
+  ['Other', .23]
+];
+
+var slide_3_3_0_data = [
+  {"Ethicity": "American Indian/Alaska Native",
+    "UC": 188,
+    "CSU": 414,
+    "NonProfit": 209,
+    "ForProfit": 81
+  },
+  {"Ethicity": "Asian",
+    "UC": 17374,
+    "CSU": 13413,
+    "NonProfit": 4757,
+    "ForProfit": 1477
+  },
+  {"Ethicity": "Asian",
+    "UC": 17374,
+    "CSU": 13413,
+    "NonProfit": 4757,
+    "ForProfit": 1477
+  },
+  {"Ethicity": "Black/African American",
+    "UC": 1397,
+    "CSU": 3602,
+    "NonProfit": 1754,
+    "ForProfit": 1211
+  },
+  {"Ethicity": "Hispanic/Latino",
+    "UC": 8488,
+    "CSU": 21686,
+    "NonProfit": 6694,
+    "ForProfit": 3259
+  },
+  {"Ethicity": "Native Hawaiian or Other Pacific Islander",
+    "UC": 149,
+    "CSU": 597,
+    "NonProfit": 234,
+    "ForProfit": 174
+  },
+  {"Ethicity": "White",
+    "UC": 15798,
+    "CSU": 28990,
+    "NonProfit": 17046,
+    "ForProfit": 3279
+  },
+  {"Ethicity": "Two or more races",
+    "UC": 950,
+    "CSU": 2506,
+    "NonProfit": 1281,
+    "ForProfit": 184
+  },
+  {"Ethicity": "Unknown",
+    "UC": 2518,
+    "CSU": 7576,
+    "NonProfit": 2330,
+    "ForProfit": 3294
+  },
+  {"Ethicity": "Nonresident alien",
+    "UC": 2084,
+    "CSU": 3019,
+    "NonProfit": 2074,
+    "ForProfit": 506
+  }
+];
+
 window.onload = function(){
 
 
@@ -44,20 +122,7 @@ window.onload = function(){
   var slide_3_1_0 = c3.generate({
     bindto: '#graph-3-1-0',
     data: {
-      columns: [
-        ['Business & Marketing', 0.17],
-        ['Social Sciences (various)', 0.12],
-        ['Psychology', 0.08],
-        ['Visual & Performing Arts', 0.07],
-        ['Biology', 0.07],
-        ['Health Professions', 0.07],
-        ['Engineering', 0.06],
-        ['Communication', 0.04],
-        ['English', 0.04],
-        ['Liberal Arts', 0.03],
-        ['Computer and Information Sciences', 0.02],
-        ['Other', .23]
-      ],
+      columns: slide_3_1_0_data,
       type: 'pie',
     },
     legend: {
@@ -75,8 +140,6 @@ window.onload = function(){
       url: 'assets/data/slide_3_2_0_2014_sort.csv',
       x: 'Institution',
       columns: ['Institution', 'Major', 'Count'],
-      // groups: [['Institution', 'Major']],
-      // groups: [['CIS & Support Services', 'CIS, General', 'CIT Admin & Management', 'Computer Engineering', 'Computer Programming', 'Computer Science', 'Computer Software & Media Applications', 'Computer Systems Analysis', 'Computer Systems Networking & Telecommunications', 'Information Science/Studies']],
       type: 'bar'
     },
     axis: {

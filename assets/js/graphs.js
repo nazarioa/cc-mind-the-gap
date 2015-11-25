@@ -261,6 +261,18 @@ window.onload = function(){
 
   var fillData_3_3_0 = function(x){
     console.log(x);
+    $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
+    $('#slide-3-3 .stats-general .percentage > span').html(
+      function(){
+        return Math.floor((x.ratio * 100)) + '%';
+      }
+    );
+    $('#slide-3-3 .stats-general .totals > span').html(
+      function(){
+        // return x.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return x.value.toLocaleString();
+      }
+    );
   };
 
   var slide_3_3_0 = c3.generate({
@@ -271,17 +283,39 @@ window.onload = function(){
       type: 'pie',
       onclick: function(d) {
         // console.log(d);
-
         var leftPanelWidth = $('#slide-3-3 .left-panel').width();
-        $('#slide-3-3 .left-panel').animate(
-          {left: -leftPanelWidth},
-          300,
-          "swing",
-          fillData_3_3_0(d)
-        );
+
+        // If the info panel is not .hidden, slide it out and present data panel
+        if($('#slide-3-3 .left-panel.info').hasClass('hidden') === false ){
+          $('#slide-3-3 .left-panel.info').animate(
+            {left: -leftPanelWidth},
+            500,
+            "swing",
+            function(){
+              $('#slide-3-3 .left-panel.info').addClass('hidden');
+              $('#slide-3-3 .left-panel.data').removeClass('hidden');
+              fillData_3_3_0(d);
+            }
+          );
+
+          $('#slide-3-3 .left-panel.data').animate(
+            {left: 0},
+            500,
+            "swing",
+            function(){
+              // fillData_3_3_0(d);
+            }
+          );
+        }
+        // If the data panel is up, just udpate the content
+        else{
+          fillData_3_3_0(d);
+        }
+
+
       },
       onmouseout: function(){
-        console.log('Test');
+      // alert('Test');
       }
     },
     legend: {

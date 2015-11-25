@@ -701,11 +701,12 @@ section.conclusion .view-more > span {
 .stats-general{
   color: white;
   background-color: #CA6D54;
-  padding: 1%;
+  padding: 3%;
 }
 
 .stats-general > h3, .stats-general > h4{
-  color: white;
+  color: white !important;
+  /*TODO: why is the baove happening*/
   padding: 0px;
   margin: 0px;
   font-size: 100%;
@@ -718,7 +719,20 @@ section.conclusion .view-more > span {
 .stats-general hr{
     border-color: white;
     border-width: 1px;
-    width: 90%;
+    width: 100%;
+}
+
+.stats-general .percentage, .stats-general .totals{
+  display: inline-block;
+  width: 45%;
+  padding: 0;
+  margin: 0;
+  font-size: 80%;
+}
+
+.stats-general .percentage > span, .stats-general .totals > span{
+  font-size: 300%;
+  display: block;
 }
 
 .stats-percent dt, .stats-major dt {
@@ -729,6 +743,10 @@ section.conclusion .view-more > span {
   background-repeat: no-repeat;
   background-position: center right 2%;
   background-size: 4%;
+}
+
+.stats-percent h5{
+  text-transform: capitalize;
 }
 
 .stats-major table{

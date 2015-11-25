@@ -106,6 +106,13 @@ window.onload = function(){
       },
       type: 'area',
     },
+    axis: {
+      y: {
+        tick: {
+          format: d3.format('s')
+        }
+      }
+    },
     point: {
       show: false
     },

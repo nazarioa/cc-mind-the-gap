@@ -751,18 +751,34 @@ section.conclusion .view-more > span {
 .stats-percent dd{
   background-color: white;
   padding: 0;
-  margin: 0;
+  margin: 2%;
 }
 
-.fourups{
+.stats-percent h5{
+  color: #CA6D54;
+}
+
+.stats-percent .institution{
+  margin: -12% 0 6% 0;
+  padding: 0;
+  color: #6E6E70;
+  font-size: 80%;
+  text-align: center;
+}
+
+.stats-percent .institution .percent{
+  color: #CA6D54;
+}
+
+.mini-graphs{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0;
-  margin: 2%;
+  margin: 0;
 }
 
-.fourup{
+.mini-graph{
   order: 1;
   display: inline-block;
   width: 50%;
@@ -898,5 +914,6 @@ section.conclusion .view-more > span {
   min-height: 64px;
   width: 100%;
   height: 100%;
+  color: #6E6E70;
   background: url('../img/loading.gif') center center no-repeat;
 }

@@ -138,6 +138,13 @@ var slide_3_3_0_data = [
   }
 ];
 
+var mini_graph_padding = {
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+};
+
 window.onload = function(){
 
 
@@ -277,6 +284,9 @@ window.onload = function(){
         console.log('Test');
       }
     },
+    legend: {
+      hide: true
+    },
     size: {
       height: slideSize(.6)
     }
@@ -285,6 +295,7 @@ window.onload = function(){
   //fourups test
   var slide_3_3_1 = c3.generate({
     bindto: '#graph-3-3-1',
+    padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
@@ -301,6 +312,7 @@ window.onload = function(){
   //fourups test
   var slide_3_3_2 = c3.generate({
     bindto: '#graph-3-3-2',
+    padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
@@ -317,6 +329,7 @@ window.onload = function(){
   //fourups test
   var slide_3_3_3 = c3.generate({
     bindto: '#graph-3-3-3',
+    padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
@@ -333,6 +346,7 @@ window.onload = function(){
   //fourups test
   var slide_3_3_4 = c3.generate({
     bindto: '#graph-3-3-4',
+    padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,

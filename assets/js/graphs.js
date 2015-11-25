@@ -226,7 +226,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return Math.floor((value * 100)) + '% ' + "\n" + id ;
+          return Math.floor((ratio * 100)) + '% ' + "\n" + id ;
         }
       }
     },

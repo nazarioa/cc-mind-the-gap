@@ -637,7 +637,7 @@ section.conclusion .view-more > span {
     right: 0px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 0 3% 3% 3%;
 }
 
@@ -646,25 +646,30 @@ section.conclusion .view-more > span {
   order: 1;
 }
 
-
-#slide-5-3 .logo img{
+#slide-5-3 .logo img {
   width: 50%;
+}
+
+#slide-5-3 a.logo {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  color: rgb(182,89,30);
+}
+
+#slide-5-3 a.logo:hover {
+  color: #CA7243;
+}
+
+#slide-5-3 .opportunity-institute-logo img{
   margin-top: 1.5%;
 }
 
-#slide-5-3 .opportunity-institute-logo{
-  text-align: right;
-  font-family: 'Montserrat', sans-serif;
+#slide-5-3 a.opportunity-institute-logo{
+  font-size: 75%;
 }
 
-#slide-5-3 .opportunity-institute-logo a{
-  color: rgb(182,89,30);
-  font-size: 83%;
-}
-
-#slide-5-3 .opportunity-institute-logo a:hover{
-  color: #CA7243;
-}
 
 #slide-5-3 .council-members{
   display: flex;

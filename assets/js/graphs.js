@@ -241,4 +241,108 @@ window.onload = function(){
       }
     }
   });
+
+  // slide
+  var slide_3_3_0_data_keys = slide_3_3_0_data.map(function(x) {
+    return x;
+  });
+
+  var slide_3_3_0_data_TotalsValues = slide_3_3_0_data.map(function(x) {
+      var totals = x.UC + x.CSU + x.NonProfit + x.ForProfit;
+      return [ x.Ethicity, totals];
+  });
+
+  var fillData_3_3_0 = function(x){
+    console.log(x);
+  };
+
+  var slide_3_3_0 = c3.generate({
+    bindto: '#graph-3-3-0',
+    data: {
+      columns: slide_3_3_0_data_TotalsValues,
+      keys: slide_3_3_0_data_keys,
+      type: 'pie',
+      onclick: function(d) {
+        // console.log(d);
+
+        var leftPanelWidth = $('#slide-3-3 .left-panel').width();
+        $('#slide-3-3 .left-panel').animate(
+          {left: -leftPanelWidth},
+          300,
+          "swing",
+          fillData_3_3_0(d)
+        );
+      },
+      onmouseout: function(){
+        console.log('Test');
+      }
+    },
+    size: {
+      height: slideSize(.6)
+    }
+  });
+
+  //fourups test
+  var slide_3_3_1 = c3.generate({
+    bindto: '#graph-3-3-1',
+    data: {
+      columns: slide_3_3_0_data_TotalsValues,
+      keys: slide_3_3_0_data_keys,
+      type: 'pie',
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(.15)
+    }
+  });
+
+  //fourups test
+  var slide_3_3_2 = c3.generate({
+    bindto: '#graph-3-3-2',
+    data: {
+      columns: slide_3_3_0_data_TotalsValues,
+      keys: slide_3_3_0_data_keys,
+      type: 'pie',
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(.15)
+    }
+  });
+
+  //fourups test
+  var slide_3_3_3 = c3.generate({
+    bindto: '#graph-3-3-3',
+    data: {
+      columns: slide_3_3_0_data_TotalsValues,
+      keys: slide_3_3_0_data_keys,
+      type: 'pie',
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(.15)
+    }
+  });
+
+  //fourups test
+  var slide_3_3_4 = c3.generate({
+    bindto: '#graph-3-3-4',
+    data: {
+      columns: slide_3_3_0_data_TotalsValues,
+      keys: slide_3_3_0_data_keys,
+      type: 'pie',
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(.15)
+    }
+  });
 }

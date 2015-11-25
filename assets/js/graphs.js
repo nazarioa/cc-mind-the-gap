@@ -90,6 +90,12 @@ window.onload = function(){
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',
+    padding: {
+      top: 10,
+      right: 20,
+      bottom: 10,
+      left: 50,
+    },
     data: {
       url: 'assets/data/slide_2_0_0.csv',
       x: 'Year',

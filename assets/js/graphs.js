@@ -289,6 +289,13 @@ window.onload = function(){
     },
     size: {
       height: slideSize(.6)
+    },
+    pie: {
+      label: {
+        format: function (value, ratio, id) {
+          return Math.floor((ratio * 100)) + '% ' + "\n" + id ;
+        }
+      }
     }
   });
 

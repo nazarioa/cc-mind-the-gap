@@ -105,6 +105,7 @@ section > label.field-of-study{
 }
 
 .view-more{
+  display: block;
   width: 100%;
   padding-top: 1rem;
   font-size: 1rem;
@@ -117,15 +118,14 @@ section > label.field-of-study{
   bottom: 2rem;
 }
 
-.view-more::after{
+.view-more > span{
   /* Empty content, but required for pseudo element to display */
-  content: "";
-  display: block;
+  display: inline-block;
   margin: auto;
 
   /* Size of star within sprite */
-  width: 30px !important;
-  height: 40px  !important;
+  width: 30px;
+  height: 60px;
   margin-top: .8rem;
 
   /* Sprite */
@@ -363,7 +363,7 @@ section.bachelors-degrees .view-more{
   color: rgb(199,165,28);
 }
 
-section.bachelors-degrees .view-more::after{
+section.bachelors-degrees .view-more > span{
   background: url('../img/down_arrow_sprite.png') -90px 0px no-repeat;
 }
 
@@ -414,7 +414,6 @@ section.bachelors-degrees .view-more::after{
   left:0px;
   top: 5%;
   bottom: 0px;
-  background-color: rgba(255,255,0,.2);
 }
 
 #slide-3-3 .left-panel.hide{
@@ -427,7 +426,6 @@ section.bachelors-degrees .view-more::after{
   right:0px;
   top: 5%;
   bottom: 0px;
-  background-color: pink;
 }
 
 #slide-3-3 .right-panel.hide{
@@ -443,7 +441,7 @@ section.sub-baccalaureate .view-more{
   color: rgb(159,167,107);
 }
 
-section.sub-baccalaureate .view-more::after{
+section.sub-baccalaureate .view-more > span {
   background: url('../img/down_arrow_sprite.png') -120px 0px no-repeat;
 }
 
@@ -465,7 +463,7 @@ section.conclusion .view-more{
   color: rgb(182,89,30);
 }
 
-section.conclusion .view-more::after{
+section.conclusion .view-more > span {
   background: url('../img/down_arrow_sprite.png') -150px 0px no-repeat;
 }
 

@@ -192,8 +192,7 @@ section > label.field-of-study{
 
 /* COVER */
 #slide-0-0{
-  background-color: rgb(55,117,140);
-  background-image: url('../img/cover.png');
+  background-image: url('../img/cover.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

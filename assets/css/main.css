@@ -611,15 +611,32 @@ section.conclusion .view-more::after{
   margin-left: 3%;
 }
 
+
+#slide-5-3 .logos{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3% 3% 3%;
+}
+
+#slide-5-3 .logo{
+  display: inline-block;
+  order: 1;
+}
+
 #slide-5-3 .opportunity-institute-logo{
   text-align: right;
-  padding: 3% 5% 0 0;
   font-family: 'Montserrat', sans-serif;
 }
 
 #slide-5-3 .opportunity-institute-logo img{
-  width: 22%;
-  margin-top: 2%;
+  width: 50%;
+  margin-top: 1.5%;
 }
 
 #slide-5-3 .opportunity-institute-logo a{

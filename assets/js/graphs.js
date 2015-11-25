@@ -27,6 +27,16 @@ window.onload = function(){
     },
     size: {
       width: slideSize(.5)
+    },
+    tooltip: {
+      format: {
+        title: function (d) { return d; },
+        value: function (value, ratio, id) {
+          var format = (id === 'Cumulative Degrees' || id === 'Degrees Added Per Year' || id === 'Projected Degrees') ? d3.format(',') : false;
+          return format(value);
+        }
+        // value: d3.format(',') // apply this format to both y and y2
+      }
     }
   });
 

@@ -646,14 +646,15 @@ section.conclusion .view-more > span {
   order: 1;
 }
 
+
+#slide-5-3 .logo img{
+  width: 50%;
+  margin-top: 1.5%;
+}
+
 #slide-5-3 .opportunity-institute-logo{
   text-align: right;
   font-family: 'Montserrat', sans-serif;
-}
-
-#slide-5-3 .opportunity-institute-logo img{
-  width: 50%;
-  margin-top: 1.5%;
 }
 
 #slide-5-3 .opportunity-institute-logo a{

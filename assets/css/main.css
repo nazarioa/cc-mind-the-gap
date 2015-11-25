@@ -690,6 +690,119 @@ section.conclusion .view-more > span {
   margin-left: 0px;
 }
 
+/*== START: LEFT SIDE STATS ===*/
+.stats-general, .stats-percent, .stats-major{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  margin: 3px 2% 3px 2%;
+  font-size: 80%;
+}
+
+.stats-general{
+  color: white;
+  background-color: #CA6D54;
+  padding: 1%;
+}
+
+.stats-general > h3, .stats-general > h4{
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  font-size: 100%;
+}
+
+.stats-general > h4{
+  text-transform: capitalize;
+}
+
+.stats-general hr{
+    border-color: white;
+    border-width: 1px;
+    width: 90%;
+}
+
+.stats-percent dt, .stats-major dt {
+  color: white;
+  background-color: #CA6D54;
+  padding: 1%;
+  background-image: url('../img/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center right 2%;
+  background-size: 4%;
+}
+
+.stats-major table{
+  background-color: #F9F9F9;
+}
+
+.stats-major tbody tr:nth-child(2n+1){
+  background-color: #F2F2F3;
+}
+
+.stats-major .major{
+  text-transform: capitalize;
+}
+
+.stats-major dd{
+  padding: 0;
+  margin: 0;
+}
+
+.stats-percent dd{
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.fourups{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  margin: 2%;
+}
+
+.fourup{
+  order: 1;
+  display: inline-block;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+/*== END: LEFT SIDE STATS ===*/
+
+/*== START: DATA TABLE ==*/
+.stats-major table{
+  color: #878787;
+  font-size: 80%;
+}
+
+.stats-major td{
+  padding: 1%;
+}
+
+.stats-major thead th.rotate{
+  height: 100px;
+  white-space: nowrap;
+}
+
+.stats-major th.table-origin{
+  text-transform: none;
+  padding: 2%;
+  vertical-align: bottom;
+  text-align: left;
+}
+
+.stats-major thead th.rotate > div{
+  transform:
+  translate(-10px, 30px)
+  rotate(-90deg);
+  width: 25px;
+}
+
+/*== END: DATA TABLE ==*/
+
 
 /*
 -- Utilitiy classes --

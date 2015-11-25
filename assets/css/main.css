@@ -56,6 +56,16 @@ a:hover{
   text-decoration: underline;
 }
 
+img.bar-icon{
+  width: 40px;
+  height: 43px;
+}
+
+img.pie-icon{
+  width: 32px;
+  height: 34px;
+}
+
 section.slide{
   position: relative;
   width: 70vw;
@@ -702,6 +712,14 @@ section.conclusion .view-more > span {
   text-transform: uppercase;
   margin: 3px 2% 3px 2%;
   font-size: 80%;
+}
+
+.stats-percent img, .stats-major img{
+  height: 1.5em;
+  width: 1.5em;
+  vertical-align: bottom;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 
 .stats-general{

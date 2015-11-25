@@ -215,7 +215,14 @@ window.onload = function(){
     },
     size: {
       height: slideSize(.45)
-    }
+    },
+    pie: {
+      label: {
+        format: function (value, ratio, id) {
+          return Math.floor((value * 100)) + '% ' + "\n" + id ;
+        }
+      }
+    },
   });
 
   // slide

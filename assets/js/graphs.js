@@ -167,9 +167,10 @@ window.onload = function(){
             }
           );
 
+          $('#slide-3-3 .left-panel.data').css('left', -leftPanelWidth);
           $('#slide-3-3 .left-panel.data').animate(
             {left: 0},
-            500,
+            1500,
             "swing",
             function(){
               // fillData_3_3_0(d);

@@ -75,6 +75,12 @@ window.onload = function(){
 
   var slide_3_1_0 = c3.generate({
     bindto: '#graph-3-1-0',
+    padding: {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10,
+    },
     data: {
       columns: slide_3_1_0_data_result,
       keys: slide_3_1_0_data_keys,

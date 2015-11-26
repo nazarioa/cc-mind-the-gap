@@ -335,3 +335,9 @@ var slide_3_4_1_data = {
   "2012" : {"UC": 48899, "CSU": 76427, "NonProfit":34889, "ForProfit":12281},
   "2013" : {"UC": 48946, "CSU": 81803, "NonProfit":36378, "ForProfit":13465}
 }
+
+var slide_4_4_0_data = [
+  ["Non-Profit", 9.66],
+  ["Community College", 39.72],
+  ["For Profit", 54.35]
+];

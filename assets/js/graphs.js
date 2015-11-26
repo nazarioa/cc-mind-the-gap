@@ -16,6 +16,10 @@ window.onload = function(){
     return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
   };
 
+  var percentify = function(ratio){
+    return Math.floor((ratio * 100)) + '%';
+  }
+
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',
@@ -96,7 +100,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return Math.floor((ratio * 100)) + '% ' + "\n" + id ;
+          return percentify(ratio) + "\n " + id ;
         }
       }
     },
@@ -132,9 +136,7 @@ window.onload = function(){
   var fillData_3_3_0 = function(x){
     $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
     $('#slide-3-3 .stats-general .percentage > span').html(
-      function(){
-        return Math.floor((x.ratio * 100)) + '%';
-      }
+      percentify(x.ratio)
     );
     $('#slide-3-3 .stats-general .totals > span').html(
       function(){
@@ -204,7 +206,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return Math.floor((ratio * 100)) + '% ' + "\n" + id ;
+          return percentify(ratio) + "\n " + id ;
         }
       }
     }

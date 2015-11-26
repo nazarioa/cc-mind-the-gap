@@ -147,11 +147,10 @@ var mini_graph_padding = {
 
 window.onload = function(){
 
-
   var slideSize = function(percent){
     var slideWidth = $('#slide-0-0').width();
-    console.log();
-    return Math.floor(slideWidth * percent);
+    var slideHeight = $('#slide-0-0').height();
+    return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
   };
 
   // slide
@@ -184,7 +183,8 @@ window.onload = function(){
       show: false
     },
     size: {
-      width: slideSize(.5)
+      width: slideSize(.5).width,
+      height: slideSize(.6).height
     },
     tooltip: {
       format: {
@@ -221,7 +221,8 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.45)
+      width: slideSize(.45).width,
+      height: slideSize(.48).width
     },
     pie: {
       label: {
@@ -277,6 +278,12 @@ window.onload = function(){
 
   var slide_3_3_0 = c3.generate({
     bindto: '#graph-3-3-0',
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    },
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
@@ -322,7 +329,8 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.6)
+      width: slideSize(.5).width,
+      height: slideSize(1).height
     },
     pie: {
       label: {
@@ -346,7 +354,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15)
+      height: slideSize(.15).height
     }
   });
 
@@ -363,7 +371,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15)
+      height: slideSize(.15).height
     }
   });
 
@@ -380,7 +388,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15)
+      height: slideSize(.15).height
     }
   });
 
@@ -397,7 +405,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15)
+      height: slideSize(.15).height
     }
   });
 }

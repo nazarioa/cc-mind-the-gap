@@ -409,6 +409,10 @@ section.bachelors-degrees .view-more > span{
   font-family: 'Montserrat', sans-serif;
 }
 
+#graph-3-3-0{
+  text-align: center;
+}
+
 /* = */
 #slide-3-2 h3{
   margin-top: 0px;
@@ -434,7 +438,7 @@ section.bachelors-degrees .view-more > span{
   width: 60%;
   position: absolute;
   right:0px;
-  top: 5%;
+  top: 0px;
   bottom: 0px;
 }
 

@@ -321,3 +321,15 @@ var slide_3_4_0_data = [
   ["ForProfit", 39.72]
 ]
 
+var slide_3_4_1_data = {
+  "2004" : {"UC": 38558, "CSU": 65743, "NonProfit":29455, "ForProfit":8117},
+  "2005" : {"UC": 40851, "CSU": 66768, "NonProfit":30185, "ForProfit":8469},
+  "2006" : {"UC": 41639, "CSU": 69361, "NonProfit":30631, "ForProfit":8751},
+  "2007" : {"UC": 41587, "CSU": 71074, "NonProfit":31040, "ForProfit":9094},
+  "2008" : {"UC": 42416, "CSU": 73762, "NonProfit":31990, "ForProfit":10071},
+  "2009" : {"UC": 42664, "CSU": 74643, "NonProfit":31343, "ForProfit":11949},
+  "2010" : {"UC": 44856, "CSU": 75419, "NonProfit":31435, "ForProfit":12350},
+  "2011" : {"UC": 46935, "CSU": 77731, "NonProfit":32892, "ForProfit":12045},
+  "2012" : {"UC": 48899, "CSU": 76427, "NonProfit":34889, "ForProfit":12281},
+  "2013" : {"UC": 48946, "CSU": 81803, "NonProfit":36378, "ForProfit":13465}
+}

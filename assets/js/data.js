@@ -319,9 +319,9 @@ var dataYellowSlide = {
 var slide_3_4_0_data = [
   ["UC", 21.22],
   ["CSU", 19.63],
-  ["NonProfit", 19.03],
-  ["ForProfit", 39.72]
-]
+  ["Non-Profit", 19.03],
+  ["For Profit", 39.72]
+];
 
 var slide_3_4_1_data = {
   "2004" : {"UC": 38558, "CSU": 65743, "NonProfit":29455, "ForProfit":8117},

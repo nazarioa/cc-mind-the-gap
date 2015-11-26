@@ -279,4 +279,26 @@ window.onload = function(){
       height: slideSize(.15).height
     }
   });
+
+  // slide
+  var slide_3_4_0 = c3.generate({
+    bindto: '#graph-3-4-0',
+    data: {
+      columns: slide_3_4_0_data,
+      type: 'bar'
+    },
+    axis: {
+      rotated: true,
+      x: {
+        show: false
+      },
+      y: {
+        show: false
+      }
+    },
+    tooltip: {
+      show: false
+    }
+  });
+
 }

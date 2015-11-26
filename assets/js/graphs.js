@@ -261,7 +261,6 @@ window.onload = function(){
   });
 
   var fillData_3_3_0 = function(x){
-    console.log(x);
     $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
     $('#slide-3-3 .stats-general .percentage > span').html(
       function(){

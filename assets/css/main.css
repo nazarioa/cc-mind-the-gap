@@ -1010,11 +1010,25 @@ section.conclusion .view-more > span {
 }
 
 .loading{
-  display: inline-block;
+  display: block;
   min-width: 64px;
   min-height: 64px;
   width: 100%;
   height: 100%;
   color: #6E6E70;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60%;
+  text-align: center;
+  margin: auto auto;
+  padding: 3%;
+}
+
+.loading::after{
+  content: '';
+  padding-top: 3%;
+  display: block;
+  min-width: 32px;
+  min-height: 32px;
   background: url('../img/loading.gif') center center no-repeat;
+  background-size: 32px 32px;
 }

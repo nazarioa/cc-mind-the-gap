@@ -2,72 +2,96 @@ var slide_3_1_0_data = [
   {
     "Major": "Business & Marketing",
     "Percent": 0.17,
+    "Top Providers": "CSU, Nonprofits",
+    "Rank 2004": "1 (20%) -",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Social Sciences (various)",
     "Percent":  0.12,
+    "Top Providers": "UC, Nonprofits",
+    "Rank 2004": "2 (12%) -",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Psychology",
     "Percent":  0.08,
+    "Top Providers": "CSU, UC",
+    "Rank 2004": "3 (7%) down",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Visual & Performing Arts",
     "Percent":  0.07,
+    "Top Providers": "CSU, Nonprofits",
+    "Rank 2004": "3 (7%) down",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Biology",
     "Percent":  0.07,
+    "Top Providers": "UC, CSU",
+    "Rank 2004": "6 (5%) up",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Health Professions",
     "Percent":  0.07,
+    "Top Providers": "CSU, Nonprofits",
+    "Rank 2004": "11 (3%) up",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Engineering",
     "Percent":  0.06,
+    "Top Providers": "CSU, UC",
+    "Rank 2004": "7 (5%) -",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Communication",
     "Percent":  0.04,
+    "Top Providers": "CSU, Nonprofits",
+    "Rank 2004": "10 (4%) up",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "English",
     "Percent":  0.04,
+    "Top Providers": "CSU, UC",
+    "Rank 2004": "9 (4%) -",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Liberal Arts",
     "Percent":  0.03,
+    "Top Providers": "CSU, Nonprofits",
+    "Rank 2004": "4 (7%) down",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Computer & Information Sciences",
     "Percent":  0.02,
+    "Top Providers": "For-Profits, CSU",
+    "Rank 2004": "8 (5%) down",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Other",
     "Percent":  .23,
+    "Top Providers": "",
+    "Rank 2004": "",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   }

@@ -1,7 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);
+/*@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);*/
 @font-face {
     font-family: Nilland;
     src: url('../fonts/nilland/Nilland.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/montserrat/montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/ebgaramond/EBGaramond-Regular.ttf');
 }
 
 /*

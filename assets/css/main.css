@@ -773,6 +773,15 @@ section.conclusion .view-more > span {
   background-size: 4%;
 }
 
+.stats-percent dt.inactive, .stats-major dt.inactive {
+  background-image: url('../img/minus.svg');
+}
+
+.stats-percent dt.inactive:hover, .stats-major dt.inactive:hover {
+  background-color: #9c5542;
+  cursor: pointer;
+}
+
 .stats-percent h5{
   text-transform: capitalize;
 }

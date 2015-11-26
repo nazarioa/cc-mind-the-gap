@@ -1,3 +1,5 @@
+"use strict";
+
 var slide_3_1_0_data = [
   {
     "Major": "Business & Marketing",

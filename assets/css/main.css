@@ -388,6 +388,37 @@ section.bachelors-degrees .view-more > span{
   margin-bottom: 0;
 }
 
+#slide-3-1 .highlight{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#slide-3-1 .take-a-look{
+  background-color: rgb(199,165,28);
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 160%;
+  padding: 3% 3% 3% 12%;
+  color: white;
+  background-image: url('../img/plus_icon.svg');
+  background-repeat: no-repeat;
+  background-size: 3%;
+  background-position: left 8% top 55%;
+}
+
+#slide-3-1 .major-example{
+  padding-left: 3%;
+  margin-left: 3%;
+  border-left: solid 1px white;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 60%;
+}
+
+#slide-3-1 .major-example label{
+  display: block;
+}
+
 #container-graph-3-1-0{
   position: static;
   float: right;

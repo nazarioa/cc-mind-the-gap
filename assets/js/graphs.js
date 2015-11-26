@@ -70,11 +70,11 @@ window.onload = function(){
   });
 
   var slide_3_1_0_data_result = slide_3_1_0_data.map(function(x) {
-      return [ x.Major, x.Percent];
+    return [ x.Major, x.Percent];
   });
 
   var slide_3_1_0_data_colors = slide_3_1_0_data.map(function(x) {
-      return { "Active": x.ColorActive, "Inactive": x.ColorInactive };
+    return { "Active": x.ColorActive, "Inactive": x.ColorInactive };
   });
 
   var slide_3_1_0 = c3.generate({
@@ -129,8 +129,8 @@ window.onload = function(){
   });
 
   var slide_3_3_0_data_TotalsValues = slide_3_3_0_data.map(function(x) {
-      var totals = x.UC + x.CSU + x.NonProfit + x.ForProfit;
-      return [ x.Ethicity, totals];
+    var totals = x.UC + x.CSU + x.NonProfit + x.ForProfit;
+    return [ x.Ethicity, totals];
   });
 
   var fillData_3_3_0 = function(x){
@@ -193,7 +193,7 @@ window.onload = function(){
 
       },
       onmouseout: function(){
-      // alert('Test');
+        // alert('Test');
       }
     },
     legend: {

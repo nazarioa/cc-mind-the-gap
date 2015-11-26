@@ -138,11 +138,34 @@ window.onload = function(){
     );
     $('#slide-3-3 .stats-general .totals > span').html(
       function(){
-        // return x.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         return x.value.toLocaleString();
       }
     );
+
+//TODO
+/*
+    // dataYellowSlide
+    for (var ethnicity in dataYellowSlide) {
+      if (dataYellowSlide.hasOwnProperty(ethnicity)) {
+        // console.log(ethnicity);
+
+        // var row = '<tr><td class="major">' + ethnicity + '</td>';
+
+        for (var majorScore in ethnicity) {
+          if (ethnicity.hasOwnProperty(majorScore)) {
+            // console.log(ethnicity);
+            // console.log(majorScore);
+            // row = row + '<td>' + majorScore + '</td>';
+          }
+        }
+
+        // row = row + '</tr>';
+        // $('#slide-3-3-table tbody').append(row);
+
+      }
+    }
   };
+  */
 
   var slide_3_3_0 = c3.generate({
     bindto: '#graph-3-3-0',
@@ -210,29 +233,80 @@ window.onload = function(){
     }
   });
 
-  //fourups test
+
+  //* Mini Graphs *//
+
+  // 'Y' values for Mini Pie Graphs
+  // UC
+  var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
+    if(x.UC){
+      return [ x.Ethicity, x.UC];
+    }
+  });
+
+  // CSU
+  var slide_3_3_0_data_Values_CSU = slide_3_3_0_data.map(function(x) {
+    if(x.CSU){
+      return [ x.Ethicity, x.CSU];
+    }
+  });
+
+  // FP
+  var slide_3_3_0_data_Values_ForProfit = slide_3_3_0_data.map(function(x) {
+    if(x.ForProfit){
+      return [ x.Ethicity, x.ForProfit];
+    }
+  });
+
+  // NFP
+  var slide_3_3_0_data_Values_NonProfit = slide_3_3_0_data.map(function(x) {
+    if(x.NonProfit){
+      return [ x.Ethicity, x.NonProfit];
+    }
+  });
+
+
   var slide_3_3_1 = c3.generate({
-    bindto: '#graph-3-3-1',
+    bindto: '#graph-3-3-1-UC',
     padding: mini_graph_padding,
     data: {
-      columns: slide_3_3_0_data_TotalsValues,
+      columns: slide_3_3_0_data_Values_UC,
       keys: slide_3_3_0_data_keys,
-      type: 'pie',
+      type: 'pie'/*,
+      color: function (color, d) {
+        console.log(slide_3_3_0_data_Values_UC);
+        console.log(d);
+        if(){
+
+        }
+        //d will be 'id' when called for legends
+        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+        return '#8B8B8D';
+      }
+      */
     },
     legend: {
       hide: true
     },
     size: {
       height: slideSize(.15).height
+    },
+    tooltip: {
+        show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
     }
   });
 
   //fourups test
   var slide_3_3_2 = c3.generate({
-    bindto: '#graph-3-3-2',
+    bindto: '#graph-3-3-2-CSU',
     padding: mini_graph_padding,
     data: {
-      columns: slide_3_3_0_data_TotalsValues,
+      columns: slide_3_3_0_data_Values_ForProfit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
     },
@@ -241,15 +315,23 @@ window.onload = function(){
     },
     size: {
       height: slideSize(.15).height
+    },
+    tooltip: {
+        show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
     }
   });
 
   //fourups test
   var slide_3_3_3 = c3.generate({
-    bindto: '#graph-3-3-3',
+    bindto: '#graph-3-3-3-FP',
     padding: mini_graph_padding,
     data: {
-      columns: slide_3_3_0_data_TotalsValues,
+      columns: slide_3_3_0_data_Values_NonProfit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
     },
@@ -258,12 +340,20 @@ window.onload = function(){
     },
     size: {
       height: slideSize(.15).height
+    },
+    tooltip: {
+        show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
     }
   });
 
   //fourups test
   var slide_3_3_4 = c3.generate({
-    bindto: '#graph-3-3-4',
+    bindto: '#graph-3-3-4-NFP',
     padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_TotalsValues,
@@ -275,6 +365,14 @@ window.onload = function(){
     },
     size: {
       height: slideSize(.15).height
+    },
+    tooltip: {
+        show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
     }
   });
 }

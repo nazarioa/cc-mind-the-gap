@@ -301,4 +301,26 @@ window.onload = function(){
     }
   });
 
+
+  // slide
+  var slide_4_4_0 = c3.generate({
+    bindto: '#graph-4-4-0',
+    data: {
+      columns: slide_4_4_0_data,
+      type: 'bar'
+    },
+    axis: {
+      rotated: true,
+      x: {
+        show: false
+      },
+      y: {
+        show: false
+      }
+    },
+    tooltip: {
+      show: false
+    }
+  });
+
 }

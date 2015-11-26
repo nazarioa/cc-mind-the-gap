@@ -419,7 +419,11 @@ section.bachelors-degrees .view-more > span{
 }
 
 /* = */
-#slide-3-3 h3{
+#slide-3-3 {
+  background-image: url('../img/grad_silhouette.png');
+  background-position: right 5% top 10%;
+  background-repeat: no-repeat;
+  background-size: 10%;
 }
 
 #slide-3-3 .left-panel{

@@ -313,3 +313,11 @@ var dataYellowSlide = {
         "Parks, Recreation, Leisure & Fitness Studies": 17
     }
 }
+
+var slide_3_4_0_data = [
+  ["UC", 21.22],
+  ["CSU", 19.63],
+  ["NonProfit", 19.03],
+  ["ForProfit", 39.72]
+]
+

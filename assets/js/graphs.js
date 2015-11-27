@@ -296,6 +296,10 @@ window.onload = function(){
         show: false
       }
     },
+    size: {
+      width: slideSize(.5).width,
+      height: slideSize(.17).height
+    },
     tooltip: {
       show: false
     }
@@ -317,6 +321,10 @@ window.onload = function(){
       y: {
         show: false
       }
+    },
+    size: {
+      width: slideSize(.5).width,
+      height: slideSize(.15).height
     },
     tooltip: {
       show: false

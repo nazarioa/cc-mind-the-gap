@@ -492,6 +492,24 @@ section.bachelors-degrees .view-more > span{
   text-align: center;
 }
 
+/* = */
+
+#container-graphs-3-4{
+    width: 57%;
+}
+
+#container-graphs-3-4 h4{
+  font-size: 130%;
+}
+
+#container-graphs-3-4 h5{
+  text-align: left;
+  color: #6E6E70;
+  margin-top: 3%;
+}
+
+
+
 /* SUB-BACCALAUREATE DEGREES (GREEN) */
 section.sub-baccalaureate > h3, section.sub-baccalaureate .left-panel h3{
   color: rgb(159,167,107);
@@ -505,8 +523,26 @@ section.sub-baccalaureate .view-more > span {
   background: url('../img/down_arrow_sprite.png') -120px 0px no-repeat;
 }
 
+/* = */
+
 #slide-4-0 h3{
   font-size: 500%;
+}
+
+/* = */
+
+#container-graphs-4-4{
+    width: 57%;
+}
+
+#container-graphs-4-4 h4{
+  font-size: 130%;
+}
+
+#container-graphs-4-4 h5{
+  text-align: left;
+  color: #6E6E70;
+  margin-top: 3%;
 }
 
 

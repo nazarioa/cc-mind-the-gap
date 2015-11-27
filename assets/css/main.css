@@ -569,11 +569,30 @@ section.conclusion .view-more > span {
   font-size: 200%;
   float: left;
   height: inherit;
-  padding-right: 5%;
-  background-image: url('../img/plus.svg');
+  padding-right: 10%;
   background-repeat: no-repeat;
-  background-position: center right 2%;
-  background-size: 2%;
+  background-position: center;
+  background-size: 36px 38px;
+}
+
+#container-recomendations dt.inactive span.step{
+  background-size: 25px 27px;
+}
+
+#container-recomendations dt.org span.step{
+  background-image: url('../img/org_chart_icon.png');
+}
+
+#container-recomendations dt.currency span.step{
+  background-image: url('../img/currency_icon.png');
+}
+
+#container-recomendations dt.california span.step{
+  background-image: url('../img/california_icon.png');
+}
+
+#container-recomendations dt.clock span.step{
+  background-image: url('../img/clock_icon.png');
 }
 
 #container-recomendations dt span.subheading{

@@ -171,6 +171,32 @@ section > label.field-of-study{
   background-image: url('../img/state_grad_blue.png');
 }
 
+.take-a-look{
+  background-color: #9FA76B;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 160%;
+  padding: 3% 3% 3% 12%;
+  color: white;
+  background-image: url('../img/plus_icon.svg');
+  background-repeat: no-repeat;
+  background-size: 3%;
+  background-position: left 8% top 55%;
+}
+
+.take-a-look .major-example{
+  padding-left: 3%;
+  margin-left: 3%;
+  border-left: solid 1px white;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 60%;
+}
+
+.take-a-look .major-example label{
+  display: block;
+}
+
 /* == GENERAL CHART SPECIFIC STYLING == */
 .c3-chart{
  font-family: 'Montserrat', sans-serif;
@@ -405,28 +431,6 @@ section.bachelors-degrees .view-more > span{
 
 #slide-3-1 .take-a-look{
   background-color: rgb(199,165,28);
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 160%;
-  padding: 3% 3% 3% 12%;
-  color: white;
-  background-image: url('../img/plus_icon.svg');
-  background-repeat: no-repeat;
-  background-size: 3%;
-  background-position: left 8% top 55%;
-}
-
-#slide-3-1 .major-example{
-  padding-left: 3%;
-  margin-left: 3%;
-  border-left: solid 1px white;
-  display: inline-block;
-  text-transform: capitalize;
-  font-size: 60%;
-}
-
-#slide-3-1 .major-example label{
-  display: block;
 }
 
 #container-graph-3-1-0{
@@ -527,6 +531,11 @@ section.sub-baccalaureate .view-more > span {
 
 #slide-4-0 h3{
   font-size: 500%;
+}
+
+/* = */
+#slide-4-1 .take-a-look{
+  background-color: #9FA76B;
 }
 
 /* = */

@@ -96,7 +96,6 @@ window.onload = function(){
           $('#container-graph-3-1-0 .take-a-look.instruction').html('Breakdown for other not available.');
           // Clicked on other
           setTimeout(function () {
-            console.log('alert');
             $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
           }, 3000);
 

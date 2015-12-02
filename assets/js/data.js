@@ -3,7 +3,7 @@ var slide_3_1_0_data = [
     "Major": "Business & Marketing",
     "Percent": 0.17,
     "TopProviders": "CSU, Nonprofits",
-    "Rank2004": "1 (20%) -",
+    "Rank2004": "1 (20%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -11,7 +11,7 @@ var slide_3_1_0_data = [
     "Major": "Social Sciences (various)",
     "Percent":  0.12,
     "TopProviders": "UC, Nonprofits",
-    "Rank2004": "2 (12%) -",
+    "Rank2004": "2 (12%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -19,7 +19,7 @@ var slide_3_1_0_data = [
     "Major": "Psychology",
     "Percent":  0.08,
     "TopProviders": "CSU, UC",
-    "Rank2004": "3 (7%) down",
+    "Rank2004": "3 (7%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -27,7 +27,7 @@ var slide_3_1_0_data = [
     "Major": "Visual & Performing Arts",
     "Percent":  0.07,
     "TopProviders": "CSU, Nonprofits",
-    "Rank2004": "3 (7%) down",
+    "Rank2004": "3 (7%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -35,7 +35,7 @@ var slide_3_1_0_data = [
     "Major": "Biology",
     "Percent":  0.07,
     "TopProviders": "UC, CSU",
-    "Rank2004": "6 (5%) up",
+    "Rank2004": "6 (5%) Increased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -43,7 +43,7 @@ var slide_3_1_0_data = [
     "Major": "Health Professions",
     "Percent":  0.07,
     "TopProviders": "CSU, Nonprofits",
-    "Rank2004": "11 (3%) up",
+    "Rank2004": "11 (3%) Increased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -51,7 +51,7 @@ var slide_3_1_0_data = [
     "Major": "Engineering",
     "Percent":  0.06,
     "TopProviders": "CSU, UC",
-    "Rank2004": "7 (5%) -",
+    "Rank2004": "7 (5%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -59,7 +59,7 @@ var slide_3_1_0_data = [
     "Major": "Communication",
     "Percent":  0.04,
     "TopProviders": "CSU, Nonprofits",
-    "Rank2004": "10 (4%) up",
+    "Rank2004": "10 (4%) Increased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -67,7 +67,7 @@ var slide_3_1_0_data = [
     "Major": "English",
     "Percent":  0.04,
     "TopProviders": "CSU, UC",
-    "Rank2004": "9 (4%) -",
+    "Rank2004": "9 (4%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -75,7 +75,7 @@ var slide_3_1_0_data = [
     "Major": "Liberal Arts",
     "Percent":  0.03,
     "TopProviders": "CSU, Nonprofits",
-    "Rank2004": "4 (7%) down",
+    "Rank2004": "4 (7%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
@@ -83,7 +83,7 @@ var slide_3_1_0_data = [
     "Major": "Computer & Information Sciences",
     "Percent":  0.02,
     "TopProviders": "For-Profits, CSU",
-    "Rank2004": "8 (5%) down",
+    "Rank2004": "8 (5%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },

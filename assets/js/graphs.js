@@ -127,20 +127,6 @@ window.onload = function(){
           setTimeout(function () {
             $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
           }, 3000);
-
-
-          // deprecated start
-          // $('#container-graph-3-1-0 .take-a-look.instruction').removeClass('hidden');
-          // deprecated end
-        } else {
-          // Clicked on a category
-          // Them navigate to slide 3-2 with name x.id
-
-          // deprecated start
-          // $('#container-graph-3-1-0 .take-a-look.instruction').addClass('hidden');
-          // $('#container-graph-3-1-0 .take-a-look').removeClass('hidden');
-          // deprecated end
-
         }
       }
     },

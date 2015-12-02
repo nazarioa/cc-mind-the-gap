@@ -460,6 +460,54 @@ section.bachelors-degrees .view-more > span{
   font-family: 'Montserrat', sans-serif;
 }
 
+#graph-3-1-0 .tooltip{
+  min-width: 100%;
+  background-color: rgba(53, 118, 138, .9);
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color: white;
+  padding: 6%;
+}
+
+#graph-3-1-0 .tooltip hr{
+  border-color: white;
+  width: 100%;
+  border-width: 1px;
+}
+
+#graph-3-1-0 .tooltip ul{
+  margin: 0;
+  padding: 0;
+}
+
+#graph-3-1-0 .tooltip li{
+  display: block;
+  min-height: 45px;
+  font-size: 70%;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  color: white;
+  margin: 3%;
+  padding: 1% 0 1% 40px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#graph-3-1-0 .tooltip li.percent{
+  background-image: url('../img/ribbon_icon.png');
+  background-size: 24px 26px;
+}
+
+#graph-3-1-0 .tooltip li.rank{
+  background-image: url('../img/bargraph_icon.png');
+  background-size: 24px 26px;
+}
+
+#graph-3-1-0 .tooltip li.top-providers{
+  background-image: url('../img/building_icon.png');
+  background-size: 24px 26px;
+}
+
 /* = */
 #slide-3-2 h3{
   margin-top: 0px;

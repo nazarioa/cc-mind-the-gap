@@ -16,6 +16,10 @@ window.onload = function(){
     return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
   };
 
+  var percentify = function(ratio){
+    return Math.floor((ratio * 100)) + '%';
+  }
+
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',
@@ -66,11 +70,40 @@ window.onload = function(){
   });
 
   var slide_3_1_0_data_result = slide_3_1_0_data.map(function(x) {
-      return [ x.Major, x.Percent];
+    return [ x.Major, x.Percent];
   });
 
+  function slide_3_1_0_data_getMeta(key, attribute){
+    for (var i = 0; i < slide_3_1_0_data.length; i++) {
+      var thisObject = slide_3_1_0_data[i];
+
+      if ( thisObject.Major !== undefined && thisObject.Major === key ) {
+        switch (attribute) {
+          case 'Rank2004':
+          return thisObject.Rank2004;
+          break;
+
+          case 'TopProviders':
+          return thisObject.TopProviders;
+          break;
+
+          case 'ColorInactive':
+          return thisObject.ColorInactive;
+          break;
+
+          case 'ColorActive':
+          return thisObject.ColorActive;
+          break;
+
+          default:
+          return undefined;
+        }
+      }
+    }
+  }
+
   var slide_3_1_0_data_colors = slide_3_1_0_data.map(function(x) {
-      return { "Active": x.ColorActive, "Inactive": x.ColorInactive };
+    return { "Active": x.ColorActive, "Inactive": x.ColorInactive };
   });
 
   var slide_3_1_0 = c3.generate({
@@ -85,6 +118,17 @@ window.onload = function(){
       columns: slide_3_1_0_data_result,
       keys: slide_3_1_0_data_keys,
       type: 'pie',
+      onclick: function(x){
+
+        if( "Other" === x.id ){
+          var oldText = $('#container-graph-3-1-0 .take-a-look.instruction').html();
+          $('#container-graph-3-1-0 .take-a-look.instruction').html('Breakdown for other not available.');
+          // Clicked on other
+          setTimeout(function () {
+            $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
+          }, 3000);
+        }
+      }
     },
     legend: {
       hide: true
@@ -96,10 +140,17 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return Math.floor((ratio * 100)) + '% ' + "\n" + id ;
+          return percentify(ratio) + "\n " + id ;
         }
       }
     },
+    tooltip: {
+      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+        if(d[0].id !== undefined && d[0].id !== 'Other'){
+          return '<div class="tooltip"><div class="major">The Stats <span>' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all BAs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + slide_3_1_0_data_getMeta(d[0].id, 'Rank2004') + '</span></li><li class="top-providers">Top Providers<br /><span>' + slide_3_1_0_data_getMeta(d[0].id, 'TopProviders') + '</span></li></ul></div>';
+        }
+      }
+    }
   });
 
   // slide
@@ -125,16 +176,14 @@ window.onload = function(){
   });
 
   var slide_3_3_0_data_TotalsValues = slide_3_3_0_data.map(function(x) {
-      var totals = x.UC + x.CSU + x.NonProfit + x.ForProfit;
-      return [ x.Ethicity, totals];
+    var totals = x.UC + x.CSU + x.NonProfit + x.ForProfit;
+    return [ x.Ethicity, totals];
   });
 
   var fillData_3_3_0 = function(x){
     $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
     $('#slide-3-3 .stats-general .percentage > span').html(
-      function(){
-        return Math.floor((x.ratio * 100)) + '%';
-      }
+      percentify(x.ratio)
     );
     $('#slide-3-3 .stats-general .totals > span').html(
       function(){
@@ -214,7 +263,7 @@ window.onload = function(){
 
       },
       onmouseout: function(){
-      // alert('Test');
+        // alert('Test');
       }
     },
     legend: {
@@ -227,7 +276,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return Math.floor((ratio * 100)) + '% ' + "\n" + id ;
+          return percentify(ratio) + "\n " + id ;
         }
       }
     }
@@ -375,4 +424,56 @@ window.onload = function(){
       }
     }
   });
+
+  // slide
+  var slide_3_4_0 = c3.generate({
+    bindto: '#graph-3-4-0',
+    data: {
+      columns: slide_3_4_0_data,
+      type: 'bar'
+    },
+    axis: {
+      rotated: true,
+      x: {
+        show: false
+      },
+      y: {
+        show: false
+      }
+    },
+    size: {
+      width: slideSize(.5).width,
+      height: slideSize(.17).height
+    },
+    tooltip: {
+      show: false
+    }
+  });
+
+
+  // slide
+  var slide_4_4_0 = c3.generate({
+    bindto: '#graph-4-4-0',
+    data: {
+      columns: slide_4_4_0_data,
+      type: 'bar'
+    },
+    axis: {
+      rotated: true,
+      x: {
+        show: false
+      },
+      y: {
+        show: false
+      }
+    },
+    size: {
+      width: slideSize(.5).width,
+      height: slideSize(.15).height
+    },
+    tooltip: {
+      show: false
+    }
+  });
+
 }

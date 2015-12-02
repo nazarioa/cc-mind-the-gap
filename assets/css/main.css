@@ -1,7 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);
+/*@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|EB+Garamond);*/
 @font-face {
     font-family: Nilland;
     src: url('../fonts/nilland/Nilland.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/montserrat/montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/ebgaramond/EBGaramond-Regular.ttf');
 }
 
 /*
@@ -159,6 +169,37 @@ section > label.field-of-study{
 
 .state-grad.blue{
   background-image: url('../img/state_grad_blue.png');
+}
+
+.take-a-look.instruction{
+  font-size: 100%;
+}
+
+.take-a-look{
+  text-align: left;
+  background-color: #9FA76B;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 160%;
+  padding: 3% 3% 3% 12%;
+  color: white;
+  background-image: url('../img/plus_icon.svg');
+  background-repeat: no-repeat;
+  background-size: 3%;
+  background-position: left 8% top 55%;
+}
+
+.take-a-look .major-example{
+  padding-left: 3%;
+  margin-left: 3%;
+  border-left: solid 1px white;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 60%;
+}
+
+.take-a-look .major-example label{
+  display: block;
 }
 
 /* == GENERAL CHART SPECIFIC STYLING == */
@@ -395,28 +436,6 @@ section.bachelors-degrees .view-more > span{
 
 #slide-3-1 .take-a-look{
   background-color: rgb(199,165,28);
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 160%;
-  padding: 3% 3% 3% 12%;
-  color: white;
-  background-image: url('../img/plus_icon.svg');
-  background-repeat: no-repeat;
-  background-size: 3%;
-  background-position: left 8% top 55%;
-}
-
-#slide-3-1 .major-example{
-  padding-left: 3%;
-  margin-left: 3%;
-  border-left: solid 1px white;
-  display: inline-block;
-  text-transform: capitalize;
-  font-size: 60%;
-}
-
-#slide-3-1 .major-example label{
-  display: block;
 }
 
 #container-graph-3-1-0{
@@ -439,6 +458,54 @@ section.bachelors-degrees .view-more > span{
   text-transform: uppercase;
   text-anchor: end;
   font-family: 'Montserrat', sans-serif;
+}
+
+#graph-3-1-0 .tooltip{
+  min-width: 100%;
+  background-color: rgba(53, 118, 138, .9);
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color: white;
+  padding: 6%;
+}
+
+#graph-3-1-0 .tooltip hr{
+  border-color: white;
+  width: 100%;
+  border-width: 1px;
+}
+
+#graph-3-1-0 .tooltip ul{
+  margin: 0;
+  padding: 0;
+}
+
+#graph-3-1-0 .tooltip li{
+  display: block;
+  min-height: 45px;
+  font-size: 70%;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  color: white;
+  margin: 3%;
+  padding: 1% 0 1% 40px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#graph-3-1-0 .tooltip li.percent{
+  background-image: url('../img/ribbon_icon.png');
+  background-size: 24px 26px;
+}
+
+#graph-3-1-0 .tooltip li.rank{
+  background-image: url('../img/bargraph_icon.png');
+  background-size: 24px 26px;
+}
+
+#graph-3-1-0 .tooltip li.top-providers{
+  background-image: url('../img/building_icon.png');
+  background-size: 24px 26px;
 }
 
 /* = */
@@ -482,6 +549,24 @@ section.bachelors-degrees .view-more > span{
   text-align: center;
 }
 
+/* = */
+
+#container-graphs-3-4{
+    width: 57%;
+}
+
+#container-graphs-3-4 h4{
+  font-size: 130%;
+}
+
+#container-graphs-3-4 h5{
+  text-align: left;
+  color: #6E6E70;
+  margin-top: 3%;
+}
+
+
+
 /* SUB-BACCALAUREATE DEGREES (GREEN) */
 section.sub-baccalaureate > h3, section.sub-baccalaureate .left-panel h3{
   color: rgb(159,167,107);
@@ -495,8 +580,31 @@ section.sub-baccalaureate .view-more > span {
   background: url('../img/down_arrow_sprite.png') -120px 0px no-repeat;
 }
 
+/* = */
+
 #slide-4-0 h3{
   font-size: 500%;
+}
+
+/* = */
+#slide-4-1 .take-a-look{
+  background-color: #9FA76B;
+}
+
+/* = */
+
+#container-graphs-4-4{
+    width: 57%;
+}
+
+#container-graphs-4-4 h4{
+  font-size: 130%;
+}
+
+#container-graphs-4-4 h5{
+  text-align: left;
+  color: #6E6E70;
+  margin-top: 3%;
 }
 
 
@@ -559,11 +667,30 @@ section.conclusion .view-more > span {
   font-size: 200%;
   float: left;
   height: inherit;
-  padding-right: 5%;
-  background-image: url('../img/plus.svg');
+  padding-right: 10%;
   background-repeat: no-repeat;
-  background-position: center right 2%;
-  background-size: 2%;
+  background-position: center;
+  background-size: 36px 38px;
+}
+
+#container-recomendations dt.inactive span.step{
+  background-size: 25px 27px;
+}
+
+#container-recomendations dt.org span.step{
+  background-image: url('../img/org_chart_icon.png');
+}
+
+#container-recomendations dt.currency span.step{
+  background-image: url('../img/currency_icon.png');
+}
+
+#container-recomendations dt.california span.step{
+  background-image: url('../img/california_icon.png');
+}
+
+#container-recomendations dt.clock span.step{
+  background-image: url('../img/clock_icon.png');
 }
 
 #container-recomendations dt span.subheading{
@@ -1000,11 +1127,34 @@ section.conclusion .view-more > span {
 }
 
 .loading{
-  display: inline-block;
+  display: block;
   min-width: 64px;
   min-height: 64px;
   width: 100%;
   height: 100%;
   color: #6E6E70;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60%;
+  text-align: center;
+  margin: auto auto;
+  padding: 3%;
+}
+
+.loading::after{
+  content: '';
+  padding-top: 3%;
+  display: block;
+  min-width: 32px;
+  min-height: 32px;
   background: url('../img/loading.gif') center center no-repeat;
+  background-size: 32px 32px;
+}
+
+@media only screen and (max-width: 710px) {
+  /* landscape */
+  section.slide{
+    position: relative;
+    width: 100vw; /*100*/
+    height: 75vw; /* 75*/
+  }
 }

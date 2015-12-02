@@ -1,73 +1,99 @@
+"use strict";
+
 var slide_3_1_0_data = [
   {
     "Major": "Business & Marketing",
     "Percent": 0.17,
+    "TopProviders": "CSU, Nonprofits",
+    "Rank2004": "1 (20%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Social Sciences (various)",
     "Percent":  0.12,
+    "TopProviders": "UC, Nonprofits",
+    "Rank2004": "2 (12%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Psychology",
     "Percent":  0.08,
+    "TopProviders": "CSU, UC",
+    "Rank2004": "3 (7%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Visual & Performing Arts",
     "Percent":  0.07,
+    "TopProviders": "CSU, Nonprofits",
+    "Rank2004": "3 (7%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Biology",
     "Percent":  0.07,
+    "TopProviders": "UC, CSU",
+    "Rank2004": "6 (5%) Increased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Health Professions",
     "Percent":  0.07,
+    "TopProviders": "CSU, Nonprofits",
+    "Rank2004": "11 (3%) Increased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Engineering",
     "Percent":  0.06,
+    "TopProviders": "CSU, UC",
+    "Rank2004": "7 (5%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Communication",
     "Percent":  0.04,
+    "TopProviders": "CSU, Nonprofits",
+    "Rank2004": "10 (4%) Increased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "English",
     "Percent":  0.04,
+    "TopProviders": "CSU, UC",
+    "Rank2004": "9 (4%) No Change",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Liberal Arts",
     "Percent":  0.03,
+    "TopProviders": "CSU, Nonprofits",
+    "Rank2004": "4 (7%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Computer & Information Sciences",
     "Percent":  0.02,
+    "TopProviders": "For-Profits, CSU",
+    "Rank2004": "8 (5%) Decreased",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   },
   {
     "Major": "Other",
     "Percent":  .23,
+    "TopProviders": "",
+    "Rank2004": "",
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   }
@@ -289,3 +315,29 @@ var dataYellowSlide = {
         "Parks, Recreation, Leisure & Fitness Studies": 17
     }
 }
+
+var slide_3_4_0_data = [
+  ["UC", 21.22],
+  ["CSU", 19.63],
+  ["Non-Profit", 19.03],
+  ["For Profit", 39.72]
+];
+
+var slide_3_4_1_data = {
+  "2004" : {"UC": 38558, "CSU": 65743, "NonProfit":29455, "ForProfit":8117},
+  "2005" : {"UC": 40851, "CSU": 66768, "NonProfit":30185, "ForProfit":8469},
+  "2006" : {"UC": 41639, "CSU": 69361, "NonProfit":30631, "ForProfit":8751},
+  "2007" : {"UC": 41587, "CSU": 71074, "NonProfit":31040, "ForProfit":9094},
+  "2008" : {"UC": 42416, "CSU": 73762, "NonProfit":31990, "ForProfit":10071},
+  "2009" : {"UC": 42664, "CSU": 74643, "NonProfit":31343, "ForProfit":11949},
+  "2010" : {"UC": 44856, "CSU": 75419, "NonProfit":31435, "ForProfit":12350},
+  "2011" : {"UC": 46935, "CSU": 77731, "NonProfit":32892, "ForProfit":12045},
+  "2012" : {"UC": 48899, "CSU": 76427, "NonProfit":34889, "ForProfit":12281},
+  "2013" : {"UC": 48946, "CSU": 81803, "NonProfit":36378, "ForProfit":13465}
+}
+
+var slide_4_4_0_data = [
+  ["Non-Profit", 9.66],
+  ["Community College", 39.72],
+  ["For Profit", 54.35]
+];

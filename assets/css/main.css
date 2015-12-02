@@ -1101,3 +1101,12 @@ section.conclusion .view-more > span {
   background: url('../img/loading.gif') center center no-repeat;
   background-size: 32px 32px;
 }
+
+@media only screen and (max-width: 710px) {
+  /* landscape */
+  section.slide{
+    position: relative;
+    width: 100vw; /*100*/
+    height: 75vw; /* 75*/
+  }
+}

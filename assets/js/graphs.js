@@ -89,6 +89,32 @@ window.onload = function(){
       columns: slide_3_1_0_data_result,
       keys: slide_3_1_0_data_keys,
       type: 'pie',
+      onclick: function(x){
+
+        if( "Other" === x.id ){
+          var oldText = $('#container-graph-3-1-0 .take-a-look.instruction').html();
+          $('#container-graph-3-1-0 .take-a-look.instruction').html('Breakdown for other not available.');
+          // Clicked on other
+          setTimeout(function () {
+            console.log('alert');
+            $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
+          }, 3000);
+
+
+          // deprecated start
+          // $('#container-graph-3-1-0 .take-a-look.instruction').removeClass('hidden');
+          // deprecated end
+        } else {
+          // Clicked on a category
+          // Them navigate to slide 3-2 with name x.id
+
+          // deprecated start
+          // $('#container-graph-3-1-0 .take-a-look.instruction').addClass('hidden');
+          // $('#container-graph-3-1-0 .take-a-look').removeClass('hidden');
+          // deprecated end
+
+        }
+      }
     },
     legend: {
       hide: true

@@ -171,7 +171,12 @@ section > label.field-of-study{
   background-image: url('../img/state_grad_blue.png');
 }
 
+.take-a-look.instruction{
+  font-size: 100%;
+}
+
 .take-a-look{
+  text-align: left;
   background-color: #9FA76B;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;

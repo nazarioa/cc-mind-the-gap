@@ -235,6 +235,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
+      colors: race_chart_colors_active,
       onclick: function(d) {
         var leftPanelWidth = $('#slide-3-3 .left-panel').width();
 
@@ -335,20 +336,8 @@ window.onload = function(){
     data: {
       columns: slide_3_3_0_data_Values_UC,
       keys: slide_3_3_0_data_keys,
-      type: 'pie'
-      // //
-      // ,
-      // color: function (color, d) {
-      //   console.log(slide_3_3_0_data_Values_UC);
-      //   console.log(d);
-      //   if(){
-      //
-      //   }
-      //   //d will be 'id' when called for legends
-      //   return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
-      //   return '#8B8B8D';
-      // }
-      // //
+      type: 'pie',
+      colors: race_chart_colors_active
     },
     legend: {
       hide: true
@@ -374,6 +363,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_CSU,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
+      colors: race_chart_colors_active
     },
     legend: {
       hide: true
@@ -399,6 +389,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_ForProfit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
+      colors: race_chart_colors_active
     },
     legend: {
       hide: true
@@ -424,6 +415,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_NonProfit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
+      colors: race_chart_colors_active
     },
     legend: {
       hide: true

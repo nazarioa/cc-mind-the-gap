@@ -1,5 +1,17 @@
 "use strict";
 
+var race_chart_colors_active = {
+  'American Indian/Alaska Native': '#a6a8ab',
+  'Asian': '#a73e3f',
+  'Black/African American': '#ca6d54',
+  'Hispanic/Latino': '#9fa76b',
+  'Native Hawaiian or Other Pacific Islander': '#00736b',
+  'White': '#c7a51c',
+  'Two or more races': '#a2c6d4',
+  'Unknown': '#37758c',
+  'Nonresident alien': '#5c180c'
+};
+
 var slide_3_1_0_data = [
   {
     "Major": "Business & Marketing",

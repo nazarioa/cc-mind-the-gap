@@ -128,6 +128,9 @@ window.onload = function(){
             $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
           }, 3000);
         }
+        else {
+          // TODO: If someone clicks a slice, generate the graph and expand 3-2
+        }
       }
     },
     legend: {
@@ -180,6 +183,7 @@ window.onload = function(){
     return [ x.Ethicity, totals];
   });
 
+  // Used for updating the mini graphs and stats for slide 3-3
   function updateData_3_3_0(x){
     // The Stats Data -- Mains stuff
     $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
@@ -192,7 +196,7 @@ window.onload = function(){
       }
     );
 
-    // START - Table Data
+    // START - Table Data Update
     var rowData = '';
     for (var attr in dataYellowSlide) {
       var row = '<tr><td class="major">' + attr + '</td>';
@@ -295,7 +299,7 @@ window.onload = function(){
 
   //* Mini Graphs *//
 
-  // 'Y' values for Mini Pie Graphs
+  // function to get 'Y' values for Mini Pie Graphs
   // UC
   var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
     if(x.UC){

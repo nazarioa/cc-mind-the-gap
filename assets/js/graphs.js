@@ -332,7 +332,12 @@ window.onload = function(){
     bindto: '#graph-3-4-0',
     data: {
       columns: slide_3_4_0_data,
-      type: 'bar'
+      type: 'bar',
+      labels: {
+        format: function (value, id, index, subIndex) {
+          return '' + id + ' - ' + value + '%' ;
+        }
+      }
     },
     axis: {
       rotated: true,
@@ -348,6 +353,12 @@ window.onload = function(){
       height: slideSize(.17).height
     },
     tooltip: {
+      show: false
+    },
+    interaction: {
+      enabled: false
+    },
+    legend: {
       show: false
     }
   });

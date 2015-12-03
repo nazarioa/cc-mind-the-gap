@@ -124,12 +124,6 @@ var slide_3_3_0_data = [
     "NonProfit": 4757,
     "ForProfit": 1477
   },
-  {"Ethicity": "Asian",
-    "UC": 17374,
-    "CSU": 13413,
-    "NonProfit": 4757,
-    "ForProfit": 1477
-  },
   {"Ethicity": "Black/African American",
     "UC": 1397,
     "CSU": 3602,

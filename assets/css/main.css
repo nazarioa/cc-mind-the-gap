@@ -847,7 +847,6 @@ section.conclusion .view-more > span {
   font-size: 75%;
 }
 
-
 #slide-5-3 .council-members{
   display: flex;
   flex-direction: row;
@@ -1014,6 +1013,12 @@ section.conclusion .view-more > span {
 
 .stats-major td{
   padding: 1%;
+  text-align: center;
+}
+
+.stats-major td.selected{
+  background-color: #CA6D54;
+  color: white;
 }
 
 .stats-major thead th.rotate{

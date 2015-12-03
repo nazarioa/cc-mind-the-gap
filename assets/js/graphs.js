@@ -180,7 +180,8 @@ window.onload = function(){
     return [ x.Ethicity, totals];
   });
 
-  var fillData_3_3_0 = function(x){
+  function updateData_3_3_0(x){
+    // The Stats Data -- Mains stuff
     $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
     $('#slide-3-3 .stats-general .percentage > span').html(
       percentify(x.ratio)
@@ -191,30 +192,32 @@ window.onload = function(){
       }
     );
 
-//TODO
-/*
-    // dataYellowSlide
-    for (var ethnicity in dataYellowSlide) {
-      if (dataYellowSlide.hasOwnProperty(ethnicity)) {
-        // console.log(ethnicity);
-
-        // var row = '<tr><td class="major">' + ethnicity + '</td>';
-
-        for (var majorScore in ethnicity) {
-          if (ethnicity.hasOwnProperty(majorScore)) {
-            // console.log(ethnicity);
-            // console.log(majorScore);
-            // row = row + '<td>' + majorScore + '</td>';
+    // START - Table Data
+    var rowData = '';
+    for (var attr in dataYellowSlide) {
+      var row = '<tr><td class="major">' + attr + '</td>';
+      if (dataYellowSlide.hasOwnProperty(attr) ) {
+        var attrData = dataYellowSlide[attr];
+        for (var ethnicity in attrData) {
+          if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
+            row = row + '<td class="selected">' + attrData[ethnicity] + '</td>';
+          }
+          else{
+            row = row + '<td>' + attrData[ethnicity] + '</td>';
           }
         }
-
-        // row = row + '</tr>';
-        // $('#slide-3-3-table tbody').append(row);
-
+        row = row + '</tr>';
       }
+      rowData += row + '</tr>';
     }
+    $('#slide-3-3-table tbody').html(rowData);
+    // END - Table Data
+
+    // START - MiniGraphs
+
+    // END - MiniGraphs
+
   };
-  */
 
   var slide_3_3_0 = c3.generate({
     bindto: '#graph-3-3-0',
@@ -229,37 +232,44 @@ window.onload = function(){
       keys: slide_3_3_0_data_keys,
       type: 'pie',
       onclick: function(d) {
-        // console.log(d);
         var leftPanelWidth = $('#slide-3-3 .left-panel').width();
 
         // If the info panel is not .hidden, slide it out and present data panel
         if($('#slide-3-3 .left-panel.info').hasClass('hidden') === false ){
+
+          //start info slide out animation
           $('#slide-3-3 .left-panel.info').animate(
             {left: -leftPanelWidth},
             500,
             "swing",
             function(){
+              // swap out the info div with the data div
               $('#slide-3-3 .left-panel.info').addClass('hidden');
               $('#slide-3-3 .left-panel.data').removeClass('hidden');
-              fillData_3_3_0(d);
+              // update data div
+              updateData_3_3_0(d);
             }
           );
+          //end info slide out animation
 
+          //start data slide in animation
           $('#slide-3-3 .left-panel.data').css('left', -leftPanelWidth);
           $('#slide-3-3 .left-panel.data').animate(
             {left: 0},
             1500,
             "swing",
             function(){
-              // fillData_3_3_0(d);
+              // updateData_3_3_0(d);
             }
           );
-        }
-        // If the data panel is up, just udpate the content
-        else{
-          fillData_3_3_0(d);
+          //end data slide in animation
+
         }
 
+        // else -- the data panel is up, just update the content
+        else{
+          updateData_3_3_0(d);
+        }
 
       },
       onmouseout: function(){
@@ -289,28 +299,28 @@ window.onload = function(){
   // UC
   var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
     if(x.UC){
-      return [ x.Ethicity, x.UC];
+      return [x.Ethicity, x.UC];
     }
   });
 
   // CSU
   var slide_3_3_0_data_Values_CSU = slide_3_3_0_data.map(function(x) {
     if(x.CSU){
-      return [ x.Ethicity, x.CSU];
+      return [x.Ethicity, x.CSU];
     }
   });
 
   // FP
   var slide_3_3_0_data_Values_ForProfit = slide_3_3_0_data.map(function(x) {
     if(x.ForProfit){
-      return [ x.Ethicity, x.ForProfit];
+      return [x.Ethicity, x.ForProfit];
     }
   });
 
   // NFP
   var slide_3_3_0_data_Values_NonProfit = slide_3_3_0_data.map(function(x) {
     if(x.NonProfit){
-      return [ x.Ethicity, x.NonProfit];
+      return [x.Ethicity, x.NonProfit];
     }
   });
 
@@ -321,18 +331,20 @@ window.onload = function(){
     data: {
       columns: slide_3_3_0_data_Values_UC,
       keys: slide_3_3_0_data_keys,
-      type: 'pie'/*,
-      color: function (color, d) {
-        console.log(slide_3_3_0_data_Values_UC);
-        console.log(d);
-        if(){
-
-        }
-        //d will be 'id' when called for legends
-        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
-        return '#8B8B8D';
-      }
-      */
+      type: 'pie'
+      // //
+      // ,
+      // color: function (color, d) {
+      //   console.log(slide_3_3_0_data_Values_UC);
+      //   console.log(d);
+      //   if(){
+      //
+      //   }
+      //   //d will be 'id' when called for legends
+      //   return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+      //   return '#8B8B8D';
+      // }
+      // //
     },
     legend: {
       hide: true
@@ -341,7 +353,7 @@ window.onload = function(){
       height: slideSize(.15).height
     },
     tooltip: {
-        show: true
+      show: true
     },
     pie: {
       label:{
@@ -350,9 +362,34 @@ window.onload = function(){
     }
   });
 
-  //fourups test
+  // Mini Pie Graph
   var slide_3_3_2 = c3.generate({
     bindto: '#graph-3-3-2-CSU',
+    padding: mini_graph_padding,
+    data: {
+      columns: slide_3_3_0_data_Values_CSU,
+      keys: slide_3_3_0_data_keys,
+      type: 'pie',
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(.15).height
+    },
+    tooltip: {
+      show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
+    }
+  });
+
+  // Mini Pie Graph
+  var slide_3_3_3 = c3.generate({
+    bindto: '#graph-3-3-3-FP',
     padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_Values_ForProfit,
@@ -366,7 +403,7 @@ window.onload = function(){
       height: slideSize(.15).height
     },
     tooltip: {
-        show: true
+      show: true
     },
     pie: {
       label:{
@@ -375,9 +412,9 @@ window.onload = function(){
     }
   });
 
-  //fourups test
-  var slide_3_3_3 = c3.generate({
-    bindto: '#graph-3-3-3-FP',
+  // Mini Pie Graph
+  var slide_3_3_4 = c3.generate({
+    bindto: '#graph-3-3-4-NFP',
     padding: mini_graph_padding,
     data: {
       columns: slide_3_3_0_data_Values_NonProfit,
@@ -391,7 +428,7 @@ window.onload = function(){
       height: slideSize(.15).height
     },
     tooltip: {
-        show: true
+      show: true
     },
     pie: {
       label:{
@@ -400,32 +437,7 @@ window.onload = function(){
     }
   });
 
-  //fourups test
-  var slide_3_3_4 = c3.generate({
-    bindto: '#graph-3-3-4-NFP',
-    padding: mini_graph_padding,
-    data: {
-      columns: slide_3_3_0_data_TotalsValues,
-      keys: slide_3_3_0_data_keys,
-      type: 'pie',
-    },
-    legend: {
-      hide: true
-    },
-    size: {
-      height: slideSize(.15).height
-    },
-    tooltip: {
-        show: true
-    },
-    pie: {
-      label:{
-        show: false
-      }
-    }
-  });
-
-  // slide
+  // Mini Pie Graph
   var slide_3_4_0 = c3.generate({
     bindto: '#graph-3-4-0',
     data: {

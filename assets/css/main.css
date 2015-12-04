@@ -171,35 +171,47 @@ section > label.field-of-study{
   background-image: url('../img/state_grad_blue.png');
 }
 
-.take-a-look.instruction{
-  font-size: 100%;
+a.take-a-look{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  /*align-items: stretch;*/
+  font-family: 'Montserrat', sans-serif;
+  /*height: 10%;*/
+  padding: 2%;
 }
 
-.take-a-look{
-  text-align: left;
-  background-color: #9FA76B;
-  font-family: 'Montserrat', sans-serif;
+a.take-a-look:hover{
+  text-decoration: none;
+}
+
+.take-a-look > div{
+  order: 1;
+  white-space: nowrap;
+}
+
+div.take-a-look{
+  font-size: 120%;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 160%;
-  padding: 3% 3% 3% 12%;
-  color: white;
   background-image: url('../img/plus_icon.svg');
   background-repeat: no-repeat;
-  background-size: 3%;
-  background-position: left 8% top 55%;
+  background-size: 5%;
+  background-position: left 1% center;
+  padding-left: 4%;
 }
 
-.take-a-look .major-example{
+div.major-example{
+  font-size: 80%;
   padding-left: 3%;
   margin-left: 3%;
   border-left: solid 1px white;
   display: inline-block;
   text-transform: capitalize;
-  font-size: 60%;
-}
-
-.take-a-look .major-example label{
-  display: block;
+  text-align: left;
 }
 
 /* == GENERAL CHART SPECIFIC STYLING == */

@@ -18,6 +18,10 @@ window.onload = function(){
     return Math.floor((ratio * 100)) + '%';
   }
 
+  var grayScale = function(value, lower, upper){
+    return Math.max(Math.min(Math.floor( value * 100 / 255), upper), lower);
+  }
+
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',
@@ -125,11 +129,16 @@ window.onload = function(){
           setTimeout(function () {
             $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
           }, 3000);
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
         }
         else {
           // TODO: If someone clicks a slice, generate the graph and expand 3-2
         }
-      }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true

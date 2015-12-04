@@ -178,9 +178,7 @@ a.take-a-look{
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  /*align-items: stretch;*/
   font-family: 'Montserrat', sans-serif;
-  /*height: 10%;*/
   padding: 2%;
 }
 
@@ -199,7 +197,7 @@ div.take-a-look{
   text-transform: uppercase;
   background-image: url('../img/plus_icon.svg');
   background-repeat: no-repeat;
-  background-size: 5%;
+  background-size: 8%;
   background-position: left 1% center;
   padding-left: 4%;
 }

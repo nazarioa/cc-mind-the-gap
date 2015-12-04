@@ -120,22 +120,10 @@ window.onload = function(){
       columns: slide_3_1_0_data_result,
       keys: slide_3_1_0_data_keys,
       type: 'pie',
-      onclick: function(x){
-
-        if( "Other" === x.id ){
-          var oldText = $('#container-graph-3-1-0 .take-a-look.instruction').html();
-          $('#container-graph-3-1-0 .take-a-look.instruction').html('Breakdown for other not available.');
-          // Clicked on other
-          setTimeout(function () {
-            $('#container-graph-3-1-0 .take-a-look.instruction').html(oldText);
-          }, 3000);
       color: function (color, d) {
         if(d !== undefined ){
           var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
           return d3.rgb(grayValue, grayValue, grayValue);
-        }
-        else {
-          // TODO: If someone clicks a slice, generate the graph and expand 3-2
         }
         return '#dedede';
       },

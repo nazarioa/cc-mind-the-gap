@@ -1,14 +1,12 @@
 "use strict";
-
-
-var mini_graph_padding = {
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-};
-
 window.onload = function(){
+
+  var mini_graph_padding = {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+  };
 
   var slideSize = function(percent){
     var slideWidth = $('#slide-0-0').width();

@@ -508,14 +508,26 @@ section.bachelors-degrees .view-more > span{
   background-size: 24px 26px;
 }
 
+#graph-3-1-0 .tooltip li.percent span{
+  font-size: 210%;
+}
+
 #graph-3-1-0 .tooltip li.rank{
   background-image: url('../img/bargraph_icon.png');
   background-size: 24px 26px;
 }
 
+#graph-3-1-0 .tooltip li.rank span{
+  font-size: 150%;
+}
+
 #graph-3-1-0 .tooltip li.top-providers{
   background-image: url('../img/building_icon.png');
   background-size: 24px 26px;
+}
+
+#graph-3-1-0 .tooltip li.top-providers span{
+  font-size: 150%;
 }
 
 /* = */

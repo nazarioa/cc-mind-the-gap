@@ -297,6 +297,10 @@ div.major-example{
   font-family: 'Montserrat', sans-serif;
 }
 
+#slide-0-1 a{
+  color: white;
+}
+
 #slide-0-1 ol{
   list-style: none;
   margin:0;

@@ -332,8 +332,7 @@ window.onload = function(){
     $('#slide-3-3-table tbody').html(rowData);
     // END - Table Data
 
-    // START - MiniGraphs
-
+    // START - MiniGraphs Data Update
     // END - MiniGraphs
 
   };
@@ -440,7 +439,7 @@ window.onload = function(){
     }
   });
 
-
+  // 1 Mini Pie Graph
   var slide_3_3_1 = c3.generate({
     bindto: '#graph-3-3-1-UC',
     padding: mini_graph_padding,
@@ -466,7 +465,7 @@ window.onload = function(){
     }
   });
 
-  // Mini Pie Graph
+  // 2 Mini Pie Graph
   var slide_3_3_2 = c3.generate({
     bindto: '#graph-3-3-2-CSU',
     padding: mini_graph_padding,
@@ -492,7 +491,7 @@ window.onload = function(){
     }
   });
 
-  // Mini Pie Graph
+  // 3 Mini Pie Graph
   var slide_3_3_3 = c3.generate({
     bindto: '#graph-3-3-3-FP',
     padding: mini_graph_padding,
@@ -518,7 +517,7 @@ window.onload = function(){
     }
   });
 
-  // Mini Pie Graph
+  // 4 Mini Pie Graph
   var slide_3_3_4 = c3.generate({
     bindto: '#graph-3-3-4-NFP',
     padding: mini_graph_padding,
@@ -544,7 +543,8 @@ window.onload = function(){
     }
   });
 
-  // Mini Pie Graph
+
+  // slide
   var slide_3_4_0 = c3.generate({
     bindto: '#graph-3-4-0',
     data: {

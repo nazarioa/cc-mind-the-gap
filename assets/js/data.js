@@ -1,5 +1,6 @@
 "use strict";
 
+// Generic Data
 var race_chart_colors_active = {
   'American Indian/Alaska Native': '#a6a8ab',
   'Asian': '#a73e3f',

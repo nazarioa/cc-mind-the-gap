@@ -26,14 +26,6 @@ window.onload = function(){
     }
   });
 
-  function slide_3_2_0_updateTotals(year){
-    let totals = slide_3_2_0_getTotals(year);
-    $('#container-graph-3-2-0 .uc .value').html(totals.UC.toLocaleString());
-    $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
-    $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
-    $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
-  }
-
   /* Utility functions */
   var mini_graph_padding = {
     top: 0,
@@ -188,6 +180,15 @@ window.onload = function(){
 
   // slide
   var institutions = ['UC', 'CSU', 'NonProfit', 'ForProfit'] ;
+
+  function slide_3_2_0_updateTotals(year){
+    let totals = slide_3_2_0_getTotals(year);
+    $('#container-graph-3-2-0 .uc .value').html(totals.UC.toLocaleString());
+    $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
+    $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
+    $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
+  }
+
   function slide_3_2_0_getKeys(year){
     var keys = [];
     var dataYear = 'Y' + year;

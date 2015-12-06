@@ -197,11 +197,11 @@ window.onload = function(){
       top: 10,
       right: 50,
       bottom: 10,
-      left: 50,
+      left: slideSize(.4).width
     },
     size: {
       width: slideSize(.9).width,
-      height: slideSize(.5).width
+      height: slideSize(.4).width
     },
     data: {
       columns: slide_3_2_0_getData(2004),
@@ -216,6 +216,15 @@ window.onload = function(){
         categories: ['UC', 'CSU', 'Non Profit', 'For Profit' ]
       }
     },
+    legend: {
+      position: 'inset',
+      inset: {
+        anchor: 'top-left',
+        x: -(slideSize(.4).width),
+        y: 0,
+        step: 10
+      }
+    }
   });
 
   // slide

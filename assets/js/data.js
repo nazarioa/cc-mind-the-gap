@@ -12,99 +12,6 @@ var race_chart_colors_active = {
   'Nonresident alien': '#5c180c'
 };
 
-var slide_3_2_0_data = [
-  {
-    "Major": "Computer Science",
-    "Y2004":{
-      "UC": 687,
-      "CSU": 687,
-      "NonProfit": 343,
-      "ForProfit": 3,
-    }
-  },
-  {
-    "Major": "CIS, General",
-    "Y2004":{
-      "UC": 599,
-      "CSU": 223,
-      "NonProfit": 453,
-      "ForProfit": 448,
-    }
-  },
-  {
-    "Major": "Computer Engineering",
-    "Y2004":{
-      "UC": 550,
-      "CSU": 304,
-      "NonProfit": 131,
-      "ForProfit": 18,
-    }
-  },
-  {
-    "Major": "Computer Systems Networking & Telecommunications",
-    "Y2004":{
-      "UC": 0,
-      "CSU": 0,
-      "NonProfit": 0,
-      "ForProfit": 611,
-    }
-  },
-  {
-    "Major": "Computer Software & Media Applications",
-    "Y2004":{
-      "UC": 0,
-      "CSU": 75,
-      "NonProfit": 1,
-      "ForProfit": 400,
-    }
-  },
-  {
-    "Major": "Computer Systems Analysis",
-    "Y2004":{
-      "UC": 0,
-      "CSU": 0,
-      "NonProfit": 0,
-      "ForProfit": 405,
-    }
-  },
-  {
-    "Major": "CIS & Support Services, Other",
-    "Y2004":{
-      "UC": 33,
-      "CSU": 0,
-      "NonProfit": 106,
-      "ForProfit": 70,
-    }
-  },
-  {
-    "Major": "Information Science/Studies",
-    "Y2004":{
-      "UC": 11,
-      "CSU": 0,
-      "NonProfit": 166,
-      "ForProfit": 0,
-    }
-  },
-  {
-    "Major": "CIT Admin & Management",
-    "Y2004":{
-      "UC": 0,
-      "CSU": 0,
-      "NonProfit": 83,
-      "ForProfit": 37,
-    }
-  },
-  {
-    "Major": "Computer Programming",
-    "Y2004":{
-      "UC": 0,
-      "CSU": 0,
-      "NonProfit": 61,
-      "ForProfit": 15,
-    }
-  },
-];
-
 var slide_3_1_0_data = [
   {
     "Major": "Business & Marketing",
@@ -202,6 +109,99 @@ var slide_3_1_0_data = [
     "ColorInactive" : "#e3e3e3",
     "ColorActive" : "#e3e3e3"
   }
+];
+
+var slide_3_2_0_data = [
+  {
+    "Major": "Computer Science",
+    "Y2004":{
+      "UC": 687,
+      "CSU": 687,
+      "NonProfit": 343,
+      "ForProfit": 3,
+    }
+  },
+  {
+    "Major": "CIS, General",
+    "Y2004":{
+      "UC": 599,
+      "CSU": 223,
+      "NonProfit": 453,
+      "ForProfit": 448,
+    }
+  },
+  {
+    "Major": "Computer Engineering",
+    "Y2004":{
+      "UC": 550,
+      "CSU": 304,
+      "NonProfit": 131,
+      "ForProfit": 18,
+    }
+  },
+  {
+    "Major": "Computer Systems Networking & Telecommunications",
+    "Y2004":{
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 0,
+      "ForProfit": 611,
+    }
+  },
+  {
+    "Major": "Computer Software & Media Applications",
+    "Y2004":{
+      "UC": 0,
+      "CSU": 75,
+      "NonProfit": 1,
+      "ForProfit": 400,
+    }
+  },
+  {
+    "Major": "Computer Systems Analysis",
+    "Y2004":{
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 0,
+      "ForProfit": 405,
+    }
+  },
+  {
+    "Major": "CIS & Support Services, Other",
+    "Y2004":{
+      "UC": 33,
+      "CSU": 0,
+      "NonProfit": 106,
+      "ForProfit": 70,
+    }
+  },
+  {
+    "Major": "Information Science/Studies",
+    "Y2004":{
+      "UC": 11,
+      "CSU": 0,
+      "NonProfit": 166,
+      "ForProfit": 0,
+    }
+  },
+  {
+    "Major": "CIT Admin & Management",
+    "Y2004":{
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 83,
+      "ForProfit": 37,
+    }
+  },
+  {
+    "Major": "Computer Programming",
+    "Y2004":{
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 61,
+      "ForProfit": 15,
+    }
+  },
 ];
 
 var slide_3_3_0_data = [

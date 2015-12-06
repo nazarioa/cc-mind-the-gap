@@ -162,7 +162,6 @@ window.onload = function(){
       let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
       keys.push(dataYear + '_' + majorName);
     }
-    console.log(keys);
     return [keys];
   };
 

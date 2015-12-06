@@ -13,20 +13,26 @@ window.onload = function(){
       $('#container-graph-3-2-0 .the-tally-flex').addClass('hidden');
     }else{
       slide_3_2_0.load({
+        type: 'bar',
         names: slide_3_2_0_getNames(option),
         columns: slide_3_2_0_getData(option),
         groups: slide_3_2_0_getKeys(option),
+        colors: slide_3_2_0_getColors(option),
+
         unload: true
       });
-
-      let totals = slide_3_2_0_getTotals(option);
-      $('#container-graph-3-2-0 .uc .value').html(totals.UC.toLocaleString());
-      $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
-      $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
-      $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
+      slide_3_2_0_updateTotals(option);
       $('#container-graph-3-2-0 .the-tally-flex').removeClass('hidden');
     }
   });
+
+  function slide_3_2_0_updateTotals(year){
+    let totals = slide_3_2_0_getTotals(year);
+    $('#container-graph-3-2-0 .uc .value').html(totals.UC.toLocaleString());
+    $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
+    $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
+    $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
+  }
 
   /* Utility functions */
   var mini_graph_padding = {

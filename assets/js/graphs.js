@@ -10,6 +10,7 @@ window.onload = function(){
 
     if(option.toLowerCase() === 'compare' ){
       slide_3_2_0.unload();
+      $('#container-graph-3-2-0 .the-tally-flex').addClass('hidden');
     }else{
       slide_3_2_0.load({
         names: slide_3_2_0_getNames(option),
@@ -23,6 +24,7 @@ window.onload = function(){
       $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
       $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
       $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
+      $('#container-graph-3-2-0 .the-tally-flex').removeClass('hidden');
     }
   });
 

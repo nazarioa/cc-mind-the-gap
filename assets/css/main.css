@@ -266,11 +266,14 @@ div.the-tally-flex > div{
   order: 1;
   flex-basis: auto;
   flex-grow: 1;
-  padding: 3%;
+  padding: 2%;
   border-left: 1px solid white;
-  text-align: center;
-  font-size: 100%;
+}
+
+div.the-tally-flex div.value{
   color: #c7a51c;
+  font-size: 110%;
+  text-align: center;
 }
 
 div.the-tally-flex div.label{
@@ -278,18 +281,19 @@ div.the-tally-flex div.label{
   font-size: 80%;
   color: #6e6e70;
   text-transform: uppercase;
+  text-align: center;
 }
 
 div.the-tally-flex div.tab{
   background-color: #37758c;
   color: white;
-  text-align: left;
   font-size: 75%;
 }
 
 div.the-tally-flex div.tab div.label{
   font-size: 110%;
   text-transform: uppercase;
+  text-align: left;
   color: white;
 }
 

@@ -119,7 +119,13 @@ var slide_3_2_0_data = [
       "CSU": 687,
       "NonProfit": 343,
       "ForProfit": 3,
-    }
+    },
+    "Y2013": {
+      "UC": 907,
+      "CSU": 798,
+      "NonProfit": 321,
+      "ForProfit": 44
+    },
   },
   {
     "Major": "CIS, General",
@@ -128,7 +134,13 @@ var slide_3_2_0_data = [
       "CSU": 223,
       "NonProfit": 453,
       "ForProfit": 448,
-    }
+    },
+    "Y2013": {
+      "UC": 69,
+      "CSU": 304,
+      "NonProfit": 125,
+      "ForProfit": 163
+    },
   },
   {
     "Major": "Computer Engineering",
@@ -137,7 +149,13 @@ var slide_3_2_0_data = [
       "CSU": 304,
       "NonProfit": 131,
       "ForProfit": 18,
-    }
+    },
+    "Y2013": {
+      "UC": 289,
+      "CSU": 317,
+      "NonProfit": 76,
+      "ForProfit": 74
+    },
   },
   {
     "Major": "Computer Systems Networking & Telecommunications",
@@ -146,7 +164,13 @@ var slide_3_2_0_data = [
       "CSU": 0,
       "NonProfit": 0,
       "ForProfit": 611,
-    }
+    },
+    "Y2013": {
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 97,
+      "ForProfit": 137
+    },
   },
   {
     "Major": "Computer Software & Media Applications",
@@ -155,7 +179,13 @@ var slide_3_2_0_data = [
       "CSU": 75,
       "NonProfit": 1,
       "ForProfit": 400,
-    }
+    },
+    "Y2013": {
+      "UC": 0,
+      "CSU": 36,
+      "NonProfit": 62,
+      "ForProfit": 541
+    },
   },
   {
     "Major": "Computer Systems Analysis",
@@ -164,7 +194,13 @@ var slide_3_2_0_data = [
       "CSU": 0,
       "NonProfit": 0,
       "ForProfit": 405,
-    }
+    },
+    "Y2013": {
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 0,
+      "ForProfit": 110
+    },
   },
   {
     "Major": "CIS & Support Services, Other",
@@ -173,7 +209,13 @@ var slide_3_2_0_data = [
       "CSU": 0,
       "NonProfit": 106,
       "ForProfit": 70,
-    }
+    },
+    "Y2013": {
+      "UC": 12,
+      "CSU": 0,
+      "NonProfit": 3,
+      "ForProfit": 3
+    },
   },
   {
     "Major": "Information Science/Studies",
@@ -182,7 +224,13 @@ var slide_3_2_0_data = [
       "CSU": 0,
       "NonProfit": 166,
       "ForProfit": 0,
-    }
+    },
+    "Y2013": {
+      "UC": 12,
+      "CSU": 0,
+      "NonProfit": 3,
+      "ForProfit": 3
+    },
   },
   {
     "Major": "CIT Admin & Management",
@@ -191,7 +239,13 @@ var slide_3_2_0_data = [
       "CSU": 0,
       "NonProfit": 83,
       "ForProfit": 37,
-    }
+    },
+    "Y2013": {
+      "UC": 32,
+      "CSU": 0,
+      "NonProfit": 106,
+      "ForProfit": 324
+    },
   },
   {
     "Major": "Computer Programming",
@@ -200,7 +254,13 @@ var slide_3_2_0_data = [
       "CSU": 0,
       "NonProfit": 61,
       "ForProfit": 15,
-    }
+    },
+    "Y2013": {
+      "UC": 0,
+      "CSU": 0,
+      "NonProfit": 31,
+      "ForProfit": 96
+    },
   },
 ];
 

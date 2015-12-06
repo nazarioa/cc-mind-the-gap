@@ -17,8 +17,13 @@ window.onload = function(){
         groups: slide_3_2_0_getKeys(option),
         unload: true
       });
-    }
 
+      let totals = slide_3_2_0_getTotals(option);
+      $('#container-graph-3-2-0 .uc .value').html(totals.UC.toLocaleString());
+      $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
+      $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
+      $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
+    }
   });
 
   /* Utility functions */
@@ -207,6 +212,22 @@ window.onload = function(){
     for (let i = 0; i < slide_3_2_0_data.length; i++) {
       let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
       result[dataYear + '_' + majorName] = slide_3_2_0_data[i].Major;
+    }
+    return result;
+  }
+
+  function slide_3_2_0_getTotals(year){
+    var result = {};
+    var dataYear = 'Y' + year;
+    let total = 0;
+    for (var institution of institutions ) {
+      for (let i = 0; i < slide_3_2_0_data.length; i++) {
+          total = total + slide_3_2_0_data[i][dataYear][institution];
+          // console.log(dataYear + ' ' + institution);
+          // console.log(slide_3_2_0_data[i][dataYear][institution]);
+      }
+      result[institution] = total;
+      total = 0;
     }
     return result;
   }

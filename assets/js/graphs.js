@@ -152,20 +152,69 @@ window.onload = function(){
   });
 
   // slide
+  var institutions = ['UC', 'CSU', 'NonProfit', 'ForProfit'] ;
+  function slide_3_2_0_getKeys(year){
+    var keys = [];
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < slide_3_2_0_data.length; i++) {
+      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      keys.push(dataYear + '_' + majorName);
+    }
+    console.log(keys);
+    return [keys];
+  };
+
+  function slide_3_2_0_getData(year){
+    var result = [];
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < slide_3_2_0_data.length; i++) {
+      var scores = [];
+      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      for (var institution of institutions ) {
+        scores.push(slide_3_2_0_data[i][dataYear][institution]);
+      }
+      let key = (dataYear + '_' + majorName);
+      scores.unshift(key);
+      result.push(scores);
+    }
+    return result;
+  }
+
+  function slide_3_2_0_getNames(year){
+    var result = {};
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < slide_3_2_0_data.length; i++) {
+      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      result[dataYear + '_' + majorName] = slide_3_2_0_data[i].Major;
+    }
+    return result;
+  }
+
   var slide_3_2_0 = c3.generate({
     bindto: '#graph-3-2-0',
+    padding: {
+      top: 10,
+      right: 50,
+      bottom: 10,
+      left: 50,
+    },
+    size: {
+      width: slideSize(.9).width,
+      height: slideSize(.5).width
+    },
     data: {
-      url: 'assets/data/slide_3_2_0_2014_sort.csv',
-      x: 'Institution',
-      columns: ['Institution', 'Major', 'Count'],
-      type: 'bar'
+      columns: slide_3_2_0_getData(2004),
+      groups: slide_3_2_0_getKeys(2004),
+      names: slide_3_2_0_getNames(2004),
+      type: 'bar',
     },
     axis: {
       rotated: true,
       x: {
-        type: 'category' // this needed to load string x value
+        type: 'category',
+        categories: ['UC', 'CSU', 'Non Profit', 'For Profit' ]
       }
-    }
+    },
   });
 
   // slide

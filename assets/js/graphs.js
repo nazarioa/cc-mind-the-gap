@@ -1,6 +1,7 @@
 "use strict";
 window.onload = function(){
 
+  /* Utility functions */
   var mini_graph_padding = {
     top: 0,
     right: 0,
@@ -22,6 +23,7 @@ window.onload = function(){
     return Math.max(Math.min(Math.floor( value * 100 / 255), upper), lower);
   }
 
+  /* Graphs and Graph Accessor functions */
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',
@@ -319,10 +321,6 @@ window.onload = function(){
         else{
           updateData_3_3_0(d);
         }
-
-      },
-      onmouseout: function(){
-        // alert('Test');
       }
     },
     legend: {

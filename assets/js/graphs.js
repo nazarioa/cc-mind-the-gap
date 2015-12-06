@@ -1,6 +1,26 @@
 "use strict";
 window.onload = function(){
 
+  /* User interacticity */
+  $('#container-graph-3-2-0 .option').on('click', function(d){
+    $('#container-graph-3-2-0 .option').removeClass('active');
+    $(this).addClass('active');
+
+    let option = $(this).html();
+
+    if(option.toLowerCase() === 'compare' ){
+      slide_3_2_0.unload();
+    }else{
+      slide_3_2_0.load({
+        names: slide_3_2_0_getNames(option),
+        columns: slide_3_2_0_getData(option),
+        groups: slide_3_2_0_getKeys(option),
+        unload: true
+      });
+    }
+
+  });
+
   /* Utility functions */
   var mini_graph_padding = {
     top: 0,

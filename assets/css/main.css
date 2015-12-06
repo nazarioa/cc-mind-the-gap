@@ -225,11 +225,22 @@ div.major-example{
   font-family: 'Montserrat', sans-serif;
 }
 
+.c3-legend-item{
+  font-family: 'Montserrat', sans-serif;
+  fill: #9a9a9a;
+}
+
 .c3-axis-y-label{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: .8rem;
   letter-spacing: .3rem;
+}
+
+.c3-axis {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  fill: #9a9a9a;
 }
 
 .c3-area {

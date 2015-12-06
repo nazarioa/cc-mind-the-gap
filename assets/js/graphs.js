@@ -626,4 +626,7 @@ window.onload = function(){
     }
   });
 
+
+  //Primer
+  slide_3_2_0_updateTotals(2004);
 }

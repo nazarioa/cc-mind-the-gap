@@ -521,13 +521,12 @@ window.onload = function(){
       width: slideSize(.4).width,
       height: slideSize(.45).height
     },
-    tooltip: {
-      show: false
-    },
     axis: {
       x: {
         type: 'timeseries',
-        // categories: ['UC', 'CSU', 'Non Profit', 'For Profit' ]
+        tick: {
+          format: function (x) { return x.getFullYear(); }
+        }
       }
     },
   });

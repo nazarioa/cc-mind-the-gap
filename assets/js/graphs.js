@@ -510,6 +510,28 @@ window.onload = function(){
     }
   });
 
+  var slide_3_4_1 = c3.generate({
+    bindto: '#graph-3-4-1',
+    data: {
+      x: 'Year',
+      columns: slide_3_4_1_data,
+      type: 'area',
+    },
+    size: {
+      width: slideSize(.4).width,
+      height: slideSize(.45).height
+    },
+    tooltip: {
+      show: false
+    },
+    axis: {
+      x: {
+        type: 'timeseries',
+        // categories: ['UC', 'CSU', 'Non Profit', 'For Profit' ]
+      }
+    },
+  });
+
 
   // slide
   var slide_4_4_0 = c3.generate({

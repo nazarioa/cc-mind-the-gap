@@ -216,6 +216,16 @@ window.onload = function(){
     return result;
   }
 
+  function slide_3_2_0_getColors(year){
+    var result = {};
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < slide_3_2_0_data.length; i++) {
+      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      result[dataYear + '_' + majorName] = slide_3_2_0_data[i].ColorActive;
+    }
+    return result;
+  }
+
   function slide_3_2_0_getTotals(year){
     var result = {};
     var dataYear = 'Y' + year;
@@ -249,6 +259,7 @@ window.onload = function(){
       groups: slide_3_2_0_getKeys(2004),
       names: slide_3_2_0_getNames(2004),
       type: 'bar',
+      colors: slide_3_2_0_getColors(2004),
     },
     axis: {
       rotated: true,

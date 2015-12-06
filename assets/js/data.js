@@ -114,6 +114,7 @@ var slide_3_1_0_data = [
 var slide_3_2_0_data = [
   {
     "Major": "Computer Science",
+    "ColorActive": '#37758c',
     "Y2004":{
       "UC": 687,
       "CSU": 687,
@@ -129,6 +130,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "CIS, General",
+    "ColorActive": '#9fa76b',
     "Y2004":{
       "UC": 599,
       "CSU": 223,
@@ -144,6 +146,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "Computer Engineering",
+    "ColorActive": '#6e6e70',
     "Y2004":{
       "UC": 550,
       "CSU": 304,
@@ -159,6 +162,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "Computer Systems Networking & Telecommunications",
+    "ColorActive": '#c46d26',
     "Y2004":{
       "UC": 0,
       "CSU": 0,
@@ -174,6 +178,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "Computer Software & Media Applications",
+    "ColorActive": '#a2c6d4',
     "Y2004":{
       "UC": 0,
       "CSU": 75,
@@ -189,6 +194,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "Computer Systems Analysis",
+    "ColorActive": '#00736b',
     "Y2004":{
       "UC": 0,
       "CSU": 0,
@@ -204,6 +210,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "CIS & Support Services, Other",
+    "ColorActive": '#5c180c',
     "Y2004":{
       "UC": 33,
       "CSU": 0,
@@ -219,6 +226,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "Information Science/Studies",
+    "ColorActive": '#c7a51c',
     "Y2004":{
       "UC": 11,
       "CSU": 0,
@@ -234,6 +242,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "CIT Admin & Management",
+    "ColorActive": '#a73e3f',
     "Y2004":{
       "UC": 0,
       "CSU": 0,
@@ -249,6 +258,7 @@ var slide_3_2_0_data = [
   },
   {
     "Major": "Computer Programming",
+    "ColorActive": '#a6a8ab',
     "Y2004":{
       "UC": 0,
       "CSU": 0,

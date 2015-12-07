@@ -56,6 +56,55 @@ window.onload = function(){
   });
 
 
+  // Used for updating the mini graphs and stats for slide 3-3
+  function updateSideData(x, slide, data){
+    // The Stats Data -- Mains stuff
+    $('#' + slide + ' .left-panel.data .ethicity').html(x.name);
+    $('#' + slide + ' .stats-general .percentage > span').html(
+      percentify(x.ratio)
+    );
+    $('#' + slide + ' .stats-general .totals > span').html(
+      function(){
+        return x.value.toLocaleString();
+      }
+    );
+
+    // START - Table Data Update
+    var rowData = '';
+    for (var attr in data) {
+      var row = '<tr><td class="major">' + attr + '</td>';
+      if (data.hasOwnProperty(attr) ) {
+        var attrData = data[attr];
+        for (var ethnicity in attrData) {
+          if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
+            row = row + '<td class="selected">' + attrData[ethnicity] + '</td>';
+          }
+          else{
+            row = row + '<td>' + attrData[ethnicity] + '</td>';
+          }
+        }
+        row = row + '</tr>';
+      }
+      rowData += row + '</tr>';
+    }
+    $('#' + slide + '-table tbody').html(rowData);
+    // END - Table Data
+
+    // START - MiniGraphs Data Update
+    // TODO: will be needed when colors are being dynaimcally muted
+    // slide_3_3_1.unload();
+    // slide_3_3_1.load({
+    //   columns: slide_3_3_0_data_Values_UC,
+    //   type: 'pie',
+    // });
+
+    // $('#mini-graphs .mini-graph.uc .percent').html(percentify(8));
+    // $('#mini-graphs .mini-graph.csu .percent').html(percentify(5));
+    // $('#mini-graphs .mini-graph.forprofit .percent').html(percentify(3));
+    // $('#mini-graphs .mini-graph.nonprofit .percent').html(percentify(1));
+    // END - MiniGraphs
+  };
+
   /*
   Utility functions
   */
@@ -417,44 +466,6 @@ window.onload = function(){
     var totals = x.uc + x.csu + x.nonprofit + x.forprofit;
     return [ x.Ethicity, totals];
   });
-
-  // Used for updating the mini graphs and stats for slide 3-3
-  function updateSideData(x, slide, data){
-    // The Stats Data -- Mains stuff
-    $('#' + slide + ' .left-panel.data .ethicity').html(x.name);
-    $('#' + slide + ' .stats-general .percentage > span').html(
-      percentify(x.ratio)
-    );
-    $('#' + slide + ' .stats-general .totals > span').html(
-      function(){
-        return x.value.toLocaleString();
-      }
-    );
-
-    // START - Table Data Update
-    var rowData = '';
-    for (var attr in data) {
-      var row = '<tr><td class="major">' + attr + '</td>';
-      if (data.hasOwnProperty(attr) ) {
-        var attrData = data[attr];
-        for (var ethnicity in attrData) {
-          if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
-            row = row + '<td class="selected">' + attrData[ethnicity] + '</td>';
-          }
-          else{
-            row = row + '<td>' + attrData[ethnicity] + '</td>';
-          }
-        }
-        row = row + '</tr>';
-      }
-      rowData += row + '</tr>';
-    }
-    $('#' + slide + '-table tbody').html(rowData);
-    // END - Table Data
-
-    // START - MiniGraphs Data Update
-    // END - MiniGraphs
-  };
 
   var slide_3_3_0 = c3.generate({
     bindto: '#graph-3-3-0',

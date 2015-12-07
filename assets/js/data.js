@@ -857,6 +857,97 @@ var slide_4_3_0_data = [
   }
 ];
 
+var dataGreenSlide = {
+  "Health Professions": {
+    "Overall Rank":	1,
+    "Asian":	1,
+    "Black/African American":	1,
+    "Hispanic/Latino":	1,
+    "White":	1,
+    "Nonresident alien":	2,
+  },
+  "Protective Services": {
+    "Overall Rank":	2,
+    "Asian":	6,
+    "Black/African American":	2,
+    "Hispanic/Latino":	2,
+    "White":	3,
+    "Nonresident alien":	8,
+  },
+  "Mechanic Tech/Repair": {
+    "Overall Rank":	3,
+    "Asian":	2,
+    "Black/African American":	4,
+    "Hispanic/Latino":	3,
+    "White":	4,
+    "Nonresident alien":	7,
+  },
+  "Cosmetology & Culinary": {
+    "Overall Rank":	4,
+    "Asian":	4,
+    "Black/African American":	3,
+    "Hispanic/Latino":	4,
+    "White":	6,
+    "Nonresident alien":	6,
+  },
+  "Business & Marketing": {
+    "Overall Rank":	5,
+    "Asian":	8,
+    "Black/African American":	7,
+    "Hispanic/Latino":	8,
+    "White":	10,
+    "Nonresident alien":	4,
+  },
+  "Visual & Performing Arts": {
+    "Overall Rank":	6,
+    "Asian":	3,
+    "Black/African American":	5,
+    "Hispanic/Latino":	7,
+    "White":	2,
+    "Nonresident alien":	1,
+  },
+  "Engineering Tech": {
+    "Overall Rank":	7,
+    "Asian":	9,
+    "Black/African American":	8,
+    "Hispanic/Latino":	5,
+    "White":	7,
+    "Nonresident alien":	9,
+  },
+  "Computer Tech": {
+    "Overall Rank":	8,
+    "Asian":	5,
+    "Black/African American":	6,
+    "Hispanic/Latino":	10,
+    "White":	5,
+    "Nonresident alien":	5,
+  },
+  "Family & Consumer Sciences": {
+    "Overall Rank":	9,
+    "Asian":	7,
+    "Black/African American":	9,
+    "Hispanic/Latino":	6,
+    "White":	8,
+    "Nonresident alien":	3,
+  },
+  "Construction Trades": {
+    "Overall Rank":	10,
+    "Asian":	11,
+    "Black/African American":	10,
+    "Hispanic/Latino":	9,
+    "White":	11,
+    "Nonresident alien":	11,
+  },
+  "Paralegal": {
+    "Overall Rank":	11,
+    "Asian":	10,
+    "Black/African American":	11,
+    "Hispanic/Latino":	11,
+    "White":	9,
+    "Nonresident alien":	10
+  }
+}
+
 var slide_4_4_0_data = [
   ['nonprofit', 9.66],
   ['cc', 39.72],

@@ -1,16 +1,43 @@
 "use strict";
 
 // Generic Data
-var race_chart_colors_active = {
-  'American Indian/Alaska Native': '#a6a8ab',
-  'Asian': '#a73e3f',
-  'Black/African American': '#ca6d54',
-  'Hispanic/Latino': '#9fa76b',
-  'Native Hawaiian or Other Pacific Islander': '#00736b',
-  'White': '#c7a51c',
-  'Two or more races': '#a2c6d4',
-  'Unknown': '#37758c',
-  'Nonresident alien': '#5c180c'
+var genericEthnicityData = {
+  "aai" : {
+    "Name": "American Indian/Alaska Native",
+    "ActiveColor": '#a6a8ab',
+  },
+  "asn" : {
+    "Name": "Asian",
+    "ActiveColor": '#a73e3f',
+  },
+  "blk": {
+    "Name": 'Black/African American',
+    "ActiveColor": '#ca6d54',
+  },
+  "hsp" : {
+    "Name": "Hispanic/Latino",
+    "ActiveColor": '#9fa76b',
+  },
+  "nhp" : {
+    "Name": "Native Hawaiian or Other Pacific Islander",
+    "ActiveColor": '#00736b',
+  },
+  "wht" : {
+    "Name": "White",
+    "ActiveColor": '#c7a51c',
+  },
+  "tw" : {
+    "Name": "Two or more races",
+    "ActiveColor": '#a2c6d4',
+  },
+  "unk" : {
+    "Name": "Unknown",
+    "ActiveColor": '#37758c',
+  },
+  "nra" : {
+    "Name": "Nonresident alien",
+    "ActiveColor": '#5c180c'
+  },
 };
 
 var slide_3_1_0_data = [

@@ -176,9 +176,9 @@ window.onload = function(){
     return [ x.Major, x.Percent];
   });
 
-  function slide_3_1_0_data_getMeta(key, attribute){
-    for (var i = 0; i < slide_3_1_0_data.length; i++) {
-      var thisObject = slide_3_1_0_data[i];
+  function topTen_getMetaData(key, attribute, data){
+    for (var i = 0; i < data.length; i++) {
+      var thisObject = data[i];
 
       if ( thisObject.Major !== undefined && thisObject.Major === key ) {
         switch (attribute) {
@@ -246,7 +246,7 @@ window.onload = function(){
     tooltip: {
       contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
         if(d[0].id !== undefined && d[0].id !== 'Other'){
-          return '<div class="tooltip"><div class="major">The Stats:<span> ' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all BAs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + slide_3_1_0_data_getMeta(d[0].id, 'Rank2004') + '</span></li><li class="top-providers">Top Providers<br /><span>' + slide_3_1_0_data_getMeta(d[0].id, 'TopProviders') + '</span></li></ul></div>';
+          return '<div class="tooltip"><div class="major">The Stats:<span> ' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all BAs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + topTen_getMetaData(d[0].id, 'Rank2004', slide_3_1_0_data) + '</span></li><li class="top-providers">Top Providers<br /><span>' + topTen_getMetaData(d[0].id, 'TopProviders', slide_3_1_0_data) + '</span></li></ul></div>';
         }
       }
     }

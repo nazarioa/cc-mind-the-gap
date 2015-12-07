@@ -775,7 +775,7 @@ window.onload = function(){
       top: 10,
       right: 50,
       bottom: 10,
-      left: slideSize(.4).width
+      left: slideSize(.5).width
     },
     size: {
       width: slideSize(.9).width,
@@ -799,7 +799,7 @@ window.onload = function(){
       position: 'inset',
       inset: {
         anchor: 'top-left',
-        x: -(slideSize(.4).width),
+        x: -(slideSize(.5).width),
         y: 0,
         step: 10
       }

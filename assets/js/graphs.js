@@ -59,7 +59,7 @@ window.onload = function(){
   // Used for updating the mini graphs and stats for slide 3-3
   function updateSideData(x, slide, data){
     // The Stats Data -- Mains stuff
-    $('#' + slide + ' .left-panel.data .ethicity').html(x.name);
+    $('#' + slide + ' .left-panel.data .ethnicity').html(x.name);
     $('#' + slide + ' .stats-general .percentage > span').html(
       percentify(x.ratio)
     );
@@ -464,7 +464,7 @@ window.onload = function(){
 
   var slide_3_3_0_data_TotalsValues = slide_3_3_0_data.map(function(x) {
     var totals = x.uc + x.csu + x.nonprofit + x.forprofit;
-    return [ x.Ethicity, totals];
+    return [ x.Ethnicity, totals];
   });
 
   var slide_3_3_0 = c3.generate({
@@ -541,28 +541,28 @@ window.onload = function(){
   // UC
   var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
     if(x.uc){
-      return [x.Ethicity, x.uc];
+      return [x.Ethnicity, x.uc];
     }
   });
 
   // CSU
   var slide_3_3_0_data_Values_CSU = slide_3_3_0_data.map(function(x) {
     if(x.csu){
-      return [x.Ethicity, x.csu];
+      return [x.Ethnicity, x.csu];
     }
   });
 
   // FP
   var slide_3_3_0_data_Values_ForProfit = slide_3_3_0_data.map(function(x) {
     if(x.forprofit){
-      return [x.Ethicity, x.forprofit];
+      return [x.Ethnicity, x.forprofit];
     }
   });
 
   // NFP
   var slide_3_3_0_data_Values_NonProfit = slide_3_3_0_data.map(function(x) {
     if(x.nonprofit){
-      return [x.Ethicity, x.nonprofit];
+      return [x.Ethnicity, x.nonprofit];
     }
   });
 

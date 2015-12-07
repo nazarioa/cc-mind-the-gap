@@ -332,63 +332,63 @@ var slide_3_2_0_data = [
 
 var slide_3_3_0_data = [
   {
-    "Ethicity": "American Indian/Alaska Native",
+    "Ethnicity": "American Indian/Alaska Native",
     'uc': 188,
     'csu': 414,
     'nonprofit': 209,
     'forprofit': 81
   },
   {
-    "Ethicity": "Asian",
+    "Ethnicity": "Asian",
     'uc': 17374,
     'csu': 13413,
     'nonprofit': 4757,
     'forprofit': 1477
   },
   {
-    "Ethicity": "Black/African American",
+    "Ethnicity": "Black/African American",
     'uc': 1397,
     'csu': 3602,
     'nonprofit': 1754,
     'forprofit': 1211
   },
   {
-    "Ethicity": "Hispanic/Latino",
+    "Ethnicity": "Hispanic/Latino",
     'uc': 8488,
     'csu': 21686,
     'nonprofit': 6694,
     'forprofit': 3259
   },
   {
-    "Ethicity": "Native Hawaiian or Other Pacific Islander",
+    "Ethnicity": "Native Hawaiian or Other Pacific Islander",
     'uc': 149,
     'csu': 597,
     'nonprofit': 234,
     'forprofit': 174
   },
   {
-    "Ethicity": "White",
+    "Ethnicity": "White",
     'uc': 15798,
     'csu': 28990,
     'nonprofit': 17046,
     'forprofit': 3279
   },
   {
-    "Ethicity": "Two or more races",
+    "Ethnicity": "Two or more races",
     'uc': 950,
     'csu': 2506,
     'nonprofit': 1281,
     'forprofit': 184
   },
   {
-    "Ethicity": "Unknown",
+    "Ethnicity": "Unknown",
     'uc': 2518,
     'csu': 7576,
     'nonprofit': 2330,
     'forprofit': 3294
   },
   {
-    "Ethicity": "Nonresident alien",
+    "Ethnicity": "Nonresident alien",
     'uc': 2084,
     'csu': 3019,
     'nonprofit': 2074,

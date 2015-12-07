@@ -44,15 +44,15 @@ window.onload = function(){
 
   function instituation_getColors(institautions){
     var result = {};
-    if(institautions.length > 1){
+    if( typeof institautions !== 'string' && isIterable(institautions) === true){
       // get all colors and retrun an object with key: color pairs
       for (var inst in genericInstitutionData) {
         if (genericInstitutionData.hasOwnProperty(inst)) {
           result[inst] = genericInstitutionData[inst].ActiveColor;
         }
       }
-    }else if(institautions.length === 1){
-      result[inst] = genericInstitutionData[inst].ActiveColor;
+    }else if(typeof institautions === 'string'){
+      result = genericInstitutionData[inst].ActiveColor;
     }else{
       result = undefined;
     }
@@ -61,14 +61,14 @@ window.onload = function(){
 
   function instituation_getNames(institautions){
     var result = {};
-    if(institautions.length > 1){
+    if( typeof institautions !== 'string' && isIterable(institautions) === true){
       for (var inst in genericInstitutionData) {
         if (genericInstitutionData.hasOwnProperty(inst)) {
           result[inst] = genericInstitutionData[inst].Name;
         }
       }
-    }else if(institautions.length === 1){
-      result[inst] = genericInstitutionData[inst].Name;
+    }else if(typeof institautions === 'string'){
+      result = genericInstitutionData[institautions].Name;
     }else{
       result = undefined;
     }

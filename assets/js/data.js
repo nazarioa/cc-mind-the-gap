@@ -800,6 +800,63 @@ var slide_4_2_0_data = [
   },
 ];
 
+var slide_4_3_0_data = [
+  {
+    "Ethnicity":"American Indian or Alaska Native",
+    "cc":692,
+    "nonprofits":18,
+    "forprofits":476,
+  },
+  {
+    "Ethnicity":"Asian",
+    "cc":17320,
+    "nonprofits":476,
+    "forprofits":5878,
+  },
+  {
+    "Ethnicity":"Black or African American ",
+    "cc":6774,
+    "nonprofits":457,
+    "forprofits":6960,
+  },
+  {
+    "Ethnicity":"Hispanic/Latino",
+    "cc":43039,
+    "nonprofits":1966,
+    "forprofits":29403,
+  },
+  {
+    "Ethnicity":"Native Hawaiian or Other Pacific Islander ",
+    "cc":696,
+    "nonprofits":49,
+    "forprofits":1123,
+  },
+  {
+    "Ethnicity":"White",
+    "cc":45174,
+    "nonprofits":1015,
+    "forprofits":17106,
+  },
+  {
+    "Ethnicity":"Two or more races",
+    "cc":3671,
+    "nonprofits":66,
+    "forprofits":1852,
+  },
+  {
+    "Ethnicity":"Unknown",
+    "cc":6070,
+    "nonprofits":88,
+    "forprofits":8897,
+  },
+  {
+    "Ethnicity":"Nonresident alien",
+    "cc":3436,
+    "nonprofits":81,
+    "forprofits":786,
+  }
+];
+
 var slide_4_4_0_data = [
   ['nonprofit', 9.66],
   ['cc', 39.72],

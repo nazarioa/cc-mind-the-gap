@@ -403,6 +403,10 @@ div.tooltip.top-ten-majors li.top-providers span{
     opacity:.9;
 }
 
+.c3-legend-background{
+  stroke: none;
+}
+
 .graph-container{
   margin-right: 3%;
   position: relative;
@@ -653,10 +657,6 @@ section.bachelors-degrees .view-more > span{
 
 #graph-3-2-0{
   text-align: center;
-}
-
-#graph-3-2-0 .c3-legend-background{
-  stroke: none;
 }
 
 /* = */

@@ -632,7 +632,7 @@ var slide_4_1_0_data = [
   {
     "Major":"Family & Consumer Sciences",
     "Percent":0.04,
-    "Rank2004":"9 (4%) - ",
+    "Rank2004":"9 (4%) No Change",
     "TopProviders":"For-profit",
     "ColorInactive" : "",
   },
@@ -646,7 +646,7 @@ var slide_4_1_0_data = [
   {
     "Major":"Paralegal",
     "Percent":0.02,
-    "Rank2004":"10 (2%) - ",
+    "Rank2004":"10 (2%) No Change",
     "TopProviders":"Community Colleges",
     "ColorInactive" : "",
   },

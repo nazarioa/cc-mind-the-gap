@@ -1,5 +1,7 @@
 "use strict";
 window.onload = function(){
+  var bachelorInstitutions = ['uc', 'csu', 'nonprofit', 'forprofit'] ;
+  var subBachelorInstitutions = ['nonprofit', 'forprofit', 'cc'] ;
 
   /* User interacticity */
   $('#container-graph-3-2-0 .option').on('click', function(d){

@@ -31,6 +31,30 @@ window.onload = function(){
     }
   });
 
+  $('#container-graph-4-2-0 .option').on('click', function(d){
+    $('#container-graph-4-2-0 .option').removeClass('active');
+    $(this).addClass('active');
+
+    let option = $(this).html();
+
+    if(option.toLowerCase() === 'compare' ){
+      slide_4_2_0.unload();
+      $('#container-graph-4-2-0 .the-tally-flex').addClass('hidden');
+    }else{
+      slide_4_2_0.load({
+        type: 'bar',
+        names: exampleMajor_getNames(option, slide_4_2_0_data),
+        columns: exampleMajor_getData(option, bachelorInstitutions, slide_4_2_0_data),
+        groups: exampleMajor_getKeys(option, slide_4_2_0_data),
+        colors: exampleMajor_getColors(option, slide_4_2_0_data),
+
+        unload: true
+      });
+      slide_4_2_0_updateTotals(option);
+      $('#container-graph-4-2-0 .the-tally-flex').removeClass('hidden');
+    }
+  });
+
 
   /*
   Utility functions
@@ -685,6 +709,51 @@ window.onload = function(){
     },
   });
 
+
+  // slide
+  function slide_4_2_0_updateTotals(year){
+    let totals = exampleMajor_getTotals(year, bachelorInstitutions, slide_4_2_0_data);
+    $('#container-graph-4-2-0 .cc .value').html(totals.cc.toLocaleString());
+    $('#container-graph-4-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
+    $('#container-graph-4-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
+  }
+
+  var slide_4_2_0 = c3.generate({
+    bindto: '#graph-4-2-0',
+    padding: {
+      top: 10,
+      right: 50,
+      bottom: 10,
+      left: slideSize(.4).width
+    },
+    size: {
+      width: slideSize(.9).width,
+      height: slideSize(.4).width
+    },
+    data: {
+      columns: exampleMajor_getData(2004, subBachelorInstitutions, slide_4_2_0_data),
+      groups: exampleMajor_getKeys(2004, slide_4_2_0_data),
+      names: exampleMajor_getNames(2004, slide_4_2_0_data),
+      type: 'bar',
+      colors: exampleMajor_getColors(2004, slide_4_2_0_data),
+    },
+    axis: {
+      rotated: true,
+      x: {
+        type: 'category',
+        categories: subBachelorInstitutions
+      }
+    },
+    legend: {
+      position: 'inset',
+      inset: {
+        anchor: 'top-left',
+        x: -(slideSize(.4).width),
+        y: 0,
+        step: 10
+      }
+    }
+  });
 
   // slide
   var slide_4_4_0 = c3.generate({

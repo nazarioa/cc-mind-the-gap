@@ -449,6 +449,11 @@ window.onload = function(){
       x: {
         type: 'category',
         categories: instituation_getNames(bachelorInstitutions, 'array')
+      },
+      y: {
+        tick: {
+          format: d3.format('s')
+        }
       }
     },
     legend: {
@@ -823,6 +828,11 @@ window.onload = function(){
         type: 'category',
         categories: instituation_getNames(subBachelorInstitutions, 'array')
 
+      },
+      y: {
+        tick: {
+          format: d3.format('s')
+        }
       }
     },
     legend: {

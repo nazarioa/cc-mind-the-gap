@@ -843,7 +843,33 @@ window.onload = function(){
     }
   });
 
-
+  var slide_4_4_1 = c3.generate({
+    bindto: '#graph-4-4-1',
+    data: {
+      x: 'Year',
+      columns: slide_4_4_1_data,
+      type: 'area',
+      colors: instituation_getColors(subBachelorInstitutions),
+      names: instituation_getNames(subBachelorInstitutions),
+    },
+    size: {
+      width: slideSize(.4).width,
+      height: slideSize(.45).height
+    },
+    axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: function (x) { return x.getFullYear(); }
+        }
+      },
+      y: {
+        tick: {
+          format: d3.format('s')
+        }
+      }
+    },
+  });
 
   //Primer
   slide_3_2_0_updateTotals(2004);

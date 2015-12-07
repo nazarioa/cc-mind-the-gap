@@ -261,24 +261,24 @@ window.onload = function(){
     $('#container-graph-3-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
   }
 
-  function slide_3_2_0_getKeys(year){
+  function exampleMajor_getKeys(year, data){
     var keys = [];
     var dataYear = 'Y' + year;
-    for (let i = 0; i < slide_3_2_0_data.length; i++) {
-      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+    for (let i = 0; i < data.length; i++) {
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
       keys.push(dataYear + '_' + majorName);
     }
     return [keys];
   };
 
-  function slide_3_2_0_getData(year, institutions){
+  function exampleMajor_getData(year, institutions, data){
     var result = [];
     var dataYear = 'Y' + year;
-    for (let i = 0; i < slide_3_2_0_data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       var scores = [];
-      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
       for (var institution of institutions ) {
-        scores.push(slide_3_2_0_data[i][dataYear][institution]);
+        scores.push(data[i][dataYear][institution]);
       }
       let key = (dataYear + '_' + majorName);
       scores.unshift(key);
@@ -287,33 +287,33 @@ window.onload = function(){
     return result;
   }
 
-  function slide_3_2_0_getNames(year){
+  function exampleMajor_getNames(year, data){
     var result = {};
     var dataYear = 'Y' + year;
-    for (let i = 0; i < slide_3_2_0_data.length; i++) {
-      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+    for (let i = 0; i < data.length; i++) {
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
       result[dataYear + '_' + majorName] = slide_3_2_0_data[i].Major;
     }
     return result;
   }
 
-  function slide_3_2_0_getColors(year){
+  function exampleMajor_getColors(year, data){
     var result = {};
     var dataYear = 'Y' + year;
-    for (let i = 0; i < slide_3_2_0_data.length; i++) {
-      let majorName = slide_3_2_0_data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
-      result[dataYear + '_' + majorName] = slide_3_2_0_data[i].ColorActive;
+    for (let i = 0; i < data.length; i++) {
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      result[dataYear + '_' + majorName] = data[i].ColorActive;
     }
     return result;
   }
 
-  function slide_3_2_0_getTotals(year, institutions){
+  function exampleMajor_getTotals(year, institutions, data){
     var result = {};
     var dataYear = 'Y' + year;
     let total = 0;
     for (var institution of institutions ) {
-      for (let i = 0; i < slide_3_2_0_data.length; i++) {
-          total = total + slide_3_2_0_data[i][dataYear][institution];
+      for (let i = 0; i < data.length; i++) {
+          total = total + data[i][dataYear][institution];
       }
       result[institution] = total;
       total = 0;

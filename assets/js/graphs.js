@@ -263,7 +263,7 @@ window.onload = function(){
     return [keys];
   };
 
-  function slide_3_2_0_getData(year){
+  function slide_3_2_0_getData(year, institutions){
     var result = [];
     var dataYear = 'Y' + year;
     for (let i = 0; i < slide_3_2_0_data.length; i++) {
@@ -299,15 +299,13 @@ window.onload = function(){
     return result;
   }
 
-  function slide_3_2_0_getTotals(year){
+  function slide_3_2_0_getTotals(year, institutions){
     var result = {};
     var dataYear = 'Y' + year;
     let total = 0;
     for (var institution of institutions ) {
       for (let i = 0; i < slide_3_2_0_data.length; i++) {
           total = total + slide_3_2_0_data[i][dataYear][institution];
-          // console.log(dataYear + ' ' + institution);
-          // console.log(slide_3_2_0_data[i][dataYear][institution]);
       }
       result[institution] = total;
       total = 0;

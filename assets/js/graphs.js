@@ -19,10 +19,10 @@ window.onload = function(){
     }else{
       slide_3_2_0.load({
         type: 'bar',
-        names: slide_3_2_0_getNames(option),
-        columns: slide_3_2_0_getData(option, bachelorInstitutions),
-        groups: slide_3_2_0_getKeys(option),
-        colors: slide_3_2_0_getColors(option),
+        names: exampleMajor_getNames(option, slide_3_2_0_data),
+        columns: exampleMajor_getData(option, bachelorInstitutions, slide_3_2_0_data),
+        groups: exampleMajor_getKeys(option, slide_3_2_0_data),
+        colors: exampleMajor_getColors(option, slide_3_2_0_data),
 
         unload: true
       });
@@ -254,7 +254,7 @@ window.onload = function(){
 
   // slide
   function slide_3_2_0_updateTotals(year){
-    let totals = slide_3_2_0_getTotals(year, bachelorInstitutions);
+    let totals = exampleMajor_getTotals(year, bachelorInstitutions, slide_3_2_0_data);
     $('#container-graph-3-2-0 .uc .value').html(totals.uc.toLocaleString());
     $('#container-graph-3-2-0 .csu .value').html(totals.csu.toLocaleString());
     $('#container-graph-3-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
@@ -334,11 +334,11 @@ window.onload = function(){
       height: slideSize(.4).width
     },
     data: {
-      columns: slide_3_2_0_getData(2004, bachelorInstitutions),
-      groups: slide_3_2_0_getKeys(2004),
-      names: slide_3_2_0_getNames(2004),
+      columns: exampleMajor_getData(2004, bachelorInstitutions, slide_3_2_0_data),
+      groups: exampleMajor_getKeys(2004, slide_3_2_0_data),
+      names: exampleMajor_getNames(2004, slide_3_2_0_data),
       type: 'bar',
-      colors: slide_3_2_0_getColors(2004),
+      colors: exampleMajor_getColors(2004, slide_3_2_0_data),
     },
     axis: {
       rotated: true,

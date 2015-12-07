@@ -17,7 +17,7 @@ window.onload = function(){
       slide_3_2_0.load({
         type: 'bar',
         names: slide_3_2_0_getNames(option),
-        columns: slide_3_2_0_getData(option),
+        columns: slide_3_2_0_getData(option, bachelorInstitutions),
         groups: slide_3_2_0_getKeys(option),
         colors: slide_3_2_0_getColors(option),
 
@@ -243,14 +243,12 @@ window.onload = function(){
   });
 
   // slide
-  var institutions = ['UC', 'CSU', 'NonProfit', 'ForProfit'] ;
-
   function slide_3_2_0_updateTotals(year){
-    let totals = slide_3_2_0_getTotals(year);
-    $('#container-graph-3-2-0 .uc .value').html(totals.UC.toLocaleString());
-    $('#container-graph-3-2-0 .csu .value').html(totals.CSU.toLocaleString());
-    $('#container-graph-3-2-0 .nonprofit .value').html(totals.NonProfit.toLocaleString());
-    $('#container-graph-3-2-0 .forprofit .value').html(totals.ForProfit.toLocaleString());
+    let totals = slide_3_2_0_getTotals(year, bachelorInstitutions);
+    $('#container-graph-3-2-0 .uc .value').html(totals.uc.toLocaleString());
+    $('#container-graph-3-2-0 .csu .value').html(totals.csu.toLocaleString());
+    $('#container-graph-3-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
+    $('#container-graph-3-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
   }
 
   function slide_3_2_0_getKeys(year){
@@ -326,7 +324,7 @@ window.onload = function(){
       height: slideSize(.4).width
     },
     data: {
-      columns: slide_3_2_0_getData(2004),
+      columns: slide_3_2_0_getData(2004, bachelorInstitutions),
       groups: slide_3_2_0_getKeys(2004),
       names: slide_3_2_0_getNames(2004),
       type: 'bar',
@@ -336,7 +334,7 @@ window.onload = function(){
       rotated: true,
       x: {
         type: 'category',
-        categories: ['UC', 'CSU', 'Non Profit', 'For Profit' ]
+        categories: bachelorInstitutions
       }
     },
     legend: {
@@ -356,7 +354,7 @@ window.onload = function(){
   });
 
   var slide_3_3_0_data_TotalsValues = slide_3_3_0_data.map(function(x) {
-    var totals = x.UC + x.CSU + x.NonProfit + x.ForProfit;
+    var totals = x.uc + x.csu + x.nonprofit + x.forprofit;
     return [ x.Ethicity, totals];
   });
 
@@ -475,29 +473,29 @@ window.onload = function(){
   // function to get 'Y' values for Mini Pie Graphs
   // UC
   var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
-    if(x.UC){
-      return [x.Ethicity, x.UC];
+    if(x.uc){
+      return [x.Ethicity, x.uc];
     }
   });
 
   // CSU
   var slide_3_3_0_data_Values_CSU = slide_3_3_0_data.map(function(x) {
-    if(x.CSU){
-      return [x.Ethicity, x.CSU];
+    if(x.csu){
+      return [x.Ethicity, x.csu];
     }
   });
 
   // FP
   var slide_3_3_0_data_Values_ForProfit = slide_3_3_0_data.map(function(x) {
-    if(x.ForProfit){
-      return [x.Ethicity, x.ForProfit];
+    if(x.forprofit){
+      return [x.Ethicity, x.forprofit];
     }
   });
 
   // NFP
   var slide_3_3_0_data_Values_NonProfit = slide_3_3_0_data.map(function(x) {
-    if(x.NonProfit){
-      return [x.Ethicity, x.NonProfit];
+    if(x.nonprofit){
+      return [x.Ethicity, x.nonprofit];
     }
   });
 
@@ -616,7 +614,9 @@ window.onload = function(){
         format: function (value, id, index, subIndex) {
           return '' + id + ' - ' + value + '%' ;
         }
-      }
+      },
+      colors: instituation_getColors(bachelorInstitutions),
+      names: instituation_getNames(bachelorInstitutions),
     },
     axis: {
       rotated: true,
@@ -648,6 +648,8 @@ window.onload = function(){
       x: 'Year',
       columns: slide_3_4_1_data,
       type: 'area',
+      colors: instituation_getColors(bachelorInstitutions),
+      names: instituation_getNames(bachelorInstitutions),
     },
     size: {
       width: slideSize(.4).width,

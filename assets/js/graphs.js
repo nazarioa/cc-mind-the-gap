@@ -98,18 +98,19 @@ window.onload = function(){
     return result;
   }
 
+  function slideSize(percent){
     var slideWidth = $('#slide-0-0').width();
     var slideHeight = $('#slide-0-0').height();
     return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
   };
 
-  var percentify = function(ratio){
+  function percentify(ratio){
     return Math.floor((ratio * 100)) + '%';
-  }
+  };
 
-  var grayScale = function(value, lower, upper){
+  function grayScale(value, lower, upper){
     return Math.max(Math.min(Math.floor( value * 100 / 255), upper), lower);
-  }
+  };
 
   /* Graphs and Graph Accessor functions */
   // slide

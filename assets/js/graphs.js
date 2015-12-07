@@ -475,7 +475,7 @@ window.onload = function(){
 
   var slide_3_3_0 = c3.generate({
     bindto: '#graph-3-3-0',
-    padding: graph_zero_padding
+    padding: graph_zero_padding,
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,

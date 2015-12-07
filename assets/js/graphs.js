@@ -110,12 +110,12 @@ window.onload = function(){
     }
 
     if( typeof institautions !== 'string' && isIterable(institautions) === true){
-      for (var inst in genericInstitutionData) {
-        if (genericInstitutionData.hasOwnProperty(inst)) {
+      for (var institaution of institautions) {
+        if (genericInstitutionData.hasOwnProperty(institaution)) {
           if(style === 'array'){
-            result.push(genericInstitutionData[inst].Name);
+            result.push(genericInstitutionData[institaution].Name);
           }else{
-            result[inst] = genericInstitutionData[inst].Name;
+            result[institaution] = genericInstitutionData[institaution].Name;
           }
         }
       }

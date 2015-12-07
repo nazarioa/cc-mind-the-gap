@@ -102,12 +102,21 @@ window.onload = function(){
     return result;
   }
 
-  function instituation_getNames(institautions){
-    var result = {};
+  function instituation_getNames(institautions, style){
+    if(style === 'array'){
+      var result = [];
+    }else{
+      var result = {};
+    }
+
     if( typeof institautions !== 'string' && isIterable(institautions) === true){
       for (var inst in genericInstitutionData) {
         if (genericInstitutionData.hasOwnProperty(inst)) {
-          result[inst] = genericInstitutionData[inst].Name;
+          if(style === 'array'){
+            result.push(genericInstitutionData[inst].Name);
+          }else{
+            result[inst] = genericInstitutionData[inst].Name;
+          }
         }
       }
     }else if(typeof institautions === 'string'){

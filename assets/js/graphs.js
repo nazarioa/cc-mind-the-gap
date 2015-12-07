@@ -709,6 +709,57 @@ window.onload = function(){
     },
   });
 
+  // slide
+  var slide_4_1_0_data_keys = slide_4_1_0_data.map(function(x) {
+    return x;
+  });
+
+  var slide_4_1_0_data_result = slide_4_1_0_data.map(function(x) {
+    return [ x.Major, x.Percent];
+  });
+
+  var slide_4_1_0 = c3.generate({
+    bindto: '#graph-4-1-0',
+    padding: {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10,
+    },
+    data: {
+      columns: slide_4_1_0_data_result,
+      keys: slide_4_1_0_data_keys,
+      type: 'pie',
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      width: slideSize(.45).width,
+      height: slideSize(.48).width
+    },
+    pie: {
+      label: {
+        format: function (value, ratio, id) {
+          return percentify(ratio) + "\n " + id ;
+        }
+      }
+    },
+    tooltip: {
+      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+        if(d[0].id !== undefined && d[0].id !== 'Other'){
+          return '<div class="tooltip top-ten-majors"><div class="major">The Stats:<span> ' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all Sub-bachs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + topTen_getMetaData(d[0].id, 'Rank2004', slide_4_1_0_data) + '</span></li><li class="top-providers">Top Providers<br /><span>' + topTen_getMetaData(d[0].id, 'TopProviders', slide_4_1_0_data) + '</span></li></ul></div>';
+        }
+      }
+    }
+  });
 
   // slide
   function slide_4_2_0_updateTotals(year){
@@ -782,58 +833,6 @@ window.onload = function(){
     }
   });
 
-  // slide
-
-  var slide_4_1_0_data_keys = slide_4_1_0_data.map(function(x) {
-    return x;
-  });
-
-  var slide_4_1_0_data_result = slide_4_1_0_data.map(function(x) {
-    return [ x.Major, x.Percent];
-  });
-
-  var slide_4_1_0 = c3.generate({
-    bindto: '#graph-4-1-0',
-    padding: {
-      top: 10,
-      right: 10,
-      bottom: 10,
-      left: 10,
-    },
-    data: {
-      columns: slide_4_1_0_data_result,
-      keys: slide_4_1_0_data_keys,
-      type: 'pie',
-      color: function (color, d) {
-        if(d !== undefined ){
-          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
-          return d3.rgb(grayValue, grayValue, grayValue);
-        }
-        return '#dedede';
-      },
-    },
-    legend: {
-      hide: true
-    },
-    size: {
-      width: slideSize(.45).width,
-      height: slideSize(.48).width
-    },
-    pie: {
-      label: {
-        format: function (value, ratio, id) {
-          return percentify(ratio) + "\n " + id ;
-        }
-      }
-    },
-    tooltip: {
-      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-        if(d[0].id !== undefined && d[0].id !== 'Other'){
-          return '<div class="tooltip top-ten-majors"><div class="major">The Stats:<span> ' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all Sub-bachs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + topTen_getMetaData(d[0].id, 'Rank2004', slide_4_1_0_data) + '</span></li><li class="top-providers">Top Providers<br /><span>' + topTen_getMetaData(d[0].id, 'TopProviders', slide_4_1_0_data) + '</span></li></ul></div>';
-        }
-      }
-    }
-  });
 
 
   //Primer

@@ -192,7 +192,7 @@ window.onload = function(){
         }
       }
     }else{
-      result[eth] = genericEthnicityData[eth].ActiveColor;
+      result[ethnicity] = genericEthnicityData[ethnicity].ActiveColor;
     }
     return result;
   }
@@ -206,7 +206,7 @@ window.onload = function(){
         }
       }
     }else{
-      result[eth] = genericEthnicityData[eth].Name;
+      result[ethnicity] = genericEthnicityData[ethnicity].Name;
     }
     return result;
   }

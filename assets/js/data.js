@@ -572,6 +572,91 @@ var slide_3_4_1_data = [
   ['forprofit', 8117, 8469, 8751, 9094, 10071, 11949, 12350, 12045, 12281, 13465],
 ]
 
+var slide_4_1_0_data = [
+  {
+    "Major":"Health Professions",
+    "Precent":0.43,
+    "Rank2004":"1 (32%) No Change",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Protective Services",
+    "Precent":0.09,
+    "Rank2004":"6 (7%) Increase",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Mechanic Tech/Repair",
+    "Precent":0.07,
+    "Rank2004":"7 (7%) Increase",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Cosmetology & Culinary",
+    "Precent":0.07,
+    "Rank2004":"4 (8%) No Change",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Business & Marketing",
+    "Precent":0.05,
+    "Rank2004":"2 (9%) Decrease",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Visual & Performing Arts",
+    "Precent":0.05,
+    "Rank2004":"8 (7%) Increase",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Engineering Tech",
+    "Precent":0.04,
+    "Rank2004":"5 (7%) Decrease",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Computer Tech",
+    "Precent":0.04,
+    "Rank2004":"3 (8%) Decrease",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Family & Consumer Sciences",
+    "Precent":0.04,
+    "Rank2004":"9 (4%) - ",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Construction Trades",
+    "Precent":0.02,
+    "Rank2004":"12 (1%) Increase",
+    "TopProviders":"For-profit",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Paralegal",
+    "Precent":0.02,
+    "Rank2004":"10 (2%) - ",
+    "TopProviders":"Community Colleges",
+    "ColorInactive" : "",
+  },
+  {
+    "Major":"Other",
+    "Precent":0.08
+    "ColorInactive" : "",
+  }
+];
+
 var slide_4_4_0_data = [
   ['nonprofit', 9.66],
   ['cc', 39.72],

@@ -660,6 +660,7 @@ var slide_4_1_0_data = [
 var slide_4_2_0_data = [
   {
     "Major":	"Medical Assisting Services",
+    "ColorActive" : "#37758c",
     "Y2003":{
       "forprofit": 10333,
       "cc": 1130,
@@ -673,6 +674,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Registered Nursing, Nursing Admin, etc.",
+    "ColorActive" : "#9fa76b",
     "Y2003":{
       "forprofit": 509,
       "cc": 5739,
@@ -686,6 +688,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Practical Nursing, Vocational Nursing & Nursing Assistants",
+    "ColorActive" : "#c46d26",
     "Y2003":{
       "forprofit": 3374,
       "cc": 1211,
@@ -699,6 +702,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Allied Health Diagnostic, Intervention & Treatment",
+    "ColorActive" : "#5c180c",
     "Y2003":{
       "forprofit": 0,
       "cc": 1688,
@@ -712,6 +716,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Health & Medical Admin Services",
+    "ColorActive" : "#00736b",
     "Y2003":{
       "forprofit": 0,
       "cc": 534,
@@ -725,6 +730,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Health Services, General",
+    "ColorActive" : "#c7a51c",
     "Y2003":{
       "forprofit": 0,
       "cc": 160,
@@ -738,6 +744,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Mental & Social Health Services",
+    "ColorActive" : "#a6a8ab",
     "Y2003":{
       "forprofit": 451,
       "cc": 1143,
@@ -751,6 +758,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Health/Medical Prep Programs",
+    "ColorActive" : "#a2c6d4",
     "Y2003":{
       "forprofit": null,
       "cc": 646,
@@ -764,6 +772,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Dental Support Services",
+    "ColorActive" : "#6e6e70",
     "Y2003":{
       "forprofit": null,
       "cc": 751,
@@ -777,6 +786,7 @@ var slide_4_2_0_data = [
   },
   {
     "Major":	"Somatic Bodywork & Therapeutic Services",
+    "ColorActive" : "#a73e3f",
     "Y2003":{
       "forprofit": 637,
       "cc": 8,

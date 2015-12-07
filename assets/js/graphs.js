@@ -36,7 +36,68 @@ window.onload = function(){
     left: 0,
   };
 
-  var slideSize = function(percent){
+  function instituation_getColors(institautions){
+    var result = {};
+    if(institautions.length > 1){
+      // get all colors and retrun an object with key: color pairs
+      for (var inst in genericInstitutionData) {
+        if (genericInstitutionData.hasOwnProperty(inst)) {
+          result[inst] = genericInstitutionData[inst].ActiveColor;
+        }
+      }
+    }else if(institautions.length === 1){
+      result[inst] = genericInstitutionData[inst].ActiveColor;
+    }else{
+      result = undefined;
+    }
+    return result;
+  }
+
+  function instituation_getNames(institautions){
+    var result = {};
+    if(institautions.length > 1){
+      for (var inst in genericInstitutionData) {
+        if (genericInstitutionData.hasOwnProperty(inst)) {
+          result[inst] = genericInstitutionData[inst].Name;
+        }
+      }
+    }else if(institautions.length === 1){
+      result[inst] = genericInstitutionData[inst].Name;
+    }else{
+      result = undefined;
+    }
+    return result;
+  }
+
+  function ethnicity_getColors(ethnicity){
+    var result = {};
+    if(ethnicity === undefined){
+      // get all colors and retrun an object with key: color pairs
+      for (var eth in genericInstitutionData) {
+        if (genericEthnicityData.hasOwnProperty(eth)) {
+          result[eth] = genericEthnicityData[eth].ActiveColor;
+        }
+      }
+    }else{
+      result[eth] = genericEthnicityData[eth].ActiveColor;
+    }
+    return result;
+  }
+
+  function ethnicity_getNames(ethnicity){
+    var result = {};
+    if(ethnicity === undefined){
+      for (var eth in genericInstitutionData) {
+        if (genericEthnicityData.hasOwnProperty(inst)) {
+          result[eth] = genericEthnicityData[eth].Name;
+        }
+      }
+    }else{
+      result[eth] = genericEthnicityData[eth].Name;
+    }
+    return result;
+  }
+
     var slideWidth = $('#slide-0-0').width();
     var slideHeight = $('#slide-0-0').height();
     return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };

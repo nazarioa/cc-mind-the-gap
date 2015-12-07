@@ -44,7 +44,7 @@ window.onload = function(){
       slide_4_2_0.load({
         type: 'bar',
         names: exampleMajor_getNames(option, slide_4_2_0_data),
-        columns: exampleMajor_getData(option, bachelorInstitutions, slide_4_2_0_data),
+        columns: exampleMajor_getData(option, subBachelorInstitutions, slide_4_2_0_data),
         groups: exampleMajor_getKeys(option, slide_4_2_0_data),
         colors: exampleMajor_getColors(option, slide_4_2_0_data),
 
@@ -772,7 +772,7 @@ window.onload = function(){
 
   // slide
   function slide_4_2_0_updateTotals(year){
-    let totals = exampleMajor_getTotals(year, bachelorInstitutions, slide_4_2_0_data);
+    let totals = exampleMajor_getTotals(year, subBachelorInstitutions, slide_4_2_0_data);
     $('#container-graph-4-2-0 .cc .value').html(totals.cc.toLocaleString());
     $('#container-graph-4-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
     $('#container-graph-4-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
@@ -821,8 +821,8 @@ window.onload = function(){
     bindto: '#graph-4-4-0',
     data: {
       columns: slide_4_4_0_data,
-      colors: instituation_getColors(bachelorInstitutions),
-      names: instituation_getNames(bachelorInstitutions),
+      colors: instituation_getColors(subBachelorInstitutions),
+      names: instituation_getNames(subBachelorInstitutions),
       type: 'bar'
     },
     axis: {

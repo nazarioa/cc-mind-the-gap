@@ -40,6 +40,34 @@ var genericEthnicityData = {
   },
 };
 
+var genericInstitutionData = {
+  'uc': {
+    'Name': 'UC',
+    'ActiveColor': '#37758c',
+    'InactiveColor': '#',
+  },
+  'csu': {
+    'Name': 'CSU',
+    'ActiveColor': '#c7a51c',
+    'InactiveColor': '#',
+  },
+  'nonprofit': {
+    'Name': 'Non-Profits',
+    'ActiveColor': '#9fa76b',
+    'InactiveColor': '#',
+  },
+  'forprofit': {
+    'Name': 'For Profits',
+    'ActiveColor': '#c46d26',
+    'InactiveColor': '#',
+  },
+  // 'cc': {
+  //   'Name': 'Community College',
+  //   'ActiveColor': '#c46d26',
+  //   'InactiveColor': '#',
+  // },
+}
+
 var slide_3_1_0_data = [
   {
     "Major": "Business & Marketing",

@@ -3,7 +3,10 @@ window.onload = function(){
   var bachelorInstitutions = ['uc', 'csu', 'nonprofit', 'forprofit'] ;
   var subBachelorInstitutions = ['nonprofit', 'forprofit', 'cc'] ;
 
-  /* User interacticity */
+
+  /*
+  User Interacticity
+  */
   $('#container-graph-3-2-0 .option').on('click', function(d){
     $('#container-graph-3-2-0 .option').removeClass('active');
     $(this).addClass('active');
@@ -28,7 +31,10 @@ window.onload = function(){
     }
   });
 
-  /* Utility functions */
+
+  /*
+  Utility functions
+  */
   var mini_graph_padding = {
     top: 0,
     right: 0,
@@ -112,7 +118,11 @@ window.onload = function(){
     return Math.max(Math.min(Math.floor( value * 100 / 255), upper), lower);
   };
 
-  /* Graphs and Graph Accessor functions */
+
+  /*
+  Graphs and Graph Accessor functions
+  */
+
   // slide
   var slide_2_0_0 = c3.generate({
     bindto: '#graph-2-0-0',

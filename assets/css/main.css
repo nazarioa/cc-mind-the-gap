@@ -637,7 +637,7 @@ section.bachelors-degrees .view-more > span{
   height: 100%;
 }
 
-#graph-3-1-0 text{
+#graph-3-1-0 text, #graph-4-1-0 text{
   fill: #494747;
   font-size: 100%;
   width: 100px;

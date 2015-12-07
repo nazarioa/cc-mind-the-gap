@@ -256,7 +256,7 @@ window.onload = function(){
     padding: {
       top: 10,
       right: 20,
-      bottom: 10,
+      bottom: 40,
       left: 50,
     },
     data: {
@@ -281,7 +281,7 @@ window.onload = function(){
     },
     size: {
       width: slideSize(.5).width,
-      height: slideSize(.6).height
+      height: slideSize(.55).height
     },
     tooltip: {
       format: {
@@ -290,6 +290,15 @@ window.onload = function(){
           var format = (id === 'Cumulative Degrees' || id === 'Degrees Added Per Year' || id === 'Projected Degrees') ? d3.format(',') : false;
           return format(value);
         }
+      }
+    },
+    legend: {
+      position: 'inset',
+      inset: {
+        anchor: 'bottom-right',
+        x: (slideSize(.5).width)/3,
+        y: -10,
+        step: 3
       }
     }
   });

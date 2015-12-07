@@ -446,10 +446,7 @@ window.onload = function(){
           $('#slide-3-3 .left-panel.data').animate(
             {left: 0},
             1500,
-            "swing",
-            function(){
-              // updateData_3_3_0(d);
-            }
+            "swing"
           );
           //end data slide in animation
 

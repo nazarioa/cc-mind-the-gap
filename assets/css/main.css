@@ -128,6 +128,21 @@ section > label.field-of-study{
   font-size: 120%;
 }
 
+.back {
+  text-transform: lowercase;
+  font-family: 'Montserrat', sans-serif;
+  margin: 3px 2% 3px 2%;
+  padding: 2px 0px 2px 3%;
+  background-color: #f1f1f1;
+  color: #CA6D54;
+  border: 1px solid #d7d7d7;
+  font-size: 80%;
+}
+
+.back::before {
+  content: '\276e \0000a0';
+}
+
 .view-more{
   display: block;
   width: 100%;

@@ -42,6 +42,25 @@ window.onload = function(){
     left: 0,
   };
 
+  function slideSize(percent){
+    var slideWidth = $('#slide-0-0').width();
+    var slideHeight = $('#slide-0-0').height();
+    return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
+  };
+
+  function percentify(ratio){
+    return Math.floor((ratio * 100)) + '%';
+  };
+
+  function grayScale(value, lower, upper){
+    return Math.max(Math.min(Math.floor( value * 100 / 255), upper), lower);
+  };
+
+
+  /*
+  Generic Graphs and Graph Accessor functions
+  */
+
   function instituation_getColors(institautions){
     var result = {};
     if( typeof institautions !== 'string' && isIterable(institautions) === true){
@@ -104,23 +123,98 @@ window.onload = function(){
     return result;
   }
 
-  function slideSize(percent){
-    var slideWidth = $('#slide-0-0').width();
-    var slideHeight = $('#slide-0-0').height();
-    return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
+  function exampleMajor_getKeys(year, data){
+    var keys = [];
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < data.length; i++) {
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      keys.push(dataYear + '_' + majorName);
+    }
+    return [keys];
   };
 
-  function percentify(ratio){
-    return Math.floor((ratio * 100)) + '%';
-  };
+  function exampleMajor_getData(year, institutions, data){
+    var result = [];
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < data.length; i++) {
+      var scores = [];
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      for (var institution of institutions ) {
+        scores.push(data[i][dataYear][institution]);
+      }
+      let key = (dataYear + '_' + majorName);
+      scores.unshift(key);
+      result.push(scores);
+    }
+    return result;
+  }
 
-  function grayScale(value, lower, upper){
-    return Math.max(Math.min(Math.floor( value * 100 / 255), upper), lower);
-  };
+  function exampleMajor_getNames(year, data){
+    var result = {};
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < data.length; i++) {
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      result[dataYear + '_' + majorName] = data[i].Major;
+    }
+    return result;
+  }
+
+  function exampleMajor_getColors(year, data){
+    var result = {};
+    var dataYear = 'Y' + year;
+    for (let i = 0; i < data.length; i++) {
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      result[dataYear + '_' + majorName] = data[i].ColorActive;
+    }
+    return result;
+  }
+
+  function exampleMajor_getTotals(year, institutions, data){
+    var result = {};
+    var dataYear = 'Y' + year;
+    let total = 0;
+    for (var institution of institutions ) {
+      for (let i = 0; i < data.length; i++) {
+          total = total + data[i][dataYear][institution];
+      }
+      result[institution] = total;
+      total = 0;
+    }
+    return result;
+  }
+
+  function topTen_getMetaData(key, attribute, data){
+    for (var i = 0; i < data.length; i++) {
+      var thisObject = data[i];
+
+      if ( thisObject.Major !== undefined && thisObject.Major === key ) {
+        switch (attribute) {
+          case 'Rank2004':
+          return thisObject.Rank2004;
+          break;
+
+          case 'TopProviders':
+          return thisObject.TopProviders;
+          break;
+
+          case 'ColorInactive':
+          return thisObject.ColorInactive;
+          break;
+
+          case 'ColorActive':
+          return thisObject.ColorActive;
+          break;
+
+          default:
+          return undefined;
+        }
+      }
+    }
+  }
 
 
   /*
-  Graphs and Graph Accessor functions
+  Specific Graphs and Graph Accessor functions
   */
 
   // slide
@@ -167,6 +261,7 @@ window.onload = function(){
     }
   });
 
+
   // slide
   var slide_3_1_0_data_keys = slide_3_1_0_data.map(function(x) {
     return x;
@@ -175,35 +270,6 @@ window.onload = function(){
   var slide_3_1_0_data_result = slide_3_1_0_data.map(function(x) {
     return [ x.Major, x.Percent];
   });
-
-  function topTen_getMetaData(key, attribute, data){
-    for (var i = 0; i < data.length; i++) {
-      var thisObject = data[i];
-
-      if ( thisObject.Major !== undefined && thisObject.Major === key ) {
-        switch (attribute) {
-          case 'Rank2004':
-          return thisObject.Rank2004;
-          break;
-
-          case 'TopProviders':
-          return thisObject.TopProviders;
-          break;
-
-          case 'ColorInactive':
-          return thisObject.ColorInactive;
-          break;
-
-          case 'ColorActive':
-          return thisObject.ColorActive;
-          break;
-
-          default:
-          return undefined;
-        }
-      }
-    }
-  }
 
   var slide_3_1_0_data_colors = slide_3_1_0_data.map(function(x) {
     return { "Active": x.ColorActive, "Inactive": x.ColorInactive };
@@ -252,6 +318,7 @@ window.onload = function(){
     }
   });
 
+
   // slide
   function slide_3_2_0_updateTotals(year){
     let totals = exampleMajor_getTotals(year, bachelorInstitutions, slide_3_2_0_data);
@@ -259,66 +326,6 @@ window.onload = function(){
     $('#container-graph-3-2-0 .csu .value').html(totals.csu.toLocaleString());
     $('#container-graph-3-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
     $('#container-graph-3-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
-  }
-
-  function exampleMajor_getKeys(year, data){
-    var keys = [];
-    var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
-      keys.push(dataYear + '_' + majorName);
-    }
-    return [keys];
-  };
-
-  function exampleMajor_getData(year, institutions, data){
-    var result = [];
-    var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      var scores = [];
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
-      for (var institution of institutions ) {
-        scores.push(data[i][dataYear][institution]);
-      }
-      let key = (dataYear + '_' + majorName);
-      scores.unshift(key);
-      result.push(scores);
-    }
-    return result;
-  }
-
-  function exampleMajor_getNames(year, data){
-    var result = {};
-    var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
-      result[dataYear + '_' + majorName] = slide_3_2_0_data[i].Major;
-    }
-    return result;
-  }
-
-  function exampleMajor_getColors(year, data){
-    var result = {};
-    var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
-      result[dataYear + '_' + majorName] = data[i].ColorActive;
-    }
-    return result;
-  }
-
-  function exampleMajor_getTotals(year, institutions, data){
-    var result = {};
-    var dataYear = 'Y' + year;
-    let total = 0;
-    for (var institution of institutions ) {
-      for (let i = 0; i < data.length; i++) {
-          total = total + data[i][dataYear][institution];
-      }
-      result[institution] = total;
-      total = 0;
-    }
-    return result;
   }
 
   var slide_3_2_0 = c3.generate({
@@ -357,6 +364,7 @@ window.onload = function(){
       }
     }
   });
+
 
   // slide
   var slide_3_3_0_data_keys = slide_3_3_0_data.map(function(x) {

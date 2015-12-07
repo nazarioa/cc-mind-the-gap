@@ -419,13 +419,13 @@ window.onload = function(){
   });
 
   // Used for updating the mini graphs and stats for slide 3-3
-  function updateData_3_3_0(x){
+  function updateSideData(x, slide, data){
     // The Stats Data -- Mains stuff
-    $('#slide-3-3 .left-panel.data .ethicity').html(x.name);
-    $('#slide-3-3 .stats-general .percentage > span').html(
+    $('#' + slide + ' .left-panel.data .ethicity').html(x.name);
+    $('#' + slide + ' .stats-general .percentage > span').html(
       percentify(x.ratio)
     );
-    $('#slide-3-3 .stats-general .totals > span').html(
+    $('#' + slide + ' .stats-general .totals > span').html(
       function(){
         return x.value.toLocaleString();
       }
@@ -433,10 +433,10 @@ window.onload = function(){
 
     // START - Table Data Update
     var rowData = '';
-    for (var attr in dataYellowSlide) {
+    for (var attr in data) {
       var row = '<tr><td class="major">' + attr + '</td>';
-      if (dataYellowSlide.hasOwnProperty(attr) ) {
-        var attrData = dataYellowSlide[attr];
+      if (data.hasOwnProperty(attr) ) {
+        var attrData = data[attr];
         for (var ethnicity in attrData) {
           if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
             row = row + '<td class="selected">' + attrData[ethnicity] + '</td>';
@@ -449,12 +449,11 @@ window.onload = function(){
       }
       rowData += row + '</tr>';
     }
-    $('#slide-3-3-table tbody').html(rowData);
+    $('#' + slide + '-table tbody').html(rowData);
     // END - Table Data
 
     // START - MiniGraphs Data Update
     // END - MiniGraphs
-
   };
 
   var slide_3_3_0 = c3.generate({

@@ -619,7 +619,7 @@ window.onload = function(){
       type: 'bar',
       labels: {
         format: function (value, id, index, subIndex) {
-          return '' + id + ' - ' + value + '%' ;
+          return '' + instituation_getNames(id) + ' - ' + value + '%' ;
         }
       },
       colors: instituation_getColors(bachelorInstitutions),

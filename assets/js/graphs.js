@@ -683,6 +683,8 @@ window.onload = function(){
     bindto: '#graph-4-4-0',
     data: {
       columns: slide_4_4_0_data,
+      colors: instituation_getColors(bachelorInstitutions),
+      names: instituation_getNames(bachelorInstitutions),
       type: 'bar'
     },
     axis: {

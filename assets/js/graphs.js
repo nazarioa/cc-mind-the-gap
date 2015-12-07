@@ -409,7 +409,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: race_chart_colors_active,
+      colors: ethnicity_getColors(),
       onclick: function(d) {
         var leftPanelWidth = $('#slide-3-3 .left-panel').width();
 
@@ -507,7 +507,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_UC,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: race_chart_colors_active
+      colors: ethnicity_getColors(),
     },
     legend: {
       hide: true
@@ -533,7 +533,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_CSU,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: race_chart_colors_active
+      colors: ethnicity_getColors(),
     },
     legend: {
       hide: true
@@ -559,7 +559,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_ForProfit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: race_chart_colors_active
+      colors: ethnicity_getColors(),
     },
     legend: {
       hide: true
@@ -585,7 +585,7 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_NonProfit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: race_chart_colors_active
+      colors: ethnicity_getColors(),
     },
     legend: {
       hide: true

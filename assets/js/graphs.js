@@ -668,6 +668,11 @@ window.onload = function(){
         tick: {
           format: function (x) { return x.getFullYear(); }
         }
+      },
+      y: {
+        tick: {
+          format: d3.format('s')
+        }
       }
     },
   });

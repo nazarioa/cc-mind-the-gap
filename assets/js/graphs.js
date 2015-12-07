@@ -2,7 +2,7 @@
 window.onload = function(){
   var bachelorInstitutions = ['uc', 'csu', 'nonprofit', 'forprofit'] ;
   var subBachelorInstitutions = ['nonprofit', 'forprofit', 'cc'] ;
-  var mini_graph_padding = {
+  var graph_zero_padding = {
     top: 0,
     right: 0,
     bottom: 0,
@@ -475,12 +475,7 @@ window.onload = function(){
 
   var slide_3_3_0 = c3.generate({
     bindto: '#graph-3-3-0',
-    padding: {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-    },
+    padding: graph_zero_padding
     data: {
       columns: slide_3_3_0_data_TotalsValues,
       keys: slide_3_3_0_data_keys,
@@ -575,7 +570,7 @@ window.onload = function(){
   // 1 Mini Pie Graph
   var slide_3_3_1 = c3.generate({
     bindto: '#graph-3-3-1-UC',
-    padding: mini_graph_padding,
+    padding: graph_zero_padding,
     data: {
       columns: slide_3_3_0_data_Values_UC,
       keys: slide_3_3_0_data_keys,
@@ -601,7 +596,7 @@ window.onload = function(){
   // 2 Mini Pie Graph
   var slide_3_3_2 = c3.generate({
     bindto: '#graph-3-3-2-CSU',
-    padding: mini_graph_padding,
+    padding: graph_zero_padding,
     data: {
       columns: slide_3_3_0_data_Values_CSU,
       keys: slide_3_3_0_data_keys,
@@ -627,7 +622,7 @@ window.onload = function(){
   // 3 Mini Pie Graph
   var slide_3_3_3 = c3.generate({
     bindto: '#graph-3-3-3-FP',
-    padding: mini_graph_padding,
+    padding: graph_zero_padding,
     data: {
       columns: slide_3_3_0_data_Values_ForProfit,
       keys: slide_3_3_0_data_keys,
@@ -653,7 +648,7 @@ window.onload = function(){
   // 4 Mini Pie Graph
   var slide_3_3_4 = c3.generate({
     bindto: '#graph-3-3-4-NFP',
-    padding: mini_graph_padding,
+    padding: graph_zero_padding,
     data: {
       columns: slide_3_3_0_data_Values_NonProfit,
       keys: slide_3_3_0_data_keys,

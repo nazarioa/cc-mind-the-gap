@@ -829,7 +829,7 @@ window.onload = function(){
       position: 'inset',
       inset: {
         anchor: 'top-left',
-        x: -(slideSize(.5).width),
+        x: -(slideSize(.45).width),
         y: 0,
         step: 10
       }

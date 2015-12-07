@@ -739,6 +739,45 @@ section.sub-baccalaureate .view-more > span {
 
 /* = */
 
+
+/* = */
+#slide-4-3 {
+  background-image: url('../img/grad_silhouette.png');
+  background-position: right 5% top 10%;
+  background-repeat: no-repeat;
+  background-size: 10%;
+}
+
+#slide-4-3 .left-panel{
+  width: 40%;
+  position: absolute;
+  left:0px;
+  top: 5%;
+  bottom: 0px;
+}
+
+#slide-4-3 .left-panel.hide{
+  left: -40%;
+}
+
+#slide-4-3 .right-panel{
+  width: 60%;
+  position: absolute;
+  right:0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+#slide-4-3 .right-panel.hide{
+  right: -60%;
+}
+
+#graph-4-3-0{
+  text-align: center;
+}
+
+/* = */
+
 #container-graphs-4-4{
     width: 57%;
 }

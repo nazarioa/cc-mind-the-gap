@@ -2,6 +2,13 @@
 window.onload = function(){
   var bachelorInstitutions = ['uc', 'csu', 'nonprofit', 'forprofit'] ;
   var subBachelorInstitutions = ['nonprofit', 'forprofit', 'cc'] ;
+  var mini_graph_padding = {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+  };
+
 
 
   /*
@@ -108,13 +115,6 @@ window.onload = function(){
   /*
   Utility functions
   */
-  var mini_graph_padding = {
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-  };
-
   function slideSize(percent){
     var slideWidth = $('#slide-0-0').width();
     var slideHeight = $('#slide-0-0').height();

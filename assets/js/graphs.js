@@ -829,7 +829,7 @@ window.onload = function(){
     tooltip: {
       contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
         if(d[0].id !== undefined && d[0].id !== 'Other'){
-          return '<div class="tooltip top-ten-majors"><div class="major">The Stats:<span> ' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all BAs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + topTen_getMetaData(d[0].id, 'Rank2004', slide_4_1_0_data) + '</span></li><li class="top-providers">Top Providers<br /><span>' + topTen_getMetaData(d[0].id, 'TopProviders', slide_4_1_0_data) + '</span></li></ul></div>';
+          return '<div class="tooltip top-ten-majors"><div class="major">The Stats:<span> ' + d[0].name + '</span></div><hr><ul><li class="percent">Percent of all Sub-bachs in 2013<br /><span>' + percentify(d[0].ratio) + '</span></li><li class="rank">Rank in 2004<br /><span>' + topTen_getMetaData(d[0].id, 'Rank2004', slide_4_1_0_data) + '</span></li><li class="top-providers">Top Providers<br /><span>' + topTen_getMetaData(d[0].id, 'TopProviders', slide_4_1_0_data) + '</span></li></ul></div>';
         }
       }
     }

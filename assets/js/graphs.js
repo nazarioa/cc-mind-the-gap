@@ -63,14 +63,14 @@ window.onload = function(){
   });
 
 
-  // Used for updating the mini graphs and stats for slide 3-3
-  function updateSideData(x, slide, data){
+  // Used for updating the mini graphs and stats for slide 3-3, 4-3
+  function updateSideData(x, slide, data, institutions){
     // The Stats Data -- Mains stuff
-    $('#' + slide + ' .left-panel.data .ethnicity').html(x.name);
-    $('#' + slide + ' .stats-general .percentage > span').html(
+    $(slide + ' .left-panel.data .ethnicity').html(x.name);
+    $(slide + ' .stats-general .percentage > span').html(
       percentify(x.ratio)
     );
-    $('#' + slide + ' .stats-general .totals > span').html(
+    $(slide + ' .stats-general .totals > span').html(
       function(){
         return x.value.toLocaleString();
       }
@@ -94,22 +94,28 @@ window.onload = function(){
       }
       rowData += row + '</tr>';
     }
-    $('#' + slide + '-table tbody').html(rowData);
+    $(slide + '-table tbody').html(rowData);
     // END - Table Data
 
     // START - MiniGraphs Data Update
     // TODO: will be needed when colors are being dynaimcally muted
-    // slide_3_3_1.unload();
-    // slide_3_3_1.load({
-    //   columns: slide_3_3_0_data_Values_UC,
-    //   type: 'pie',
-    // });
+    var intituationPercents = {
+        uc: 8,
+        csu: 7,
+        forprofit: 6,
+        nonprofit: 5,
+        cc: 4
+    };
 
-    // $('#mini-graphs .mini-graph.uc .percent').html(percentify(8));
-    // $('#mini-graphs .mini-graph.csu .percent').html(percentify(5));
-    // $('#mini-graphs .mini-graph.forprofit .percent').html(percentify(3));
-    // $('#mini-graphs .mini-graph.nonprofit .percent').html(percentify(1));
-    // END - MiniGraphs
+    slide_3_3_1.load({
+      columns: slide_3_3_0_data_Values_UC,
+      type: 'pie',
+      unload: true,
+    });
+
+    for (var institution of institutions) {
+      $( slide + '-mini-graphs .mini-graph.' + institution + ' .percent').html(percentify(intituationPercents[institution]));
+    }
   };
 
   /*

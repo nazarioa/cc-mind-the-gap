@@ -1168,7 +1168,10 @@ section.conclusion .view-more > span {
 }
 
 .stats-major thead th.rotate{
-  height: 100px;
+  position: relative;
+  left: 10px;
+  padding-top: 50px;
+  height: 120px;
   white-space: nowrap;
 }
 

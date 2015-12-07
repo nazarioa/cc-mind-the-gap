@@ -485,7 +485,7 @@ window.onload = function(){
               $('#slide-3-3 .left-panel.info').addClass('hidden');
               $('#slide-3-3 .left-panel.data').removeClass('hidden');
               // update data div
-              updateData_3_3_0(d);
+              updateSideData(d, 'slide-3-3', dataYellowSlide);
             }
           );
           //end info slide out animation
@@ -503,7 +503,7 @@ window.onload = function(){
 
         // else -- the data panel is up, just update the content
         else{
-          updateData_3_3_0(d);
+          updateSideData(d, 'slide-3-3', dataYellowSlide);
         }
       }
     },

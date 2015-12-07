@@ -657,6 +657,139 @@ var slide_4_1_0_data = [
   }
 ];
 
+var slide_4_2_0_data = [
+  {
+    "Major":	"Medical Assisting Services",
+    "Y2003":{
+      "forprofit": 10333,
+      "cc": 1130,
+      "nonprofit": 278,
+    },
+    "Y2004": {
+      "forprofit": 1435,
+      "cc": 501,
+      "nonprofit": 36,
+    },
+  },
+  {
+    "Major":	"Registered Nursing, Nursing Admin, etc.",
+    "Y2003":{
+      "forprofit": 509,
+      "cc": 5739,
+      "nonprofit": 206,
+    },
+    "Y2004": {
+      "forprofit": 1262,
+      "cc": 5094,
+      "nonprofit": 350,
+    },
+  },
+  {
+    "Major":	"Practical Nursing, Vocational Nursing & Nursing Assistants",
+    "Y2003":{
+      "forprofit": 3374,
+      "cc": 1211,
+      "nonprofit": 250,
+    },
+    "Y2004": {
+      "forprofit": null,
+      "cc": null,
+      "nonprofit": null,
+    },
+  },
+  {
+    "Major":	"Allied Health Diagnostic, Intervention & Treatment",
+    "Y2003":{
+      "forprofit": 0,
+      "cc": 1688,
+      "nonprofit": 374,
+    },
+    "Y2004": {
+      "forprofit": 1091,
+      "cc": 1093,
+      "nonprofit": 94,
+    },
+  },
+  {
+    "Major":	"Health & Medical Admin Services",
+    "Y2003":{
+      "forprofit": 0,
+      "cc": 534,
+      "nonprofit": 62,
+    },
+    "Y2004": {
+      "forprofit": 478,
+      "cc": 271,
+      "nonprofit": 18,
+    },
+  },
+  {
+    "Major":	"Health Services, General",
+    "Y2003":{
+      "forprofit": 0,
+      "cc": 160,
+      "nonprofit": 25,
+    },
+    "Y2004": {
+      "forprofit": null,
+      "cc": null,
+      "nonprofit": null,
+    },
+  },
+  {
+    "Major":	"Mental & Social Health Services",
+    "Y2003":{
+      "forprofit": 451,
+      "cc": 1143,
+      "nonprofit": 10,
+    },
+    "Y2004": {
+      "forprofit": null,
+      "cc": 1142,
+      "nonprofit": 10,
+    },
+  },
+  {
+    "Major":	"Health/Medical Prep Programs",
+    "Y2003":{
+      "forprofit": null,
+      "cc": 646,
+      "nonprofit": 150,
+    },
+    "Y2004": {
+      "forprofit": null,
+      "cc": null,
+      "nonprofit": 7,
+    },
+  },
+  {
+    "Major":	"Dental Support Services",
+    "Y2003":{
+      "forprofit": null,
+      "cc": 751,
+      "nonprofit": 8,
+    },
+    "Y2004": {
+      "forprofit": 382,
+      "cc": 595,
+      "nonprofit": null,
+    },
+  },
+  {
+    "Major":	"Somatic Bodywork & Therapeutic Services",
+    "Y2003":{
+      "forprofit": 637,
+      "cc": 8,
+      "nonprofit": null,
+    },
+    "Y2004": {
+      "forprofit": 130,
+      "cc": null,
+      "nonprofit": null,
+    },
+  },
+];
+
 var slide_4_4_0_data = [
   ['nonprofit', 9.66],
   ['cc', 39.72],

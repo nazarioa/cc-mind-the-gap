@@ -4,67 +4,67 @@
 var genericEthnicityData = {
   "aai" : {
     "Name": "American Indian/Alaska Native",
-    "ActiveColor": '#a6a8ab',
+    "ActiveColor": "#a6a8ab",
   },
   "asn" : {
     "Name": "Asian",
-    "ActiveColor": '#a73e3f',
+    "ActiveColor": "#a73e3f",
   },
   "blk": {
-    "Name": 'Black/African American',
-    "ActiveColor": '#ca6d54',
+    "Name": "Black/African American",
+    "ActiveColor": "#ca6d54",
   },
   "hsp" : {
     "Name": "Hispanic/Latino",
-    "ActiveColor": '#9fa76b',
+    "ActiveColor": "#9fa76b",
   },
   "nhp" : {
     "Name": "Native Hawaiian or Other Pacific Islander",
-    "ActiveColor": '#00736b',
+    "ActiveColor": "#00736b",
   },
   "wht" : {
     "Name": "White",
-    "ActiveColor": '#c7a51c',
+    "ActiveColor": "#c7a51c",
   },
   "tw" : {
     "Name": "Two or more races",
-    "ActiveColor": '#a2c6d4',
+    "ActiveColor": "#a2c6d4",
   },
   "unk" : {
     "Name": "Unknown",
-    "ActiveColor": '#37758c',
+    "ActiveColor": "#37758c",
   },
   "nra" : {
     "Name": "Nonresident alien",
-    "ActiveColor": '#5c180c'
+    "ActiveColor": "#5c180c"
   },
 };
 
 var genericInstitutionData = {
-  'uc': {
-    'Name': 'UC',
-    'ActiveColor': '#37758c',
-    'InactiveColor': '#',
+  "uc": {
+    "Name": "UC",
+    "ActiveColor": "#37758c",
+    "InactiveColor": "#",
   },
-  'csu': {
-    'Name': 'CSU',
-    'ActiveColor': '#c7a51c',
-    'InactiveColor': '#',
+  "csu": {
+    "Name": "CSU",
+    "ActiveColor": "#c7a51c",
+    "InactiveColor": "#",
   },
-  'nonprofit': {
-    'Name': 'Non-Profits',
-    'ActiveColor': '#9fa76b',
-    'InactiveColor': '#',
+  "nonprofit": {
+    "Name": "Non-Profits",
+    "ActiveColor": "#9fa76b",
+    "InactiveColor": "#",
   },
-  'forprofit': {
-    'Name': 'For Profits',
-    'ActiveColor': '#c46d26',
-    'InactiveColor': '#',
+  "forprofit": {
+    "Name": "For Profits",
+    "ActiveColor": "#c46d26",
+    "InactiveColor": "#",
   },
-  'cc': {
-    'Name': 'Community College',
-    'ActiveColor': '#5c180c',
-    'InactiveColor': '#',
+  "cc": {
+    "Name": "Community College",
+    "ActiveColor": "#5c180c",
+    "InactiveColor": "#",
   },
 }
 
@@ -170,162 +170,162 @@ var slide_3_1_0_data = [
 var slide_3_2_0_data = [
   {
     "Major": "Computer Science",
-    "ColorActive": '#37758c',
+    "ColorActive": "#37758c",
     "Y2004":{
-      'uc': 687,
-      'csu': 687,
-      'nonprofit': 343,
-      'forprofit': 3,
+      "uc": 687,
+      "csu": 687,
+      "nonprofit": 343,
+      "forprofit": 3,
     },
     "Y2013": {
-      'uc': 907,
-      'csu': 798,
-      'nonprofit': 321,
-      'forprofit': 44
+      "uc": 907,
+      "csu": 798,
+      "nonprofit": 321,
+      "forprofit": 44
     },
   },
   {
     "Major": "CIS, General",
-    "ColorActive": '#9fa76b',
+    "ColorActive": "#9fa76b",
     "Y2004":{
-      'uc': 599,
-      'csu': 223,
-      'nonprofit': 453,
-      'forprofit': 448,
+      "uc": 599,
+      "csu": 223,
+      "nonprofit": 453,
+      "forprofit": 448,
     },
     "Y2013": {
-      'uc': 69,
-      'csu': 304,
-      'nonprofit': 125,
-      'forprofit': 163
+      "uc": 69,
+      "csu": 304,
+      "nonprofit": 125,
+      "forprofit": 163
     },
   },
   {
     "Major": "Computer Engineering",
-    "ColorActive": '#6e6e70',
+    "ColorActive": "#6e6e70",
     "Y2004":{
-      'uc': 550,
-      'csu': 304,
-      'nonprofit': 131,
-      'forprofit': 18,
+      "uc": 550,
+      "csu": 304,
+      "nonprofit": 131,
+      "forprofit": 18,
     },
     "Y2013": {
-      'uc': 289,
-      'csu': 317,
-      'nonprofit': 76,
-      'forprofit': 74
+      "uc": 289,
+      "csu": 317,
+      "nonprofit": 76,
+      "forprofit": 74
     },
   },
   {
     "Major": "Computer Systems Networking & Telecommunications",
-    "ColorActive": '#c46d26',
+    "ColorActive": "#c46d26",
     "Y2004":{
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 0,
-      'forprofit': 611,
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 0,
+      "forprofit": 611,
     },
     "Y2013": {
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 97,
-      'forprofit': 137
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 97,
+      "forprofit": 137
     },
   },
   {
     "Major": "Computer Software & Media Applications",
-    "ColorActive": '#a2c6d4',
+    "ColorActive": "#a2c6d4",
     "Y2004":{
-      'uc': 0,
-      'csu': 75,
-      'nonprofit': 1,
-      'forprofit': 400,
+      "uc": 0,
+      "csu": 75,
+      "nonprofit": 1,
+      "forprofit": 400,
     },
     "Y2013": {
-      'uc': 0,
-      'csu': 36,
-      'nonprofit': 62,
-      'forprofit': 541
+      "uc": 0,
+      "csu": 36,
+      "nonprofit": 62,
+      "forprofit": 541
     },
   },
   {
     "Major": "Computer Systems Analysis",
-    "ColorActive": '#00736b',
+    "ColorActive": "#00736b",
     "Y2004":{
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 0,
-      'forprofit': 405,
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 0,
+      "forprofit": 405,
     },
     "Y2013": {
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 0,
-      'forprofit': 110
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 0,
+      "forprofit": 110
     },
   },
   {
     "Major": "CIS & Support Services, Other",
-    "ColorActive": '#5c180c',
+    "ColorActive": "#5c180c",
     "Y2004":{
-      'uc': 33,
-      'csu': 0,
-      'nonprofit': 106,
-      'forprofit': 70,
+      "uc": 33,
+      "csu": 0,
+      "nonprofit": 106,
+      "forprofit": 70,
     },
     "Y2013": {
-      'uc': 12,
-      'csu': 0,
-      'nonprofit': 3,
-      'forprofit': 3
+      "uc": 12,
+      "csu": 0,
+      "nonprofit": 3,
+      "forprofit": 3
     },
   },
   {
     "Major": "Information Science/Studies",
-    "ColorActive": '#c7a51c',
+    "ColorActive": "#c7a51c",
     "Y2004":{
-      'uc': 11,
-      'csu': 0,
-      'nonprofit': 166,
-      'forprofit': 0,
+      "uc": 11,
+      "csu": 0,
+      "nonprofit": 166,
+      "forprofit": 0,
     },
     "Y2013": {
-      'uc': 12,
-      'csu': 0,
-      'nonprofit': 3,
-      'forprofit': 3
+      "uc": 12,
+      "csu": 0,
+      "nonprofit": 3,
+      "forprofit": 3
     },
   },
   {
     "Major": "CIT Admin & Management",
-    "ColorActive": '#a73e3f',
+    "ColorActive": "#a73e3f",
     "Y2004":{
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 83,
-      'forprofit': 37,
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 83,
+      "forprofit": 37,
     },
     "Y2013": {
-      'uc': 32,
-      'csu': 0,
-      'nonprofit': 106,
-      'forprofit': 324
+      "uc": 32,
+      "csu": 0,
+      "nonprofit": 106,
+      "forprofit": 324
     },
   },
   {
     "Major": "Computer Programming",
-    "ColorActive": '#a6a8ab',
+    "ColorActive": "#a6a8ab",
     "Y2004":{
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 61,
-      'forprofit': 15,
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 61,
+      "forprofit": 15,
     },
     "Y2013": {
-      'uc': 0,
-      'csu': 0,
-      'nonprofit': 31,
-      'forprofit': 96
+      "uc": 0,
+      "csu": 0,
+      "nonprofit": 31,
+      "forprofit": 96
     },
   },
 ];
@@ -333,66 +333,66 @@ var slide_3_2_0_data = [
 var slide_3_3_0_data = [
   {
     "Ethnicity": "American Indian/Alaska Native",
-    'uc': 188,
-    'csu': 414,
-    'nonprofit': 209,
-    'forprofit': 81
+    "uc": 188,
+    "csu": 414,
+    "nonprofit": 209,
+    "forprofit": 81
   },
   {
     "Ethnicity": "Asian",
-    'uc': 17374,
-    'csu': 13413,
-    'nonprofit': 4757,
-    'forprofit': 1477
+    "uc": 17374,
+    "csu": 13413,
+    "nonprofit": 4757,
+    "forprofit": 1477
   },
   {
     "Ethnicity": "Black/African American",
-    'uc': 1397,
-    'csu': 3602,
-    'nonprofit': 1754,
-    'forprofit': 1211
+    "uc": 1397,
+    "csu": 3602,
+    "nonprofit": 1754,
+    "forprofit": 1211
   },
   {
     "Ethnicity": "Hispanic/Latino",
-    'uc': 8488,
-    'csu': 21686,
-    'nonprofit': 6694,
-    'forprofit': 3259
+    "uc": 8488,
+    "csu": 21686,
+    "nonprofit": 6694,
+    "forprofit": 3259
   },
   {
     "Ethnicity": "Native Hawaiian or Other Pacific Islander",
-    'uc': 149,
-    'csu': 597,
-    'nonprofit': 234,
-    'forprofit': 174
+    "uc": 149,
+    "csu": 597,
+    "nonprofit": 234,
+    "forprofit": 174
   },
   {
     "Ethnicity": "White",
-    'uc': 15798,
-    'csu': 28990,
-    'nonprofit': 17046,
-    'forprofit': 3279
+    "uc": 15798,
+    "csu": 28990,
+    "nonprofit": 17046,
+    "forprofit": 3279
   },
   {
     "Ethnicity": "Two or more races",
-    'uc': 950,
-    'csu': 2506,
-    'nonprofit': 1281,
-    'forprofit': 184
+    "uc": 950,
+    "csu": 2506,
+    "nonprofit": 1281,
+    "forprofit": 184
   },
   {
     "Ethnicity": "Unknown",
-    'uc': 2518,
-    'csu': 7576,
-    'nonprofit': 2330,
-    'forprofit': 3294
+    "uc": 2518,
+    "csu": 7576,
+    "nonprofit": 2330,
+    "forprofit": 3294
   },
   {
     "Ethnicity": "Nonresident alien",
-    'uc': 2084,
-    'csu': 3019,
-    'nonprofit': 2074,
-    'forprofit': 506
+    "uc": 2084,
+    "csu": 3019,
+    "nonprofit": 2074,
+    "forprofit": 506
   }
 ];
 
@@ -557,19 +557,19 @@ var dataYellowSlide = {
 }
 
 var slide_3_4_0_data = [
-  ['uc', 21.22],
-  ['csu', 19.63],
-  ['nonprofit', 19.03],
-  ['forprofit', 39.72]
+  ["uc", 21.22],
+  ["csu", 19.63],
+  ["nonprofit", 19.03],
+  ["forprofit", 39.72]
 ];
 
 
 var slide_3_4_1_data = [
   ["Year", "2004-01-01", "2005-01-01", "2006-01-01", "2007-01-01", "2008-01-01", "2009-01-01", "2010-01-01", "2011-01-01", "2012-01-01", "2013-01-01"],
-  ['csu', 65743, 66768, 69361, 71074, 73762, 74643, 75419, 77731, 76427, 81803],
-  ['uc', 38558, 40851, 41639, 41587, 42416, 42664, 44856, 46935, 48899, 48946],
-  ['nonprofit', 29455, 30185, 30631, 31040, 31990, 31343, 31435, 32892, 34889, 36378],
-  ['forprofit', 8117, 8469, 8751, 9094, 10071, 11949, 12350, 12045, 12281, 13465],
+  ["csu", 65743, 66768, 69361, 71074, 73762, 74643, 75419, 77731, 76427, 81803],
+  ["uc", 38558, 40851, 41639, 41587, 42416, 42664, 44856, 46935, 48899, 48946],
+  ["nonprofit", 29455, 30185, 30631, 31040, 31990, 31343, 31435, 32892, 34889, 36378],
+  ["forprofit", 8117, 8469, 8751, 9094, 10071, 11949, 12350, 12045, 12281, 13465],
 ]
 
 var slide_4_1_0_data = [
@@ -949,14 +949,14 @@ var dataGreenSlide = {
 }
 
 var slide_4_4_0_data = [
-  ['nonprofit', 9.66],
-  ['cc', 39.72],
-  ['forprofit', 54.35]
+  ["nonprofit", 9.66],
+  ["cc", 39.72],
+  ["forprofit", 54.35]
 ];
 
 var slide_4_4_1_data = [
-  ['Year', '2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01', '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01'],
-  ['cc', 28387, 28865, 29818, 31161, 33328, 34001, 33798, 34893, 36940, 39628],
-  ['forprofit', 22999, 23613, 22717, 22700, 27365, 28520, 31248, 52760, 54579, 50379],
-  ['nonprofit', 1927, 1447, 1490, 1734, 1697, 1801, 1714, 2046, 2370, 2133]
+  ["Year", "2004-01-01", "2005-01-01", "2006-01-01", "2007-01-01", "2008-01-01", "2009-01-01", "2010-01-01", "2011-01-01", "2012-01-01", "2013-01-01"],
+  ["cc", 28387, 28865, 29818, 31161, 33328, 34001, 33798, 34893, 36940, 39628],
+  ["forprofit", 22999, 23613, 22717, 22700, 27365, 28520, 31248, 52760, 54579, 50379],
+  ["nonprofit", 1927, 1447, 1490, 1734, 1697, 1801, 1714, 2046, 2370, 2133]
 ]

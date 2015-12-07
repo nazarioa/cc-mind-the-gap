@@ -384,7 +384,7 @@ window.onload = function(){
       rotated: true,
       x: {
         type: 'category',
-        categories: bachelorInstitutions
+        categories: instituation_getNames(bachelorInstitutions, 'array')
       }
     },
     legend: {
@@ -801,7 +801,8 @@ window.onload = function(){
       rotated: true,
       x: {
         type: 'category',
-        categories: subBachelorInstitutions
+        categories: instituation_getNames(subBachelorInstitutions, 'array')
+
       }
     },
     legend: {

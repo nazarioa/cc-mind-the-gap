@@ -312,6 +312,65 @@ div.the-tally-flex div.tab div.label{
   color: white;
 }
 
+div.tooltip.top-ten-majors{
+  background-color: rgba(53, 118, 138, .9);
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color: white;
+  padding: 6%;
+}
+
+div.tooltip.top-ten-majors hr{
+  border-color: white;
+  width: 100%;
+  border-width: 1px;
+}
+
+div.tooltip.top-ten-majors ul{
+  margin: 0;
+  padding: 0;
+}
+
+div.tooltip.top-ten-majors li{
+  display: block;
+  min-height: 45px;
+  font-size: 70%;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  color: white;
+  margin: 3%;
+  padding: 1% 0 1% 40px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+div.tooltip.top-ten-majors li.percent{
+  background-image: url('../img/ribbon_icon.png');
+  background-size: 24px 26px;
+}
+
+div.tooltip.top-ten-majors li.percent span{
+  font-size: 210%;
+}
+
+div.tooltip.top-ten-majors li.rank{
+  background-image: url('../img/bargraph_icon.png');
+  background-size: 24px 26px;
+}
+
+div.tooltip.top-ten-majors li.rank span{
+  font-size: 150%;
+}
+
+div.tooltip.top-ten-majors li.top-providers{
+  background-image: url('../img/building_icon.png');
+  background-size: 24px 26px;
+}
+
+div.tooltip.top-ten-majors li.top-providers span{
+  font-size: 150%;
+}
+
 
 /* == GENERAL CHART SPECIFIC STYLING == */
 .c3-chart{
@@ -585,65 +644,6 @@ section.bachelors-degrees .view-more > span{
   text-transform: uppercase;
   text-anchor: end;
   font-family: 'Montserrat', sans-serif;
-}
-
-#graph-3-1-0 .tooltip{
-  background-color: rgba(53, 118, 138, .9);
-  font-family: 'Montserrat', sans-serif;
-  text-align: left;
-  color: white;
-  padding: 6%;
-}
-
-#graph-3-1-0 .tooltip hr{
-  border-color: white;
-  width: 100%;
-  border-width: 1px;
-}
-
-#graph-3-1-0 .tooltip ul{
-  margin: 0;
-  padding: 0;
-}
-
-#graph-3-1-0 .tooltip li{
-  display: block;
-  min-height: 45px;
-  font-size: 70%;
-  font-family: 'Montserrat', sans-serif;
-  list-style: none;
-  color: white;
-  margin: 3%;
-  padding: 1% 0 1% 40px;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-#graph-3-1-0 .tooltip li.percent{
-  background-image: url('../img/ribbon_icon.png');
-  background-size: 24px 26px;
-}
-
-#graph-3-1-0 .tooltip li.percent span{
-  font-size: 210%;
-}
-
-#graph-3-1-0 .tooltip li.rank{
-  background-image: url('../img/bargraph_icon.png');
-  background-size: 24px 26px;
-}
-
-#graph-3-1-0 .tooltip li.rank span{
-  font-size: 150%;
-}
-
-#graph-3-1-0 .tooltip li.top-providers{
-  background-image: url('../img/building_icon.png');
-  background-size: 24px 26px;
-}
-
-#graph-3-1-0 .tooltip li.top-providers span{
-  font-size: 150%;
 }
 
 /* = */

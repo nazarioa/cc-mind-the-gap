@@ -531,7 +531,7 @@ window.onload = function(){
         anchor: 'top-left',
         x: -(slideSize(0.4).width),
         y: 0,
-        step: 10
+        step: 20
       }
     },
     tooltip:{
@@ -909,7 +909,7 @@ window.onload = function(){
         anchor: 'top-left',
         x: -(slideSize(0.45).width),
         y: 0,
-        step: 10
+        step: 20
       }
     },
     tooltip:{

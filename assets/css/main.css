@@ -602,6 +602,11 @@ section.degree-gap > h3, section.degree-gap .left-panel h3{
   font-size: 95%;
 }
 
+#container-graph-2-0-0 {
+  padding: 0px;
+  margin: 0px;
+}
+
 /* BACHELORS DEGREES (YELLOW)  */
 section.bachelors-degrees > h3, section.bachelors-degrees .left-panel h3{
   color: rgb(199,165,28);

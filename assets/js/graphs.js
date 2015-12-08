@@ -470,6 +470,10 @@ window.onload = function(){
         }
         return '#dedede';
       },
+      onmouseover: function (d, i) {
+        var currentColor = d3.select(i).style("fill");
+        d3.select(i).style("fill", "#35768a").on("mouseleave", function(d) { d3.select(this).style("fill", currentColor); d.onmouseout(); });
+      },
     },
     legend: {
       hide: true
@@ -846,6 +850,10 @@ window.onload = function(){
           return d3.rgb(grayValue, grayValue, grayValue);
         }
         return '#dedede';
+      },
+      onmouseover: function (d, i) {
+        var currentColor = d3.select(i).style("fill");
+        d3.select(i).style("fill", "#35768a").on("mouseleave", function(d) { d3.select(this).style("fill", currentColor); d.onmouseout(); });
       },
     },
     legend: {

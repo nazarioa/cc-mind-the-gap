@@ -4,6 +4,10 @@
 
 // Generic Data
 var genericEthnicityData = {
+  "oth" : {
+    "Name": "Overall Rank",
+    "ActiveColor": "#123456",
+  },
   "aai" : {
     "Name": "American Indian/Alaska Native",
     "ShortName": "American Indian",
@@ -31,7 +35,7 @@ var genericEthnicityData = {
     "Name": "White",
     "ActiveColor": "#c7a51c",
   },
-  "tw" : {
+  "two" : {
     "Name": "Two or more races",
     "ActiveColor": "#a2c6d4",
   },
@@ -337,63 +341,63 @@ var slide_3_2_0_data = [
 
 var slide_3_3_0_data = [
   {
-    "Ethnicity": "American Indian/Alaska Native",
+    "ethCode": "aai",
     "uc": 188,
     "csu": 414,
     "nonprofit": 209,
     "forprofit": 81
   },
   {
-    "Ethnicity": "Asian",
+    "ethCode": "asn",
     "uc": 17374,
     "csu": 13413,
     "nonprofit": 4757,
     "forprofit": 1477
   },
   {
-    "Ethnicity": "Black/African American",
+    "ethCode": "blk",
     "uc": 1397,
     "csu": 3602,
     "nonprofit": 1754,
     "forprofit": 1211
   },
   {
-    "Ethnicity": "Hispanic/Latino",
+    "ethCode": "hsp",
     "uc": 8488,
     "csu": 21686,
     "nonprofit": 6694,
     "forprofit": 3259
   },
   {
-    "Ethnicity": "Native Hawaiian or Other Pacific Islander",
+    "ethCode": "nhp",
     "uc": 149,
     "csu": 597,
     "nonprofit": 234,
     "forprofit": 174
   },
   {
-    "Ethnicity": "White",
+    "ethCode": "wht",
     "uc": 15798,
     "csu": 28990,
     "nonprofit": 17046,
     "forprofit": 3279
   },
   {
-    "Ethnicity": "Two or more races",
+    "ethCode": "two",
     "uc": 950,
     "csu": 2506,
     "nonprofit": 1281,
     "forprofit": 184
   },
   {
-    "Ethnicity": "Unknown",
+    "ethCode": "unk",
     "uc": 2518,
     "csu": 7576,
     "nonprofit": 2330,
     "forprofit": 3294
   },
   {
-    "Ethnicity": "Nonresident alien",
+    "ethCode": "nra",
     "uc": 2084,
     "csu": 3019,
     "nonprofit": 2074,
@@ -404,160 +408,160 @@ var slide_3_3_0_data = [
 
 var dataYellowSlide = {
   "Business, Management, Marketing & Related Support Services": {
-    "Overall rank": 1,
-    "American Indian/Alaska Native": 1,
-    "Asian": 1,
-    "Black/African American": 1,
-    "Hispanic/Latino": 1,
-    "Native Hawaiian or Other Pacific Islander": 1,
-    "White": 1,
-    "Two or more races": 2,
-    "Unknown": 1,
-    "Nonresident alien": 1
+    "oth": 1,
+    "aai": 1,
+    "asn": 1,
+    "blk": 1,
+    "hsp": 1,
+    "nhp": 1,
+    "wht": 1,
+    "two": 2,
+    "unk": 1,
+    "nra": 1
   },
   "Social Sciences": {
-    "Overall rank": 2,
-    "American Indian/Alaska Native": 2,
-    "Asian": 3,
-    "Black/African American": 2,
-    "Hispanic/Latino": 2,
-    "Native Hawaiian or Other Pacific Islander": 4,
-    "White": 2,
-    "Two or more races": 1,
-    "Unknown": 2,
-    "Nonresident alien": 2
+    "oth": 2,
+    "aai": 2,
+    "asn": 3,
+    "blk": 2,
+    "hsp": 2,
+    "nhp": 4,
+    "wht": 2,
+    "two": 1,
+    "unk": 2,
+    "nra": 2
   },
   "Psychology": {
-    "Overall rank": 3,
-    "American Indian/Alaska Native": 4,
-    "Asian": 6,
-    "Black/African American": 3,
-    "Hispanic/Latino": 3,
-    "Native Hawaiian or Other Pacific Islander": 6,
-    "White": 4,
-    "Two or more races": 3,
-    "Unknown": 5,
-    "Nonresident alien": 5
+    "oth": 3,
+    "aai": 4,
+    "asn": 6,
+    "blk": 3,
+    "hsp": 3,
+    "nhp": 6,
+    "wht": 4,
+    "two": 3,
+    "unk": 5,
+    "nra": 5
   },
   "Visual & Performing Arts": {
-    "Overall rank": 4,
-    "American Indian/Alaska Native": 3,
-    "Asian": 7,
-    "Black/African American": 5,
-    "Hispanic/Latino": 4,
-    "Native Hawaiian or Other Pacific Islander": 7,
-    "White": 3,
-    "Two or more races": 4,
-    "Unknown": 3,
-    "Nonresident alien": 3
+    "oth": 4,
+    "aai": 3,
+    "asn": 7,
+    "blk": 5,
+    "hsp": 4,
+    "nhp": 7,
+    "wht": 3,
+    "two": 4,
+    "unk": 3,
+    "nra": 3
   },
   "Biological & Biomedical Sciences": {
-    "Overall rank": 5,
-    "American Indian/Alaska Native": 6,
-    "Asian": 2,
-    "Black/African American": 8,
-    "Hispanic/Latino": 9,
-    "Native Hawaiian or Other Pacific Islander": 5,
-    "White": 6,
-    "Two or more races": 7,
-    "Unknown": 6,
-    "Nonresident alien": 6
+    "oth": 5,
+    "aai": 6,
+    "asn": 2,
+    "blk": 8,
+    "hsp": 9,
+    "nhp": 5,
+    "wht": 6,
+    "two": 7,
+    "unk": 6,
+    "nra": 6
   },
   "Health Professions & Related Programs": {
-    "Overall rank": 6,
-    "American Indian/Alaska Native": 5,
-    "Asian": 4,
-    "Black/African American": 4,
-    "Hispanic/Latino": 5,
-    "Native Hawaiian or Other Pacific Islander": 2,
-    "White": 5,
-    "Two or more races": 5,
-    "Unknown": 4,
-    "Nonresident alien": 10
+    "oth": 6,
+    "aai": 5,
+    "asn": 4,
+    "blk": 4,
+    "hsp": 5,
+    "nhp": 2,
+    "wht": 5,
+    "two": 5,
+    "unk": 4,
+    "nra": 10
   },
   "Engineering": {
-    "Overall rank": 7,
-    "American Indian/Alaska Native": 9,
-    "Asian": 5,
-    "Black/African American": 15,
-    "Hispanic/Latino": 11,
-    "Native Hawaiian or Other Pacific Islander": 3,
-    "White": 8,
-    "Two or more races": 9,
-    "Unknown": 7,
-    "Nonresident alien": 4
+    "oth": 7,
+    "aai": 9,
+    "asn": 5,
+    "blk": 15,
+    "hsp": 11,
+    "nhp": 3,
+    "wht": 8,
+    "two": 9,
+    "unk": 7,
+    "nra": 4
   },
   "Communication, Journalism & Related Programs": {
-    "Overall rank": 8,
-    "American Indian/Alaska Native": 8,
-    "Asian": 8,
-    "Black/African American": 6,
-    "Hispanic/Latino": 8,
-    "Native Hawaiian or Other Pacific Islander": 9,
-    "White": 7,
-    "Two or more races": 6,
-    "Unknown": 9,
-    "Nonresident alien": 7
+    "oth": 8,
+    "aai": 8,
+    "asn": 8,
+    "blk": 6,
+    "hsp": 8,
+    "nhp": 9,
+    "wht": 7,
+    "two": 6,
+    "unk": 9,
+    "nra": 7
   },
   "English Language & Literature/Letters": {
-    "Overall rank": 9,
-    "American Indian/Alaska Native": 10,
-    "Asian": 12,
-    "Black/African American": 9,
-    "Hispanic/Latino": 10,
-    "Native Hawaiian or Other Pacific Islander": 12,
-    "White": 9,
-    "Two or more races": 8,
-    "Unknown": 10,
-    "Nonresident alien": 15
+    "oth": 9,
+    "aai": 10,
+    "asn": 12,
+    "blk": 9,
+    "hsp": 10,
+    "nhp": 12,
+    "wht": 9,
+    "two": 8,
+    "unk": 10,
+    "nra": 15
   },
   "Liberal Arts and Sciences, General Studies & Humanities": {
-    "Overall rank": 10,
-    "American Indian/Alaska Native": 7,
-    "Asian": 15,
-    "Black/African American": 12,
-    "Hispanic/Latino": 7,
-    "Native Hawaiian or Other Pacific Islander": 13,
-    "White": 10,
-    "Two or more races": 10,
-    "Unknown": 8,
-    "Nonresident alien": 13
+    "oth": 10,
+    "aai": 7,
+    "asn": 15,
+    "blk": 12,
+    "hsp": 7,
+    "nhp": 13,
+    "wht": 10,
+    "two": 10,
+    "unk": 8,
+    "nra": 13
   },
   "Homeland Security, Law Enforcement, Firefighting & Related Protective Service": {
-    "Overall rank": 11,
-    "American Indian/Alaska Native": 13,
-    "Asian": 18,
-    "Black/African American": 7,
-    "Hispanic/Latino": 6,
-    "Native Hawaiian or Other Pacific Islander": 9,
-    "White": 17,
-    "Two or more races": 14,
-    "Unknown": 11,
-    "Nonresident alien": 27
+    "oth": 11,
+    "aai": 13,
+    "asn": 18,
+    "blk": 7,
+    "hsp": 6,
+    "nhp": 9,
+    "wht": 17,
+    "two": 14,
+    "unk": 11,
+    "nra": 27
   },
   "Computer & Information Sciences ": {
-    "Overall rank": 12,
-    "American Indian/Alaska Native": 17,
-    "Asian": 9,
-    "Black/African American": 11,
-    "Hispanic/Latino": 19,
-    "Native Hawaiian or Other Pacific Islander": 8,
-    "White": 14,
-    "Two or more races": 15,
-    "Unknown": 12,
-    "Nonresident alien": 9
+    "oth": 12,
+    "aai": 17,
+    "asn": 9,
+    "blk": 11,
+    "hsp": 19,
+    "nhp": 8,
+    "wht": 14,
+    "two": 15,
+    "unk": 12,
+    "nra": 9
   },
   "Parks, Recreation, Leisure & Fitness Studies": {
-    "Overall rank": 13,
-    "American Indian/Alaska Native": 12,
-    "Asian": 14,
-    "Black/African American": 16,
-    "Hispanic/Latino": 15,
-    "Native Hawaiian or Other Pacific Islander": 11,
-    "White": 11,
-    "Two or more races": 11,
-    "Unknown": 13,
-    "Nonresident alien": 17
+    "oth": 13,
+    "aai": 12,
+    "asn": 14,
+    "blk": 16,
+    "hsp": 15,
+    "nhp": 11,
+    "wht": 11,
+    "two": 11,
+    "unk": 13,
+    "nra": 17
   }
 }
 
@@ -664,7 +668,7 @@ var slide_4_1_0_data = [
 
 var slide_4_2_0_data = [
   {
-    "Major":	"Medical Assisting Services",
+    "Major": "Medical Assisting Services",
     "ColorActive" : "#37758c",
     "Y2013":{
       "forprofit": 10333,
@@ -678,7 +682,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Registered Nursing, Nursing Admin, etc.",
+    "Major": "Registered Nursing, Nursing Admin, etc.",
     "ColorActive" : "#9fa76b",
     "Y2013":{
       "forprofit": 509,
@@ -692,7 +696,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Practical Nursing, Vocational Nursing & Nursing Assistants",
+    "Major": "Practical Nursing, Vocational Nursing & Nursing Assistants",
     "ColorActive" : "#c46d26",
     "Y2013":{
       "forprofit": 3374,
@@ -706,7 +710,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Allied Health Diagnostic, Intervention & Treatment",
+    "Major": "Allied Health Diagnostic, Intervention & Treatment",
     "ColorActive" : "#5c180c",
     "Y2013":{
       "forprofit": 0,
@@ -720,7 +724,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Health & Medical Admin Services",
+    "Major": "Health & Medical Admin Services",
     "ColorActive" : "#00736b",
     "Y2013":{
       "forprofit": 0,
@@ -734,7 +738,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Health Services, General",
+    "Major": "Health Services, General",
     "ColorActive" : "#c7a51c",
     "Y2013":{
       "forprofit": 0,
@@ -748,7 +752,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Mental & Social Health Services",
+    "Major": "Mental & Social Health Services",
     "ColorActive" : "#a6a8ab",
     "Y2013":{
       "forprofit": 451,
@@ -762,7 +766,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Health/Medical Prep Programs",
+    "Major": "Health/Medical Prep Programs",
     "ColorActive" : "#a2c6d4",
     "Y2013":{
       "forprofit": null,
@@ -776,7 +780,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Dental Support Services",
+    "Major": "Dental Support Services",
     "ColorActive" : "#6e6e70",
     "Y2013":{
       "forprofit": null,
@@ -790,7 +794,7 @@ var slide_4_2_0_data = [
     },
   },
   {
-    "Major":	"Somatic Bodywork & Therapeutic Services",
+    "Major": "Somatic Bodywork & Therapeutic Services",
     "ColorActive" : "#a73e3f",
     "Y2013":{
       "forprofit": 637,
@@ -807,55 +811,55 @@ var slide_4_2_0_data = [
 
 var slide_4_3_0_data = [
   {
-    "Ethnicity":"American Indian or Alaska Native",
+    "ethCode":"aai",
     "cc":692,
     "nonprofit":18,
     "forprofit":476,
   },
   {
-    "Ethnicity":"Asian",
+    "ethCode":"asn",
     "cc":17320,
     "nonprofit":476,
     "forprofit":5878,
   },
   {
-    "Ethnicity":"Black/African American",
+    "ethCode":"blk",
     "cc":6774,
     "nonprofit":457,
     "forprofit":6960,
   },
   {
-    "Ethnicity":"Hispanic/Latino",
+    "ethCode":"hsp",
     "cc":43039,
     "nonprofit":1966,
     "forprofit":29403,
   },
   {
-    "Ethnicity":"Native Hawaiian or Other Pacific Islander ",
+    "ethCode":"nhp",
     "cc":696,
     "nonprofit":49,
     "forprofit":1123,
   },
   {
-    "Ethnicity":"White",
+    "ethCode":"wht",
     "cc":45174,
     "nonprofit":1015,
     "forprofit":17106,
   },
   {
-    "Ethnicity":"Two or more races",
+    "ethCode":"two",
     "cc":3671,
     "nonprofit":66,
     "forprofit":1852,
   },
   {
-    "Ethnicity":"Unknown",
+    "ethCode":"unk",
     "cc":6070,
     "nonprofit":88,
     "forprofit":8897,
   },
   {
-    "Ethnicity":"Nonresident alien",
+    "ethCode":"nra",
     "cc":3436,
     "nonprofit":81,
     "forprofit":786,
@@ -864,136 +868,136 @@ var slide_4_3_0_data = [
 
 var dataGreenSlide = {
   "Health Professions": {
-    "Overall Rank":	1,
-    "Asian":	1,
-    "Black/African American":	1,
-    "Hispanic/Latino":	1,
-    "White":	1,
-    "Nonresident alien":	2,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 1,
+    "asn": 1,
+    "blk": 1,
+    "hsp": 1,
+    "wht": 1,
+    "nra": 2,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Protective Services": {
-    "Overall Rank":	2,
-    "Asian":	6,
-    "Black/African American":	2,
-    "Hispanic/Latino":	2,
-    "White":	3,
-    "Nonresident alien":	8,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 2,
+    "asn": 6,
+    "blk": 2,
+    "hsp": 2,
+    "wht": 3,
+    "nra": 8,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Mechanic Tech/Repair": {
-    "Overall Rank":	3,
-    "Asian":	2,
-    "Black/African American":	4,
-    "Hispanic/Latino":	3,
-    "White":	4,
-    "Nonresident alien":	7,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 3,
+    "asn": 2,
+    "blk": 4,
+    "hsp": 3,
+    "wht": 4,
+    "nra": 7,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Cosmetology & Culinary": {
-    "Overall Rank":	4,
-    "Asian":	4,
-    "Black/African American":	3,
-    "Hispanic/Latino":	4,
-    "White":	6,
-    "Nonresident alien":	6,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 4,
+    "asn": 4,
+    "blk": 3,
+    "hsp": 4,
+    "wht": 6,
+    "nra": 6,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Business & Marketing": {
-    "Overall Rank":	5,
-    "Asian":	8,
-    "Black/African American":	7,
-    "Hispanic/Latino":	8,
-    "White":	10,
-    "Nonresident alien":	4,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 5,
+    "asn": 8,
+    "blk": 7,
+    "hsp": 8,
+    "wht": 10,
+    "nra": 4,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Visual & Performing Arts": {
-    "Overall Rank":	6,
-    "Asian":	3,
-    "Black/African American":	5,
-    "Hispanic/Latino":	7,
-    "White":	2,
-    "Nonresident alien":	1,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 6,
+    "asn": 3,
+    "blk": 5,
+    "hsp": 7,
+    "wht": 2,
+    "nra": 1,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Engineering Tech": {
-    "Overall Rank":	7,
-    "Asian":	9,
-    "Black/African American":	8,
-    "Hispanic/Latino":	5,
-    "White":	7,
-    "Nonresident alien":	9,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 7,
+    "asn": 9,
+    "blk": 8,
+    "hsp": 5,
+    "wht": 7,
+    "nra": 9,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Computer Tech": {
-    "Overall Rank":	8,
-    "Asian":	5,
-    "Black/African American":	6,
-    "Hispanic/Latino":	10,
-    "White":	5,
-    "Nonresident alien":	5,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 8,
+    "asn": 5,
+    "blk": 6,
+    "hsp": 10,
+    "wht": 5,
+    "nra": 5,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Family & Consumer Sciences": {
-    "Overall Rank":	9,
-    "Asian":	7,
-    "Black/African American":	9,
-    "Hispanic/Latino":	6,
-    "White":	8,
-    "Nonresident alien":	3,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 9,
+    "asn": 7,
+    "blk": 9,
+    "hsp": 6,
+    "wht": 8,
+    "nra": 3,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Construction Trades": {
-    "Overall Rank":	10,
-    "Asian":	11,
-    "Black/African American":	10,
-    "Hispanic/Latino":	9,
-    "White":	11,
-    "Nonresident alien":	11,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 10,
+    "asn": 11,
+    "blk": 10,
+    "hsp": 9,
+    "wht": 11,
+    "nra": 11,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   },
   "Paralegal": {
-    "Overall Rank":	11,
-    "Asian":	10,
-    "Black/African American":	11,
-    "Hispanic/Latino":	11,
-    "White":	9,
-    "Nonresident alien":	10,
-    "American Indian/Alaska Native": null,
-    "Native Hawaiian or Other Pacific Islander": null,
-    "Two or more races": null,
-    "Unknown": null
+    "oth": 11,
+    "asn": 10,
+    "blk": 11,
+    "hsp": 11,
+    "wht": 9,
+    "nra": 10,
+    "aai": null,
+    "nhp": null,
+    "two": null,
+    "unk": null
   }
 }
 

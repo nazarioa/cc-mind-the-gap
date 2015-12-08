@@ -853,7 +853,7 @@ window.onload = function(){
       },
       onmouseover: function (d, i) {
         var currentColor = d3.select(i).style("fill");
-        d3.select(i).style("fill", "#35768a").on("mouseleave", function(d) { d3.select(this).style("fill", currentColor); d.onmouseout(); });
+        d3.select(i).style("fill", "#35768a").on("mouseleave", function(d) { d3.select(this).style("fill", currentColor);});
       },
     },
     legend: {

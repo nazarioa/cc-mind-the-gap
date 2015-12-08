@@ -307,8 +307,9 @@ window.onload = function(){
     var result = {};
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
-      result[dataYear + '_' + majorName] = data[i].ColorActive;
+      let majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
+      // result[dataYear + '_' + majorName] = data[i].ColorActive;
+      result[majorCode] = data[i].ColorActive;
     }
     return result;
   }

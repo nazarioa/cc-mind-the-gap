@@ -1,3 +1,4 @@
+/*jshint bitwise: false*/
 "use strict";
 window.onload = function(){
   var bachelorInstitutions = ['uc', 'csu', 'nonprofit', 'forprofit'] ;
@@ -6,7 +7,7 @@ window.onload = function(){
     top: 0,
     right: 0,
     bottom: 0,
-    left: 0,
+    left: 0
   };
 
 
@@ -215,7 +216,7 @@ window.onload = function(){
     var keys = [];
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
       keys.push(dataYear + '_' + majorName);
     }
     return [keys];
@@ -226,7 +227,7 @@ window.onload = function(){
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
       var scores = [];
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
       for (var institution of institutions ) {
         scores.push(data[i][dataYear][institution]);
       }
@@ -241,7 +242,7 @@ window.onload = function(){
     var result = {};
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
       result[dataYear + '_' + majorName] = data[i].Major;
     }
     return result;
@@ -251,7 +252,7 @@ window.onload = function(){
     var result = {};
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|\&/g, '');
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
       result[dataYear + '_' + majorName] = data[i].ColorActive;
     }
     return result;
@@ -335,8 +336,8 @@ window.onload = function(){
       show: false
     },
     size: {
-      width: slideSize(.5).width,
-      height: slideSize(.55).height
+      width: slideSize(0.5).width,
+      height: slideSize(0.55).height
     },
     tooltip: {
       format: {
@@ -351,7 +352,7 @@ window.onload = function(){
       position: 'inset',
       inset: {
         anchor: 'bottom-right',
-        x: (slideSize(.5).width)/3,
+        x: (slideSize(0.5).width)/3,
         y: -10,
         step: 3
       }
@@ -396,8 +397,8 @@ window.onload = function(){
       hide: true
     },
     size: {
-      width: slideSize(.45).width,
-      height: slideSize(.48).width
+      width: slideSize(0.45).width,
+      height: slideSize(0.48).width
     },
     pie: {
       label: {
@@ -431,11 +432,11 @@ window.onload = function(){
       top: 10,
       right: 50,
       bottom: 10,
-      left: slideSize(.4).width
+      left: slideSize(0.4).width
     },
     size: {
-      width: slideSize(.9).width,
-      height: slideSize(.4).width
+      width: slideSize(0.9).width,
+      height: slideSize(0.4).width
     },
     data: {
       columns: exampleMajor_getData(2004, bachelorInstitutions, slide_3_2_0_data),
@@ -460,7 +461,7 @@ window.onload = function(){
       position: 'inset',
       inset: {
         anchor: 'top-left',
-        x: -(slideSize(.4).width),
+        x: -(slideSize(0.4).width),
         y: 0,
         step: 10
       }
@@ -528,7 +529,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      width: slideSize(.5).width,
+      width: slideSize(0.5).width,
       height: slideSize(1).height
     },
     pie: {
@@ -586,7 +587,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15).height
+      height: slideSize(0.15).height
     },
     tooltip: {
       show: true
@@ -612,7 +613,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15).height
+      height: slideSize(0.15).height
     },
     tooltip: {
       show: true
@@ -638,7 +639,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15).height
+      height: slideSize(0.15).height
     },
     tooltip: {
       show: true
@@ -664,7 +665,7 @@ window.onload = function(){
       hide: true
     },
     size: {
-      height: slideSize(.15).height
+      height: slideSize(0.15).height
     },
     tooltip: {
       show: true
@@ -701,8 +702,8 @@ window.onload = function(){
       }
     },
     size: {
-      width: slideSize(.5).width,
-      height: slideSize(.17).height
+      width: slideSize(0.5).width,
+      height: slideSize(0.17).height
     },
     tooltip: {
       show: false
@@ -725,8 +726,8 @@ window.onload = function(){
       names: instituation_getNames(bachelorInstitutions),
     },
     size: {
-      width: slideSize(.4).width,
-      height: slideSize(.45).height
+      width: slideSize(0.4).width,
+      height: slideSize(0.45).height
     },
     axis: {
       x: {
@@ -776,8 +777,8 @@ window.onload = function(){
       hide: true
     },
     size: {
-      width: slideSize(.45).width,
-      height: slideSize(.48).width
+      width: slideSize(0.45).width,
+      height: slideSize(0.48).width
     },
     pie: {
       label: {
@@ -809,11 +810,11 @@ window.onload = function(){
       top: 10,
       right: 50,
       bottom: 10,
-      left: slideSize(.5).width
+      left: slideSize(0.5).width
     },
     size: {
-      width: slideSize(.9).width,
-      height: slideSize(.4).width
+      width: slideSize(0.9).width,
+      height: slideSize(0.4).width
     },
     data: {
       columns: exampleMajor_getData(2004, subBachelorInstitutions, slide_4_2_0_data),
@@ -839,7 +840,7 @@ window.onload = function(){
       position: 'inset',
       inset: {
         anchor: 'top-left',
-        x: -(slideSize(.45).width),
+        x: -(slideSize(0.45).width),
         y: 0,
         step: 10
       }
@@ -865,8 +866,8 @@ window.onload = function(){
       }
     },
     size: {
-      width: slideSize(.5).width,
-      height: slideSize(.15).height
+      width: slideSize(0.5).width,
+      height: slideSize(0.15).height
     },
     tooltip: {
       show: false
@@ -883,8 +884,8 @@ window.onload = function(){
       names: instituation_getNames(subBachelorInstitutions),
     },
     size: {
-      width: slideSize(.4).width,
-      height: slideSize(.45).height
+      width: slideSize(0.4).width,
+      height: slideSize(0.45).height
     },
     axis: {
       x: {

@@ -405,6 +405,9 @@ window.onload = function(){
         y: -10,
         step: 3
       }
+    },
+    tooltip:{
+      grouped: false
     }
   });
 
@@ -504,6 +507,9 @@ window.onload = function(){
         y: 0,
         step: 10
       }
+    },
+    tooltip:{
+      grouped: false
     }
   });
 
@@ -782,6 +788,9 @@ window.onload = function(){
         }
       }
     },
+    tooltip:{
+      grouped: false
+    }
   });
 
   // slide
@@ -876,6 +885,9 @@ window.onload = function(){
         y: 0,
         step: 10
       }
+    },
+    tooltip:{
+      grouped: false
     }
   });
 
@@ -1064,7 +1076,12 @@ window.onload = function(){
       columns: slide_4_4_0_data,
       colors: instituation_getColors(subBachelorInstitutions),
       names: instituation_getNames(subBachelorInstitutions),
-      type: 'bar'
+      type: 'bar',
+      labels: {
+        format: function (value, id, index, subIndex) {
+          return instituation_getNames(id) + ' - ' + value + '%';
+        }
+      },
     },
     axis: {
       rotated: true,
@@ -1110,6 +1127,9 @@ window.onload = function(){
         }
       }
     },
+    tooltip:{
+      grouped: false
+    }
   });
 
   //Primer

@@ -1,9 +1,10 @@
+/*jslint white: true */
 "use strict";
 
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-  $('#container-recomendations dt').on('click', function(d){
+    $('#container-recomendations dt').on('click', function () {
 
     if($(this).hasClass('inactive')) {
       $('#container-recomendations dt').addClass('inactive');
@@ -13,7 +14,7 @@ $(document).ready(function(){
     }
   });
 
-  $('#slide-3-3 dt').on('click', function(d){
+  $('#slide-3-3 dt').on('click', function () {
 
     if($(this).hasClass('inactive')) {
       $('#slide-3-3 dt').addClass('inactive');
@@ -23,19 +24,18 @@ $(document).ready(function(){
     }
   });
 
-  $('#slide-3-3 .back').on('click', function(){
-    console.log('hahaha');
+  $('#slide-3-3 .back').on('click', function () {
     var leftPanelWidth = $('#slide-3-3 .left-panel').width();
 
     // If the info panel is not .hidden, slide it out and present data panel
-    if($('#slide-3-3 .left-panel.data').hasClass('hidden') === false ){
+    if($('#slide-3-3 .left-panel.data').hasClass('hidden') === false ) {
 
       //start info slide out animation
       $('#slide-3-3 .left-panel.data').animate(
         {left: -leftPanelWidth},
         500,
         "swing",
-        function(){
+        function () {
           // swap out the info div with the data div
           $('#slide-3-3 .left-panel.info').removeClass('hidden');
           $('#slide-3-3 .left-panel.data').addClass('hidden');
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
   });
 
-  $('a[href^="#"]').on('click', function(event) {
+  $('a[href^="#"]').on('click', function (event) {
     var target = $( $(this).attr('href') );
     if( target.length ) {
       event.preventDefault();
@@ -69,10 +69,10 @@ $(document).ready(function(){
 });
 
 
-function isIterable(obj) {
-  // checks for null and undefined
-  if (obj == null) {
-    return false
-  }
-  return obj[Symbol.iterator] !== undefined
+function isIterable(obj){
+   if(obj === undefined || obj === null){
+      return false;
+   }else{
+      return obj.iterator !== undefined;
+   }
 }

@@ -30,7 +30,7 @@ window.onload = function(){
         type: 'bar',
         names: exampleMajor_getNames(option, slide_3_2_0_data),
         columns: exampleMajor_getData(option, bachelorInstitutions, slide_3_2_0_data),
-        groups: exampleMajor_getKeys(option, slide_3_2_0_data),
+        groups: [exampleMajor_getKeys(option, slide_3_2_0_data)],
         colors: exampleMajor_getColors(option, slide_3_2_0_data),
 
         unload: true
@@ -54,7 +54,7 @@ window.onload = function(){
         type: 'bar',
         names: exampleMajor_getNames(option, slide_4_2_0_data),
         columns: exampleMajor_getData(option, subBachelorInstitutions, slide_4_2_0_data),
-        groups: exampleMajor_getKeys(option, slide_4_2_0_data),
+        groups: [exampleMajor_getKeys(option, slide_4_2_0_data)],
         colors: exampleMajor_getColors(option, slide_4_2_0_data),
 
         unload: true
@@ -254,27 +254,39 @@ window.onload = function(){
     return result;
   }
 
-  function exampleMajor_getKeys(year, data){
+  function exampleMajor_getKeys(year, data, keyOverride){
     var keys = [];
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
-      keys.push(dataYear + '_' + majorName);
+      let majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
+
+      if(keyOverride !== undefined){
+        keys.push(majorCode + '_' + keyOverride);
+      }
+      else{
+        keys.push(majorCode);
+      }
     }
-    return [keys];
+    return keys;
   };
 
-  function exampleMajor_getData(year, institutions, data){
+  function exampleMajor_getData(year, institutions, data, keyOverride){
     var result = [];
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
       var scores = [];
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
+      let majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
       for (var institution of institutions ) {
         scores.push(data[i][dataYear][institution]);
       }
-      let key = (dataYear + '_' + majorName);
-      scores.unshift(key);
+
+      if(keyOverride !== undefined){
+        scores.unshift(majorCode + '_' + keyOverride);
+      }
+      else{
+        scores.unshift(majorCode);
+      }
+
       result.push(scores);
     }
     return result;
@@ -284,8 +296,9 @@ window.onload = function(){
     var result = {};
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
-      result[dataYear + '_' + majorName] = data[i].Major;
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
+      result[majorName] = data[i].Major;
+      // result[dataYear + '_' + majorName] = data[i].Major;
     }
     return result;
   }
@@ -294,7 +307,7 @@ window.onload = function(){
     var result = {};
     var dataYear = 'Y' + year;
     for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&/g, '');
+      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
       result[dataYear + '_' + majorName] = data[i].ColorActive;
     }
     return result;
@@ -482,7 +495,7 @@ window.onload = function(){
     },
     data: {
       columns: exampleMajor_getData(2004, bachelorInstitutions, slide_3_2_0_data),
-      groups: exampleMajor_getKeys(2004, slide_3_2_0_data),
+      groups: [exampleMajor_getKeys(2004, slide_3_2_0_data)],
       names: exampleMajor_getNames(2004, slide_3_2_0_data),
       type: 'bar',
       colors: exampleMajor_getColors(2004, slide_3_2_0_data),
@@ -859,7 +872,7 @@ window.onload = function(){
     },
     data: {
       columns: exampleMajor_getData(2004, subBachelorInstitutions, slide_4_2_0_data),
-      groups: exampleMajor_getKeys(2004, slide_4_2_0_data),
+      groups: [exampleMajor_getKeys(2004, slide_4_2_0_data)],
       names: exampleMajor_getNames(2004, slide_4_2_0_data),
       type: 'bar',
       colors: exampleMajor_getColors(2004, slide_4_2_0_data),

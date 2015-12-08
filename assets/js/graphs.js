@@ -292,12 +292,19 @@ window.onload = function(){
     return result;
   }
 
-  function exampleMajor_getNames(year, data){
+  function exampleMajor_getNames(year, data, style, keyOverride){
     var result = {};
     var dataYear = 'Y' + year;
     for ( var i = 0; i < data.length; i++) {
        var majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
       // result[dataYear + '_' + majorName] = data[i].Major;
+
+      if(keyOverride !== undefined){
+        result[majorCode + '_' + keyOverride] = data[i].Major;
+      }
+      else{
+        result[majorCode] = data[i].Major;
+      }
     }
     return result;
   }

@@ -81,28 +81,36 @@ window.onload = function(){
     );
 
     // START - Table Data Update
-    var rowData = '';
-    var row = '';
-    var attrData = '';
-    var ethnicity = '';
-    for (attr in data) {
-      row = '<tr><td class="major">' + attr + '</td>';
-      if (data.hasOwnProperty(attr) ) {
-        attrData = data[attr];
-        ethnicity = '';
-        for (ethnicity in attrData) {
-          if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
-            row = row + '<td class="selected">' + attrData[ethnicity] + '</td>';
+    function generateTable(slide, data){
+      var rowData;
+      var row;
+      var attrData;
+      var ethnicity;
+      var score;
+      for (attr in data) {
+        row = '<tr><td class="major">' + attr + '</td>';
+        if (data.hasOwnProperty(attr) ) {
+          attrData = data[attr];
+          for (ethnicity in attrData) {
+            if(attrData[ethnicity] == null){
+              score = 'N/A';
+            }else{
+              score = attrData[ethnicity];
+            }
+            if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
+              row = row + '<td class="selected">' + score + '</td>';
+            }
+            else{
+              row = row + '<td>' + score + '</td>';
+            }
           }
-          else{
-            row = row + '<td>' + attrData[ethnicity] + '</td>';
-          }
+          row = row + '</tr>';
         }
-        row = row + '</tr>';
+        rowData += row + '</tr>';
       }
-      rowData += row + '</tr>';
+      $(slide + '-table tbody').html(rowData);
     }
-    $(slide + '-table tbody').html(rowData);
+    generateTable(slide, data);
     // END - Table Data
 
     // START - MiniGraphs Data Update

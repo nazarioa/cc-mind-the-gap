@@ -1,4 +1,5 @@
 /*jshint bitwise: false*/
+/*jslint white: true */
 "use strict";
 window.onload = function(){
   var bachelorInstitutions = ['uc', 'csu', 'nonprofit', 'forprofit'] ;
@@ -19,7 +20,7 @@ window.onload = function(){
     $('#container-graph-3-2-0 .option').removeClass('active');
     $(this).addClass('active');
 
-    let option = $(this).html();
+    var option = $(this).html();
 
     if(option.toLowerCase() === 'compare' ){
       slide_3_2_0.unload();
@@ -43,7 +44,7 @@ window.onload = function(){
     $('#container-graph-4-2-0 .option').removeClass('active');
     $(this).addClass('active');
 
-    let option = $(this).html();
+    var option = $(this).html();
 
     if(option.toLowerCase() === 'compare' ){
       slide_4_2_0.unload();
@@ -66,6 +67,8 @@ window.onload = function(){
 
   // Used for updating the mini graphs and stats for slide 3-3, 4-3
   function updateSideData(x, slide, data, institutions){
+    var attr = {};
+
     // The Stats Data -- Mains stuff
     $(slide + ' .left-panel.data .ethnicity').html(x.name);
     $(slide + ' .stats-general .percentage > span').html(
@@ -79,11 +82,15 @@ window.onload = function(){
 
     // START - Table Data Update
     var rowData = '';
-    for (var attr in data) {
-      var row = '<tr><td class="major">' + attr + '</td>';
+    var row = '';
+    var attrData = '';
+    var ethnicity = '';
+    for (attr in data) {
+      row = '<tr><td class="major">' + attr + '</td>';
       if (data.hasOwnProperty(attr) ) {
-        var attrData = data[attr];
-        for (var ethnicity in attrData) {
+        attrData = data[attr];
+        ethnicity = '';
+        for (ethnicity in attrData) {
           if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
             row = row + '<td class="selected">' + attrData[ethnicity] + '</td>';
           }
@@ -114,7 +121,8 @@ window.onload = function(){
       unload: true,
     });
 
-    for (var institution of institutions) {
+    var institution = {};
+    for (institution of institutions) {
       $( slide + '-mini-graphs .mini-graph.' + institution + ' .percent').html(percentify(intituationPercents[institution]));
     }
   };

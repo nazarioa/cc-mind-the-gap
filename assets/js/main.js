@@ -72,6 +72,8 @@ $(document).ready(function () {
 function isIterable(obj){
    if(obj === undefined || obj === null){
       return false;
+   }else if (obj.constructor === Array) {
+     return true;
    }else{
       return obj.iterator !== undefined;
    }

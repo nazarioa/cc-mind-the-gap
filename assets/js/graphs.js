@@ -381,7 +381,7 @@ window.onload = function(){
     padding: {
       top: 10,
       right: 20,
-      bottom: 40,
+      bottom: 100,
       left: 50,
     },
     data: {
@@ -412,7 +412,7 @@ window.onload = function(){
     },
     size: {
       width: slideSize(0.5).width,
-      height: slideSize(0.55).height
+      height: slideSize(0.6).height
     },
     tooltip: {
       format: {

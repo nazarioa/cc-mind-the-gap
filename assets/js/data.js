@@ -1,3 +1,5 @@
+/*jslint white: true */
+
 "use strict";
 
 // Generic Data
@@ -159,7 +161,7 @@ var slide_3_1_0_data = [
   },
   {
     "Major": "Other",
-    "Percent":  .23,
+    "Percent":  0.23,
     "TopProviders": "",
     "Rank2004": "",
     "ColorInactive" : "#e3e3e3",

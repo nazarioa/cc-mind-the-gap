@@ -6,6 +6,7 @@
 var genericEthnicityData = {
   "aai" : {
     "Name": "American Indian/Alaska Native",
+    "ShortName": "American Indian",
     "ActiveColor": "#a6a8ab",
   },
   "asn" : {
@@ -15,6 +16,7 @@ var genericEthnicityData = {
   "blk": {
     "Name": "Black/African American",
     "ActiveColor": "#ca6d54",
+    "ShortName": "Black",
   },
   "hsp" : {
     "Name": "Hispanic/Latino",
@@ -23,6 +25,7 @@ var genericEthnicityData = {
   "nhp" : {
     "Name": "Native Hawaiian or Other Pacific Islander",
     "ActiveColor": "#00736b",
+    "ShortName": "Other Pacific Islander",
   },
   "wht" : {
     "Name": "White",

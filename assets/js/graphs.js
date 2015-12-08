@@ -257,8 +257,8 @@ window.onload = function(){
   function exampleMajor_getKeys(year, data, keyOverride){
     var keys = [];
     var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      let majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
+    for ( var i = 0; i < data.length; i++) {
+       var majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
 
       if(keyOverride !== undefined){
         keys.push(majorCode + '_' + keyOverride);
@@ -273,9 +273,9 @@ window.onload = function(){
   function exampleMajor_getData(year, institutions, data, keyOverride){
     var result = [];
     var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
+    for ( var i = 0; i < data.length; i++) {
       var scores = [];
-      let majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
+       var majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
       for (var institution of institutions ) {
         scores.push(data[i][dataYear][institution]);
       }
@@ -295,9 +295,8 @@ window.onload = function(){
   function exampleMajor_getNames(year, data){
     var result = {};
     var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      let majorName = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
-      result[majorName] = data[i].Major;
+    for ( var i = 0; i < data.length; i++) {
+       var majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
       // result[dataYear + '_' + majorName] = data[i].Major;
     }
     return result;
@@ -306,8 +305,8 @@ window.onload = function(){
   function exampleMajor_getColors(year, data){
     var result = {};
     var dataYear = 'Y' + year;
-    for (let i = 0; i < data.length; i++) {
-      let majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
+    for ( var i = 0; i < data.length; i++) {
+       var majorCode = data[i].Major.replace(/\s/g, '').replace(/\(|\)|,|\/|&|\./g, '');
       // result[dataYear + '_' + majorName] = data[i].ColorActive;
       result[majorCode] = data[i].ColorActive;
     }
@@ -317,9 +316,9 @@ window.onload = function(){
   function exampleMajor_calculateTotals(year, institutions, data){
     var result = {};
     var dataYear = 'Y' + year;
-    let total = 0;
+     var total = 0;
     for (var institution of institutions ) {
-      for (let i = 0; i < data.length; i++) {
+      for ( var i = 0; i < data.length; i++) {
           total = total + data[i][dataYear][institution];
       }
       result[institution] = total;
@@ -329,7 +328,7 @@ window.onload = function(){
   }
 
   function exampleMajor_updateTotals(slide, year, institutions, data){
-    let totals = exampleMajor_calculateTotals(year, institutions, data);
+     var totals = exampleMajor_calculateTotals(year, institutions, data);
     for (var institution of institutions) {
       $(slide + ' .' + institution + ' .value').html(totals[institution].toLocaleString());
     }

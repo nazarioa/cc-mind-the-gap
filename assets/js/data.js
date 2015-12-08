@@ -870,6 +870,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	1,
     "White":	1,
     "Nonresident alien":	2,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Protective Services": {
     "Overall Rank":	2,
@@ -878,6 +882,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	2,
     "White":	3,
     "Nonresident alien":	8,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Mechanic Tech/Repair": {
     "Overall Rank":	3,
@@ -886,6 +894,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	3,
     "White":	4,
     "Nonresident alien":	7,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Cosmetology & Culinary": {
     "Overall Rank":	4,
@@ -894,6 +906,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	4,
     "White":	6,
     "Nonresident alien":	6,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Business & Marketing": {
     "Overall Rank":	5,
@@ -902,6 +918,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	8,
     "White":	10,
     "Nonresident alien":	4,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Visual & Performing Arts": {
     "Overall Rank":	6,
@@ -910,6 +930,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	7,
     "White":	2,
     "Nonresident alien":	1,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Engineering Tech": {
     "Overall Rank":	7,
@@ -918,6 +942,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	5,
     "White":	7,
     "Nonresident alien":	9,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Computer Tech": {
     "Overall Rank":	8,
@@ -926,6 +954,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	10,
     "White":	5,
     "Nonresident alien":	5,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Family & Consumer Sciences": {
     "Overall Rank":	9,
@@ -934,6 +966,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	6,
     "White":	8,
     "Nonresident alien":	3,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Construction Trades": {
     "Overall Rank":	10,
@@ -942,6 +978,10 @@ var dataGreenSlide = {
     "Hispanic/Latino":	9,
     "White":	11,
     "Nonresident alien":	11,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   },
   "Paralegal": {
     "Overall Rank":	11,
@@ -949,7 +989,11 @@ var dataGreenSlide = {
     "Black/African American":	11,
     "Hispanic/Latino":	11,
     "White":	9,
-    "Nonresident alien":	10
+    "Nonresident alien":	10,
+    "American Indian": null,
+    "Other Pacific Islander": null,
+    "Two or more races": null,
+    "Unknown": null
   }
 }
 

@@ -819,7 +819,7 @@ var slide_4_3_0_data = [
     "forprofit":5878,
   },
   {
-    "Ethnicity":"Black or African American ",
+    "Ethnicity":"Black/African American",
     "cc":6774,
     "nonprofit":457,
     "forprofit":6960,

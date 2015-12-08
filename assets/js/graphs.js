@@ -379,7 +379,7 @@ window.onload = function(){
       left: 50,
     },
     data: {
-      url: 'assets/data/slide_2_0_0.csv',
+      rows: slide_2_0_0_data,
       x: 'Year',
       colors:{
         'Projected Degrees': '#35768A',
@@ -389,6 +389,12 @@ window.onload = function(){
       type: 'area',
     },
     axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: function (x) { return x.getFullYear(); }
+        }
+      },
       y: {
         tick: {
           format: d3.format('s')

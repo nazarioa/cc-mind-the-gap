@@ -35,7 +35,7 @@ window.onload = function(){
 
         unload: true
       });
-      slide_3_2_0_updateTotals(option);
+      exampleMajor_updateTotals('#container-graph-3-2-0', option, bachelorInstitutions, slide_3_2_0_data);
       $('#container-graph-3-2-0 .the-tally-flex').removeClass('hidden');
     }
   });
@@ -59,7 +59,7 @@ window.onload = function(){
 
         unload: true
       });
-      slide_4_2_0_updateTotals(option);
+      exampleMajor_updateTotals('#container-graph-4-2-0', option, subBachelorInstitutions, slide_4_2_0_data);
       $('#container-graph-4-2-0 .the-tally-flex').removeClass('hidden');
     }
   });
@@ -1085,6 +1085,6 @@ window.onload = function(){
   });
 
   //Primer
-  slide_3_2_0_updateTotals(2004);
-  slide_4_2_0_updateTotals(2004);
+  exampleMajor_updateTotals('#container-graph-3-2-0', 2004, bachelorInstitutions, slide_3_2_0_data);
+  exampleMajor_updateTotals('#container-graph-4-2-0', 2004, subBachelorInstitutions, slide_4_2_0_data);
 }

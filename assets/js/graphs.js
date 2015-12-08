@@ -70,7 +70,7 @@ window.onload = function(){
     var attr = {};
 
     // The Stats Data -- Mains stuff
-    $(slide + ' .left-panel.data .ethnicity').html(x.name);
+    $(slide + ' .left-panel.data .ethnicity').html( ethnicity_getNames(x.id, true)[x.id]);
     $(slide + ' .stats-general .percentage > span').html(
       percentify(x.ratio)
     );
@@ -85,19 +85,19 @@ window.onload = function(){
       var rowData;
       var row;
       var attrData;
-      var ethnicity;
+      var ethCode;
       var score;
       for (attr in data) {
         row = '<tr><td class="major">' + attr + '</td>';
         if (data.hasOwnProperty(attr) ) {
           attrData = data[attr];
-          for (ethnicity in attrData) {
-            if(attrData[ethnicity] == null){
+          for (ethCode in attrData) {
+            if(attrData[ethCode] == null){
               score = 'N/A';
             }else{
-              score = attrData[ethnicity];
+              score = attrData[ethCode];
             }
-            if (attrData.hasOwnProperty(ethnicity) && x.id === ethnicity) {
+            if (attrData.hasOwnProperty(ethCode) && x.id === ethCode) {
               row = row + '<td class="selected">' + score + '</td>';
             }
             else{
@@ -203,7 +203,7 @@ window.onload = function(){
     var result = {};
     if(ethnicity === undefined){
       // get all colors and retrun an object with key: color pairs
-      for (var eth in genericInstitutionData) {
+      for (var eth in genericEthnicityData) {
         if (genericEthnicityData.hasOwnProperty(eth)) {
           result[eth] = genericEthnicityData[eth].ActiveColor;
         }
@@ -214,16 +214,42 @@ window.onload = function(){
     return result;
   }
 
-  function ethnicity_getNames(ethnicity){
-    var result = {};
-    if(ethnicity === undefined){
-      for (var eth in genericInstitutionData) {
-        if (genericEthnicityData.hasOwnProperty(inst)) {
-          result[eth] = genericEthnicityData[eth].Name;
+  function ethnicity_getNames(ethCode, short, style){
+    var result;
+    var ethObj;
+    var temp;
+    if(style === 'array'){
+      result = [];
+    }else{
+      result = {};
+    }
+
+    if (ethCode === undefined) {
+      for (ethObj in genericEthnicityData) {
+        if (genericEthnicityData.hasOwnProperty(ethObj)) {
+          if(style === 'array'){
+            if(short === true){
+              temp = (genericEthnicityData[ethObj].ShortName !== undefined) ? genericEthnicityData[ethObj].ShortName : genericEthnicityData[ethObj].Name;
+            }else{
+              temp = genericEthnicityData[ethObj].Name;
+            }
+            result.push(temp);
+          }else{
+            if(short === true){
+              result[ethObj] = (genericEthnicityData[ethObj].ShortName !== undefined) ? genericEthnicityData[ethObj].ShortName : genericEthnicityData[ethObj].Name;
+            }else{
+              result[ethObj] = genericEthnicityData[ethObj].Name;
+            }
+          }
         }
       }
-    }else{
-      result[ethnicity] = genericEthnicityData[ethnicity].Name;
+    }
+    else {
+      if(short === true){
+          result[ethCode] = (genericEthnicityData[ethCode].ShortName !== undefined) ? genericEthnicityData[ethCode].ShortName : genericEthnicityData[ethCode].Name;
+        }else{
+          result[ethCode] = genericEthnicityData[ethCode].Name;
+        }
     }
     return result;
   }
@@ -426,7 +452,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return percentify(ratio) + "\n " + id ;
+          return percentify(ratio) + " " + id ;
         }
       }
     },
@@ -489,7 +515,7 @@ window.onload = function(){
 
   var slide_3_3_0_data_TotalsValues = slide_3_3_0_data.map(function(x) {
     var totals = x.uc + x.csu + x.nonprofit + x.forprofit;
-    return [ x.Ethnicity, totals];
+    return [ x.ethCode, totals];
   });
 
   var slide_3_3_0 = c3.generate({
@@ -500,6 +526,7 @@ window.onload = function(){
       keys: slide_3_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
+      names: ethnicity_getNames(undefined, false),
       onclick: function(d) {
         var leftPanelWidth = $('#slide-3-3 .left-panel').width();
 
@@ -548,7 +575,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return percentify(ratio) + "\n " + id ;
+          return percentify(ratio) + " " + ethnicity_getNames(id, true, "array")[id];
         }
       }
     }
@@ -561,28 +588,28 @@ window.onload = function(){
   // UC
   var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
     if(x.uc){
-      return [x.Ethnicity, x.uc];
+      return [x.ethCode, x.uc];
     }
   });
 
   // CSU
   var slide_3_3_0_data_Values_CSU = slide_3_3_0_data.map(function(x) {
     if(x.csu){
-      return [x.Ethnicity, x.csu];
+      return [x.ethCode, x.csu];
     }
   });
 
   // FP
   var slide_3_3_0_data_Values_ForProfit = slide_3_3_0_data.map(function(x) {
     if(x.forprofit){
-      return [x.Ethnicity, x.forprofit];
+      return [x.ethCode, x.forprofit];
     }
   });
 
   // NFP
   var slide_3_3_0_data_Values_NonProfit = slide_3_3_0_data.map(function(x) {
     if(x.nonprofit){
-      return [x.Ethnicity, x.nonprofit];
+      return [x.ethCode, x.nonprofit];
     }
   });
 
@@ -796,7 +823,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return percentify(ratio) + "\n " + id ;
+          return percentify(ratio) + " " + id;
         }
       }
     },
@@ -859,7 +886,7 @@ window.onload = function(){
 
   var slide_4_3_0_data_TotalsValues = slide_4_3_0_data.map(function(x) {
     var totals = x.cc + x.nonprofit + x.forprofit;
-    return [ x.Ethnicity, totals];
+    return [ x.ethCode, totals];
   });
 
   var slide_4_3_0 = c3.generate({
@@ -869,6 +896,7 @@ window.onload = function(){
       columns: slide_4_3_0_data_TotalsValues,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
+      names: ethnicity_getNames(undefined, false),
       colors: ethnicity_getColors(),
       onclick: function(d) {
         var leftPanelWidth = $('#slide-4-3 .left-panel').width();
@@ -918,7 +946,7 @@ window.onload = function(){
     pie: {
       label: {
         format: function (value, ratio, id) {
-          return percentify(ratio) + "\n " + id ;
+          return percentify(ratio) + " " + ethnicity_getNames(id, true, "array")[id];
         }
       }
     }
@@ -931,21 +959,21 @@ window.onload = function(){
   // CC
   var slide_4_3_0_data_Values_CC = slide_4_3_0_data.map(function(x) {
     if(x.cc){
-      return [x.Ethnicity, x.cc];
+      return [x.ethCode, x.cc];
     }
   });
 
   // FP
   var slide_4_3_0_data_Values_ForProfit = slide_4_3_0_data.map(function(x) {
     if(x.forprofit){
-      return [x.Ethnicity, x.forprofit];
+      return [x.ethCode, x.forprofit];
     }
   });
 
   // NFP
   var slide_4_3_0_data_Values_NonProfit = slide_4_3_0_data.map(function(x) {
     if(x.nonprofit){
-      return [x.Ethnicity, x.nonprofit];
+      return [x.ethCode, x.nonprofit];
     }
   });
 

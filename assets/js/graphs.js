@@ -856,6 +856,183 @@ window.onload = function(){
   });
 
   // slide
+  var slide_4_3_0_data_keys = slide_4_3_0_data.map(function(x) {
+    return x;
+  });
+
+  var slide_4_3_0_data_TotalsValues = slide_4_3_0_data.map(function(x) {
+    var totals = x.cc + x.nonprofit + x.forprofit;
+    return [ x.Ethnicity, totals];
+  });
+
+  var slide_4_3_0 = c3.generate({
+    bindto: '#graph-4-3-0',
+    padding: graph_zero_padding,
+    data: {
+      columns: slide_4_3_0_data_TotalsValues,
+      keys: slide_4_3_0_data_keys,
+      type: 'pie',
+      colors: ethnicity_getColors(),
+      onclick: function(d) {
+        var leftPanelWidth = $('#slide-4-3 .left-panel').width();
+
+        // If the info panel is not .hidden, slide it out and present data panel
+        if($('#slide-4-3 .left-panel.info').hasClass('hidden') === false ){
+
+          //start info slide out animation
+          $('#slide-4-3 .left-panel.info').animate(
+            {left: -leftPanelWidth},
+            500,
+            "swing",
+            function(){
+              // swap out the info div with the data div
+              $('#slide-4-3 .left-panel.info').addClass('hidden');
+              $('#slide-4-3 .left-panel.data').removeClass('hidden');
+              // update data div
+              updateSideData(d, '#slide-4-3', dataGreenSlide, subBachelorInstitutions);
+            }
+          );
+          //end info slide out animation
+
+          //start data slide in animation
+          $('#slide-4-3 .left-panel.data').css('left', -leftPanelWidth);
+          $('#slide-4-3 .left-panel.data').animate(
+            {left: 0},
+            1500,
+            "swing"
+          );
+          //end data slide in animation
+
+        }
+
+        // else -- the data panel is up, just update the content
+        else{
+          updateSideData(d, '#slide-4-3', dataGreenSlide, subBachelorInstitutions);
+        }
+      }
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      width: slideSize(0.5).width,
+      height: slideSize(1).height
+    },
+    pie: {
+      label: {
+        format: function (value, ratio, id) {
+          return percentify(ratio) + "\n " + id ;
+        }
+      }
+    }
+  });
+
+
+  // Mini Graphs //
+
+  // function to get 'Y' values for Mini Pie Graphs
+  // CC
+  var slide_4_3_0_data_Values_CC = slide_4_3_0_data.map(function(x) {
+    if(x.cc){
+      return [x.Ethnicity, x.cc];
+    }
+  });
+
+  // FP
+  var slide_4_3_0_data_Values_ForProfit = slide_4_3_0_data.map(function(x) {
+    if(x.forprofit){
+      return [x.Ethnicity, x.forprofit];
+    }
+  });
+
+  // NFP
+  var slide_4_3_0_data_Values_NonProfit = slide_4_3_0_data.map(function(x) {
+    if(x.nonprofit){
+      return [x.Ethnicity, x.nonprofit];
+    }
+  });
+
+
+  // 1 Mini Pie Graph
+  var slide_4_3_1 = c3.generate({
+    bindto: '#graph-4-3-1-CC',
+    padding: graph_zero_padding,
+    data: {
+      columns: slide_4_3_0_data_Values_CC,
+      keys: slide_4_3_0_data_keys,
+      type: 'pie',
+      colors: ethnicity_getColors(),
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(0.15).height
+    },
+    tooltip: {
+      show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
+    }
+  });
+
+
+  // 2 Mini Pie Graph
+  var slide_4_3_2 = c3.generate({
+    bindto: '#graph-4-3-2-FP',
+    padding: graph_zero_padding,
+    data: {
+      columns: slide_4_3_0_data_Values_ForProfit,
+      keys: slide_4_3_0_data_keys,
+      type: 'pie',
+      colors: ethnicity_getColors(),
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(0.15).height
+    },
+    tooltip: {
+      show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
+    }
+  });
+
+  // 4 Mini Pie Graph
+  var slide_4_3_3 = c3.generate({
+    bindto: '#graph-4-3-3-NFP',
+    padding: graph_zero_padding,
+    data: {
+      columns: slide_4_3_0_data_Values_NonProfit,
+      keys: slide_4_3_0_data_keys,
+      type: 'pie',
+      colors: ethnicity_getColors(),
+    },
+    legend: {
+      hide: true
+    },
+    size: {
+      height: slideSize(0.15).height
+    },
+    tooltip: {
+      show: true
+    },
+    pie: {
+      label:{
+        show: false
+      }
+    }
+  });
+
+  // slide
   var slide_4_4_0 = c3.generate({
     bindto: '#graph-4-4-0',
     data: {

@@ -274,7 +274,7 @@ window.onload = function(){
     return result;
   }
 
-  function exampleMajor_getTotals(year, institutions, data){
+  function exampleMajor_calculateTotals(year, institutions, data){
     var result = {};
     var dataYear = 'Y' + year;
     let total = 0;
@@ -286,6 +286,13 @@ window.onload = function(){
       total = 0;
     }
     return result;
+  }
+
+  function exampleMajor_updateTotals(slide, year, institutions, data){
+    let totals = exampleMajor_calculateTotals(year, institutions, data);
+    for (var institution of institutions) {
+      $(slide + ' .' + institution + ' .value').html(totals[institution].toLocaleString());
+    }
   }
 
   function topTen_getMetaData(key, attribute, data){
@@ -431,16 +438,6 @@ window.onload = function(){
       }
     }
   });
-
-
-  // slide
-  function slide_3_2_0_updateTotals(year){
-    let totals = exampleMajor_getTotals(year, bachelorInstitutions, slide_3_2_0_data);
-    $('#container-graph-3-2-0 .uc .value').html(totals.uc.toLocaleString());
-    $('#container-graph-3-2-0 .csu .value').html(totals.csu.toLocaleString());
-    $('#container-graph-3-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
-    $('#container-graph-3-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
-  }
 
   var slide_3_2_0 = c3.generate({
     bindto: '#graph-3-2-0',
@@ -811,14 +808,6 @@ window.onload = function(){
       }
     }
   });
-
-  // slide
-  function slide_4_2_0_updateTotals(year){
-    let totals = exampleMajor_getTotals(year, subBachelorInstitutions, slide_4_2_0_data);
-    $('#container-graph-4-2-0 .cc .value').html(totals.cc.toLocaleString());
-    $('#container-graph-4-2-0 .forprofit .value').html(totals.forprofit.toLocaleString());
-    $('#container-graph-4-2-0 .nonprofit .value').html(totals.nonprofit.toLocaleString());
-  }
 
   var slide_4_2_0 = c3.generate({
     bindto: '#graph-4-2-0',

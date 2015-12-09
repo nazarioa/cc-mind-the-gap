@@ -65,86 +65,73 @@ window.onload = function(){
   });
 
 
-  // Used for updating the mini graphs and stats for slide 3-3, 4-3
-  function updateSideData(x, slide, data, institutions){
-    var attr = {};
-
-    // The Stats Data -- Mains stuff
-    $(slide + ' .left-panel.data .ethnicity').html( ethnicity_getNames(x.id, true)[x.id]);
-    $(slide + ' .stats-general .percentage > span').html(
-      percentify(x.ratio)
-    );
-    $(slide + ' .stats-general .totals > span').html(
-      function(){
-        return x.value.toLocaleString();
-      }
-    );
-
-    // START - Table Data Update
-    function generateTable(slide, data){
-      var rowData;
-      var row;
-      var attrData;
-      var ethCode;
-      var score;
-      for (attr in data) {
-        row = '<tr><td class="major">' + attr + '</td>';
-        if (data.hasOwnProperty(attr) ) {
-          attrData = data[attr];
-          for (ethCode in attrData) {
-            if(attrData[ethCode] == null){
-              score = 'N/A';
-            }else{
-              score = attrData[ethCode];
-            }
-            if (attrData.hasOwnProperty(ethCode) && x.id === ethCode) {
-              row = row + '<td class="selected">' + score + '</td>';
-            }
-            else{
-              row = row + '<td>' + score + '</td>';
-            }
-          }
-          row = row + '</tr>';
-        }
-        rowData += row + '</tr>';
-      }
-      $(slide + '-table tbody').html(rowData);
-    }
-    generateTable(slide, data);
-    // END - Table Data
-
-    // START - MiniGraphs Data Update
-    // TODO: will be needed when colors are being dynaimcally muted
-    var intituationPercents = {
-        uc: 8,
-        csu: 7,
-        forprofit: 6,
-        nonprofit: 5,
-        cc: 4
-    };
-
-    slide_3_3_1.load({
-      columns: slide_3_3_0_data_Values_UC,
-      type: 'pie',
-      unload: true,
-    });
-
-    var institution = {};
-    for (institution of institutions) {
-      $( slide + '-mini-graphs .mini-graph.' + institution + ' .percent').html(percentify(intituationPercents[institution]));
-    }
-  };
-
   /*
   Utility functions
   */
-  function slideSize(percent){
+
+  // Used for updating the mini graphs and stats for slide 3-3, 4-3
+  function updateSideData (x, slide, data, institutions) {
+    // The Stats Data //
+    $(slide + ' .left-panel.data .ethnicity').html( ethnicity_getNames(x.id, true)[x.id]);
+    $(slide + ' .stats-general .percentage > span').html(percentify(x.ratio));
+    $(slide + ' .stats-general .totals > span').html(x.value.toLocaleString());
+
+    // update tables highlight //
+    $(slide + '-table .selected').removeClass('selected');
+    $(slide + '-table .' + x.id ).addClass('selected');
+
+    // uptdate mini-maps //
+
+    // function getPercent( data, name ){
+    //   var total = 0; var single = 0; var bit; for (bit of data) { total = total + bit.values[0].value; if( bit.id === name ){ single = bit.values[0].value; } } return(single / total);
+    // }
+  }
+
+
+
+  function generateTable (dataObject) {
+    var carriersArray = Object.keys(dataObject);
+    var ethCodeArray = Object.keys(dataObject[carriersArray[0]]);
+    var temp;
+    var tableObject;
+    var rows = '';
+    var tableHead = '<thead><tr><th class="table-origin">Top Majors Among Bachelor’s Recipients Overall and by Race/Ethnicity, <span class="Year">2013</span></th>';
+    for ( var ethCode of ethCodeArray) {
+        rows = rows + '<th class="rotate ' + ethCode + '"><div>' + ethnicity_getNames(ethCode, true)[ethCode] + '</div></th>';
+    }
+    tableHead = tableHead + rows + '</tr></thead>';
+    rows = '';
+    var tableBody = '<tbody>';
+    for (var dataRow in dataObject) {
+      if (dataObject.hasOwnProperty(dataRow)) {
+        rows = rows + '<tr><td class="major">' + dataRow + '</td>';
+        temp = '';
+        var scores = dataObject[dataRow];
+        for (var score in scores) {
+          if (scores.hasOwnProperty(score)) {
+            if(scores[score] !== null){
+              temp = temp + '<td class="' + score + '">' + scores[score] + '</td>';
+            }else{
+              temp = temp + '<td class="' + score + ' not-applicable">n/a</td>';
+            }
+          }
+        }
+        rows = rows + temp + '</tr>';
+      }
+    }
+
+    tableBody = tableBody + rows + '</tbody>';
+    tableObject = tableHead + tableBody;
+    return tableObject;
+  }
+
+  function slideSize (percent) {
     var slideWidth = $('#slide-0-0').width();
     var slideHeight = $('#slide-0-0').height();
     return { width: Math.floor(slideWidth * percent), height: Math.floor(slideHeight * percent) };
   };
 
-  function percentify(ratio){
+  function percentify (ratio) {
     return Math.floor((ratio * 100)) + '%';
   };
 
@@ -959,8 +946,8 @@ window.onload = function(){
               // swap out the info div with the data div
               $('#slide-4-3 .left-panel.info').addClass('hidden');
               $('#slide-4-3 .left-panel.data').removeClass('hidden');
-              // update data div
-              updateSideData(d, '#slide-4-3', dataGreenSlide, subBachelorInstitutions);
+
+              updateSideData(d, options.slide , options.data, options.institutions);
             }
           );
           //end info slide out animation
@@ -1167,6 +1154,9 @@ window.onload = function(){
   });
 
   //Primer
+  $('#slide-3-3-table').html(generateTable(dataYellowSlide));
+  $('#slide-4-3-table').html(generateTable(dataGreenSlide));
+
   exampleMajor_updateTotals('#container-graph-3-2-0', 2004, bachelorInstitutions, slide_3_2_0_data);
   exampleMajor_updateTotals('#container-graph-4-2-0', 2004, subBachelorInstitutions, slide_4_2_0_data);
 }

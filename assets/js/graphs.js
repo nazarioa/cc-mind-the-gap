@@ -721,13 +721,13 @@ window.onload = function(){
       },
     },
     legend: {
-      hide: false
+      hide: true
     },
     size: {
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{

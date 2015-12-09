@@ -1227,16 +1227,23 @@ section.conclusion .view-more > span {
   text-align: center;
 }
 
-.stats-major td.selected{
+.stats-major table .major{
+  text-align: left;
+}
+
+.stats-major td.selected, .stats-major th.selected{
   background-color: #CA6D54;
   color: white;
 }
 
+.stats-major thead th{
+  margin: 0;
+  padding: 0;
+  height: 115px;
+}
+
 .stats-major thead th.rotate{
   position: relative;
-  left: 10px;
-  padding-top: 50px;
-  height: 90px;
   white-space: nowrap;
 }
 
@@ -1249,9 +1256,15 @@ section.conclusion .view-more > span {
 
 .stats-major thead th.rotate > div{
   transform:
-  translate(-10px, 30px)
+  translate(0px, 40px)
   rotate(-90deg);
-  width: 25px;
+  width: 20px;
+}
+
+.stats-major .oth{
+  color: #2f2f2f;
+  font-weight: bold;
+  background-color: rgba(232, 232, 232, 0.87)
 }
 
 /*== END: DATA TABLE ==*/

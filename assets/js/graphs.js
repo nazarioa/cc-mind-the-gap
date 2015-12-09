@@ -609,39 +609,39 @@ window.onload = function(){
 
   // function to get 'Y' values for Mini Pie Graphs
   // UC
-  var slide_3_3_0_data_Values_UC = slide_3_3_0_data.map(function(x) {
+  var slide_3_3_0_data_Values_uc = slide_3_3_0_data.map(function(x) {
     if(x.uc){
       return [x.ethCode, x.uc];
     }
   });
 
   // CSU
-  var slide_3_3_0_data_Values_CSU = slide_3_3_0_data.map(function(x) {
+  var slide_3_3_0_data_Values_csu = slide_3_3_0_data.map(function(x) {
     if(x.csu){
       return [x.ethCode, x.csu];
     }
   });
 
   // FP
-  var slide_3_3_0_data_Values_ForProfit = slide_3_3_0_data.map(function(x) {
+  var slide_3_3_0_data_Values_forprofit = slide_3_3_0_data.map(function(x) {
     if(x.forprofit){
       return [x.ethCode, x.forprofit];
     }
   });
 
   // NFP
-  var slide_3_3_0_data_Values_NonProfit = slide_3_3_0_data.map(function(x) {
+  var slide_3_3_0_data_Values_nonprofit = slide_3_3_0_data.map(function(x) {
     if(x.nonprofit){
       return [x.ethCode, x.nonprofit];
     }
   });
 
   // 1 Mini Pie Graph
-  var slide_3_3_1 = c3.generate({
-    bindto: '#graph-3-3-1-UC',
+  var graph_3_3_uc = c3.generate({
+    bindto: '#graph-3-3-uc',
     padding: graph_zero_padding,
     data: {
-      columns: slide_3_3_0_data_Values_UC,
+      columns: slide_3_3_0_data_Values_uc,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
@@ -663,11 +663,11 @@ window.onload = function(){
   });
 
   // 2 Mini Pie Graph
-  var slide_3_3_2 = c3.generate({
-    bindto: '#graph-3-3-2-CSU',
+  var graph_3_3_csu = c3.generate({
+    bindto: '#graph-3-3-csu',
     padding: graph_zero_padding,
     data: {
-      columns: slide_3_3_0_data_Values_CSU,
+      columns: slide_3_3_0_data_Values_csu,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
@@ -689,11 +689,11 @@ window.onload = function(){
   });
 
   // 3 Mini Pie Graph
-  var slide_3_3_3 = c3.generate({
-    bindto: '#graph-3-3-3-FP',
+  var graph_3_3_forprofit = c3.generate({
+    bindto: '#graph-3-3-forprofit',
     padding: graph_zero_padding,
     data: {
-      columns: slide_3_3_0_data_Values_ForProfit,
+      columns: slide_3_3_0_data_Values_forprofit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
@@ -715,11 +715,11 @@ window.onload = function(){
   });
 
   // 4 Mini Pie Graph
-  var slide_3_3_4 = c3.generate({
-    bindto: '#graph-3-3-4-NFP',
+  var graph_3_3_nonprofit = c3.generate({
+    bindto: '#graph-3-3-nonprofit',
     padding: graph_zero_padding,
     data: {
-      columns: slide_3_3_0_data_Values_NonProfit,
+      columns: slide_3_3_0_data_Values_nonprofit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
@@ -990,21 +990,21 @@ window.onload = function(){
 
   // function to get 'Y' values for Mini Pie Graphs
   // CC
-  var slide_4_3_0_data_Values_CC = slide_4_3_0_data.map(function(x) {
+  var slide_4_3_0_data_Values_cc = slide_4_3_0_data.map(function(x) {
     if(x.cc){
       return [x.ethCode, x.cc];
     }
   });
 
   // FP
-  var slide_4_3_0_data_Values_ForProfit = slide_4_3_0_data.map(function(x) {
+  var slide_4_3_0_data_Values_forprofit = slide_4_3_0_data.map(function(x) {
     if(x.forprofit){
       return [x.ethCode, x.forprofit];
     }
   });
 
   // NFP
-  var slide_4_3_0_data_Values_NonProfit = slide_4_3_0_data.map(function(x) {
+  var slide_4_3_0_data_Values_nonprofit = slide_4_3_0_data.map(function(x) {
     if(x.nonprofit){
       return [x.ethCode, x.nonprofit];
     }
@@ -1012,11 +1012,11 @@ window.onload = function(){
 
 
   // 1 Mini Pie Graph
-  var slide_4_3_1 = c3.generate({
-    bindto: '#graph-4-3-1-CC',
+  var graph_4_3_cc = c3.generate({
+    bindto: '#graph-4-3-cc',
     padding: graph_zero_padding,
     data: {
-      columns: slide_4_3_0_data_Values_CC,
+      columns: slide_4_3_0_data_Values_cc,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
@@ -1039,11 +1039,11 @@ window.onload = function(){
 
 
   // 2 Mini Pie Graph
-  var slide_4_3_2 = c3.generate({
-    bindto: '#graph-4-3-2-FP',
+  var graph_4_3_forprofit = c3.generate({
+    bindto: '#graph-4-3-forprofit',
     padding: graph_zero_padding,
     data: {
-      columns: slide_4_3_0_data_Values_ForProfit,
+      columns: slide_4_3_0_data_Values_forprofit,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),
@@ -1065,11 +1065,11 @@ window.onload = function(){
   });
 
   // 4 Mini Pie Graph
-  var slide_4_3_3 = c3.generate({
-    bindto: '#graph-4-3-3-NFP',
+  var graph_4_3_nonprofit = c3.generate({
+    bindto: '#graph-4-3-nonprofit',
     padding: graph_zero_padding,
     data: {
-      columns: slide_4_3_0_data_Values_NonProfit,
+      columns: slide_4_3_0_data_Values_nonprofit,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
       colors: ethnicity_getColors(),

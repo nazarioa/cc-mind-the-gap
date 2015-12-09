@@ -648,7 +648,13 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_uc,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true
@@ -657,7 +663,7 @@ window.onload = function(){
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{
@@ -674,7 +680,13 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_csu,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true
@@ -683,7 +695,7 @@ window.onload = function(){
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{
@@ -700,10 +712,16 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_forprofit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
-      hide: true
+      hide: false
     },
     size: {
       height: slideSize(0.15).height
@@ -726,7 +744,13 @@ window.onload = function(){
       columns: slide_3_3_0_data_Values_nonprofit,
       keys: slide_3_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true
@@ -735,7 +759,7 @@ window.onload = function(){
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{
@@ -1023,7 +1047,13 @@ window.onload = function(){
       columns: slide_4_3_0_data_Values_cc,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true
@@ -1032,7 +1062,7 @@ window.onload = function(){
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{
@@ -1050,7 +1080,13 @@ window.onload = function(){
       columns: slide_4_3_0_data_Values_forprofit,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true
@@ -1059,7 +1095,7 @@ window.onload = function(){
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{
@@ -1076,7 +1112,13 @@ window.onload = function(){
       columns: slide_4_3_0_data_Values_nonprofit,
       keys: slide_4_3_0_data_keys,
       type: 'pie',
-      colors: ethnicity_getColors(),
+      color: function (color, d) {
+        if(d !== undefined ){
+          var grayValue = grayScale(d3.rgb(color).r, 50, 255) + grayScale(d3.rgb(color).g, 50, 255) + grayScale(d3.rgb(color).b, 50, 255);
+          return d3.rgb(grayValue, grayValue, grayValue);
+        }
+        return '#dedede';
+      },
     },
     legend: {
       hide: true
@@ -1085,7 +1127,7 @@ window.onload = function(){
       height: slideSize(0.15).height
     },
     tooltip: {
-      show: true
+      show: false
     },
     pie: {
       label:{

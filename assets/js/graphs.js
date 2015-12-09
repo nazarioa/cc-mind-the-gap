@@ -72,7 +72,7 @@ window.onload = function(){
   // Used for updating the mini graphs and stats for slide 3-3, 4-3
   function updateSideData (x, slide, data, institutions) {
     // The Stats Data //
-    $(slide + ' .left-panel.data .ethnicity').html( ethnicity_getNames(x.id, true)[x.id]);
+    $(slide + ' .left-panel.data .ethnicity').html( ethnicity_getNames(x.id, false)[x.id]);
     $(slide + ' .stats-general .percentage > span').html(percentify(x.ratio));
     $(slide + ' .stats-general .totals > span').html(x.value.toLocaleString());
 

@@ -70,23 +70,27 @@ window.onload = function(){
   */
 
   // Used for updating the mini graphs and stats for slide 3-3, 4-3
-  function updateSideData (x, slide, data, institutions) {
+  function updateSideData (x, slide, section, institutions, dataObject) {
     // The Stats Data //
     $(slide + ' .left-panel.data .ethnicity').html( ethnicity_getNames(x.id, false)[x.id]);
     $(slide + ' .stats-general .percentage > span').html(percentify(x.ratio));
     $(slide + ' .stats-general .totals > span').html(x.value.toLocaleString());
 
-    // update tables highlight //
+    // Update Tables Highlight //
     $(slide + '-table .selected').removeClass('selected');
     $(slide + '-table .' + x.id ).addClass('selected');
 
-    // uptdate mini-maps //
+    // Update Mini-Maps //
+    for (var inst in dataObject) {
+      if (dataObject.hasOwnProperty(inst)) {
+        $( slide + '-mini-graphs .mini-graph.' + inst + ' .percent').html( percentify( getPercent( dataObject[inst].data(), x.id ) ) );
+      }
+    }
 
-    // function getPercent( data, name ){
-    //   var total = 0; var single = 0; var bit; for (bit of data) { total = total + bit.values[0].value; if( bit.id === name ){ single = bit.values[0].value; } } return(single / total);
-    // }
+    function getPercent( data, name ){
+      var total = 0; var single = 0; var bit; for (bit of data) { total = total + bit.values[0].value; if( bit.id === name ){ single = bit.values[0].value; } } return(single / total);
+    }
   }
-
 
 
   function generateTable (dataObject) {

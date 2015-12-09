@@ -421,7 +421,7 @@ var slide_3_3_0_data = [
 ];
 
 
-var dataYellowSlide = {
+var slide_3_3_1_data = {
   "Business, Management, Marketing & Related Support Services": {
     "oth": 1,
     "aai": 1,
@@ -881,7 +881,7 @@ var slide_4_3_0_data = [
   }
 ];
 
-var dataGreenSlide = {
+var slide_4_3_1_data = {
   "Health Professions": {
     "oth": 1,
     "asn": 1,

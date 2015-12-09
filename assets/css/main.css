@@ -1236,6 +1236,10 @@ section.conclusion .view-more > span {
   color: white;
 }
 
+.stats-major td.not-applicable {
+  color: #bbbbbb;
+}
+
 .stats-major thead th{
   margin: 0;
   padding: 0;

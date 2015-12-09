@@ -29,7 +29,7 @@ var genericEthnicityData = {
   "nhp" : {
     "Name": "Native Hawaiian or Other Pacific Islander",
     "ActiveColor": "#00736b",
-    "ShortName": "Other Pacific Islander",
+    "ShortName": "Pacific Islander",
   },
   "wht" : {
     "Name": "White",

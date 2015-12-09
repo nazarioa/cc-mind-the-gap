@@ -570,7 +570,7 @@ window.onload = function(){
               $('#slide-3-3 .left-panel.info').addClass('hidden');
               $('#slide-3-3 .left-panel.data').removeClass('hidden');
               // update data div
-              updateSideData(d, '#slide-3-3', dataYellowSlide, bachelorInstitutions);
+              updateSideData(d, '#slide-3-3', 3, bachelorInstitutions, {"uc": graph_3_3_uc, "csu": graph_3_3_csu, "nonprofit": graph_3_3_nonprofit, "forprofit": graph_3_3_forprofit} );
             }
           );
           //end info slide out animation
@@ -588,7 +588,7 @@ window.onload = function(){
 
         // else -- the data panel is up, just update the content
         else{
-          updateSideData(d, '#slide-3-3', dataYellowSlide, bachelorInstitutions);
+          updateSideData(d, '#slide-3-3', 3, bachelorInstitutions, {"uc": graph_3_3_uc, "csu": graph_3_3_csu, "nonprofit": graph_3_3_nonprofit, "forprofit": graph_3_3_forprofit} );
         }
       }
     },
@@ -609,7 +609,7 @@ window.onload = function(){
   });
 
 
-  //* Mini Graphs *//
+  // Mini Graphs //
 
   // function to get 'Y' values for Mini Pie Graphs
   // UC
@@ -951,7 +951,7 @@ window.onload = function(){
               $('#slide-4-3 .left-panel.info').addClass('hidden');
               $('#slide-4-3 .left-panel.data').removeClass('hidden');
 
-              updateSideData(d, options.slide , options.data, options.institutions);
+              updateSideData(d, '#slide-4-3', 4, bachelorInstitutions, {"cc": graph_4_3_cc, "nonprofit": graph_4_3_nonprofit, "forprofit": graph_4_3_forprofit} );
             }
           );
           //end info slide out animation
@@ -969,7 +969,7 @@ window.onload = function(){
 
         // else -- the data panel is up, just update the content
         else{
-          updateSideData(d, '#slide-4-3', dataGreenSlide, subBachelorInstitutions);
+          updateSideData(d, '#slide-4-3', 4, bachelorInstitutions, {"cc": graph_4_3_cc, "nonprofit": graph_4_3_nonprofit, "forprofit": graph_4_3_forprofit} );
         }
       }
     },
@@ -1158,8 +1158,8 @@ window.onload = function(){
   });
 
   //Primer
-  $('#slide-3-3-table').html(generateTable(dataYellowSlide));
-  $('#slide-4-3-table').html(generateTable(dataGreenSlide));
+  $('#slide-3-3-table').html(generateTable(slide_3_3_1_data));
+  $('#slide-4-3-table').html(generateTable(slide_4_3_1_data));
 
   exampleMajor_updateTotals('#container-graph-3-2-0', 2004, bachelorInstitutions, slide_3_2_0_data);
   exampleMajor_updateTotals('#container-graph-4-2-0', 2004, subBachelorInstitutions, slide_4_2_0_data);
